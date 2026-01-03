@@ -188,6 +188,10 @@ nav {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.nav-menu-back {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -1221,5 +1225,17 @@ a.logo:hover {
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
+  }
+
+  .nav-menu-back {
+    display: block;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-menu-back a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
   }
 }
