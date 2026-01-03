@@ -79,17 +79,32 @@ const allQuestions = [
 const QUESTIONS_PER_ROUND = 8;
 
 // ============================================
-// MINI PERIODIC TABLE DATA
+// MINI PERIODIC TABLE DATA (7 rows)
 // ============================================
 const periodicData = [
     // Row 1
-    { symbol: "H", type: "nonmetal" }, ...Array(16).fill({ symbol: "", type: "empty" }), { symbol: "He", type: "noble" },
+    { symbol: "H", type: "nonmetal" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" },
+    { symbol: "He", type: "noble" },
     // Row 2
-    { symbol: "Li", type: "alkali" }, { symbol: "Be", type: "alkaline" }, ...Array(10).fill({ symbol: "", type: "empty" }),
+    { symbol: "Li", type: "alkali" }, { symbol: "Be", type: "alkaline" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" },
     { symbol: "B", type: "metalloid" }, { symbol: "C", type: "nonmetal" }, { symbol: "N", type: "nonmetal" },
     { symbol: "O", type: "nonmetal" }, { symbol: "F", type: "halogen" }, { symbol: "Ne", type: "noble" },
     // Row 3
-    { symbol: "Na", type: "alkali" }, { symbol: "Mg", type: "alkaline" }, ...Array(10).fill({ symbol: "", type: "empty" }),
+    { symbol: "Na", type: "alkali" }, { symbol: "Mg", type: "alkaline" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" }, { symbol: "", type: "empty" }, { symbol: "", type: "empty" },
+    { symbol: "", type: "empty" },
     { symbol: "Al", type: "metal" }, { symbol: "Si", type: "metalloid" }, { symbol: "P", type: "nonmetal" },
     { symbol: "S", type: "nonmetal" }, { symbol: "Cl", type: "halogen" }, { symbol: "Ar", type: "noble" },
     // Row 4
@@ -99,7 +114,31 @@ const periodicData = [
     { symbol: "Co", type: "metal" }, { symbol: "Ni", type: "metal" }, { symbol: "Cu", type: "metal" },
     { symbol: "Zn", type: "metal" }, { symbol: "Ga", type: "metal" }, { symbol: "Ge", type: "metalloid" },
     { symbol: "As", type: "metalloid" }, { symbol: "Se", type: "nonmetal" }, { symbol: "Br", type: "halogen" },
-    { symbol: "Kr", type: "noble" }
+    { symbol: "Kr", type: "noble" },
+    // Row 5
+    { symbol: "Rb", type: "alkali" }, { symbol: "Sr", type: "alkaline" },
+    { symbol: "Y", type: "metal" }, { symbol: "Zr", type: "metal" }, { symbol: "Nb", type: "metal" },
+    { symbol: "Mo", type: "metal" }, { symbol: "Tc", type: "metal" }, { symbol: "Ru", type: "metal" },
+    { symbol: "Rh", type: "metal" }, { symbol: "Pd", type: "metal" }, { symbol: "Ag", type: "metal" },
+    { symbol: "Cd", type: "metal" }, { symbol: "In", type: "metal" }, { symbol: "Sn", type: "metal" },
+    { symbol: "Sb", type: "metalloid" }, { symbol: "Te", type: "metalloid" }, { symbol: "I", type: "halogen" },
+    { symbol: "Xe", type: "noble" },
+    // Row 6
+    { symbol: "Cs", type: "alkali" }, { symbol: "Ba", type: "alkaline" },
+    { symbol: "La", type: "metal" }, { symbol: "Hf", type: "metal" }, { symbol: "Ta", type: "metal" },
+    { symbol: "W", type: "metal" }, { symbol: "Re", type: "metal" }, { symbol: "Os", type: "metal" },
+    { symbol: "Ir", type: "metal" }, { symbol: "Pt", type: "metal" }, { symbol: "Au", type: "metal" },
+    { symbol: "Hg", type: "metal" }, { symbol: "Tl", type: "metal" }, { symbol: "Pb", type: "metal" },
+    { symbol: "Bi", type: "metal" }, { symbol: "Po", type: "metalloid" }, { symbol: "At", type: "halogen" },
+    { symbol: "Rn", type: "noble" },
+    // Row 7
+    { symbol: "Fr", type: "alkali" }, { symbol: "Ra", type: "alkaline" },
+    { symbol: "Ac", type: "metal" }, { symbol: "Rf", type: "metal" }, { symbol: "Db", type: "metal" },
+    { symbol: "Sg", type: "metal" }, { symbol: "Bh", type: "metal" }, { symbol: "Hs", type: "metal" },
+    { symbol: "Mt", type: "metal" }, { symbol: "Ds", type: "metal" }, { symbol: "Rg", type: "metal" },
+    { symbol: "Cn", type: "metal" }, { symbol: "Nh", type: "metal" }, { symbol: "Fl", type: "metal" },
+    { symbol: "Mc", type: "metal" }, { symbol: "Lv", type: "metal" }, { symbol: "Ts", type: "halogen" },
+    { symbol: "Og", type: "noble" }
 ];
 
 // ============================================
