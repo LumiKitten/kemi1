@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mol och Stökiometri | Kemi 1</title>
+    <meta name="description" content="Lär dig om mol, molmassa, koncentration och stökiometriska beräkningar." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="mol-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="mol-accent">Mol</span> & Stökiometri
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#mol">Mol</a></li>
+                <li><a href="#molmassa">Molmassa</a></li>
+                <li><a href="#koncentration">Koncentration</a></li>
+                <li><a href="#stokiometri">Stökiometri</a></li>
+                <li><a href="#kalkylator">Kalkylator</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    <span class="text-mol">Mol</span> och Stökiometri
+                </h1>
+                <p>
+                    Räkna med atomer och molekyler – från Avogadros tal till kemiska beräkningar.
+                </p>
+                <div class="flex-center">
+                    <a href="#mol" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mole Concept Section -->
+        <section id="mol">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Begreppet mol</h2>
+                    <p>Mol är enheten för substansmängd – ett praktiskt sätt att räkna partiklar.</p>
+                </div>
+
+                <div class="avogadro-display">
+                    <div class="avogadro-number">
+                        <span class="big-number">6.022 × 10²³</span>
+                        <span class="unit">partiklar/mol</span>
+                    </div>
+                    <p class="avogadro-name">Avogadros tal (Nₐ)</p>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-mol">
+                        <h3>Vad är en mol?</h3>
+                        <p>En mol är ungefär 602 triljarder partiklar – ett enormt antal!</p>
+                        <div class="mol-examples">
+                            <div class="mol-example">
+                                <span class="mol-icon">💧</span>
+                                <div>
+                                    <strong>1 mol H₂O</strong>
+                                    <p>18 gram vatten (ca 1 matsked)</p>
+                                </div>
+                            </div>
+                            <div class="mol-example">
+                                <span class="mol-icon">🧂</span>
+                                <div>
+                                    <strong>1 mol NaCl</strong>
+                                    <p>58.5 gram salt</p>
+                                </div>
+                            </div>
+                            <div class="mol-example">
+                                <span class="mol-icon">⚫</span>
+                                <div>
+                                    <strong>1 mol C</strong>
+                                    <p>12 gram kol</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Varför använder vi mol?</h3>
+                        <p>Atomer är så små att det är opraktiskt att räkna dem en och en.</p>
+                        <ul class="benefit-list">
+                            <li>Kopplar massa (gram) till antal partiklar</li>
+                            <li>Gör kemiska beräkningar möjliga</li>
+                            <li>Används i alla laboratorie-sammanhang</li>
+                        </ul>
+                        <div class="formula-block">n = antal mol</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Molar Mass Section -->
+        <section id="molmassa">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Molmassa</h2>
+                    <p>Massan av 1 mol av ett ämne, mätt i gram per mol (g/mol).</p>
+                </div>
+
+                <div class="formula-highlight">
+                    <div class="formula-block large">
+                        M = molmassa (g/mol)
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-mol">
+                        <h3>Räkna ut molmassa</h3>
+                        <ol class="calc-steps">
+                            <li>Titta på kemiska formeln</li>
+                            <li>Slå upp atommassan för varje grundämne</li>
+                            <li>Multiplicera med antalet atomer</li>
+                            <li>Summera allt</li>
+                        </ol>
+                        <div class="example-calc">
+                            <strong>Exempel: H₂O</strong>
+                            <p>H: 2 × 1.0 = 2.0</p>
+                            <p>O: 1 × 16.0 = 16.0</p>
+                            <p class="result">M = 18.0 g/mol</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Sambandet massa-mol</h3>
+                        <div class="formula-block large">n = m / M</div>
+                        <div class="formula-legend">
+                            <div class="legend-item">
+                                <span class="var">n</span> = antal mol
+                            </div>
+                            <div class="legend-item">
+                                <span class="var">m</span> = massa (g)
+                            </div>
+                            <div class="legend-item">
+                                <span class="var">M</span> = molmassa (g/mol)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concentration Section -->
+        <section id="koncentration">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Koncentration</h2>
+                    <p>Hur mycket ämne som är löst i en viss volym lösning.</p>
+                </div>
+
+                <div class="formula-highlight">
+                    <div class="formula-block large">
+                        c = n / V
+                    </div>
+                    <p>Koncentration i mol/dm³ (kan skrivas M eller mol/L)</p>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h3>Beräkningsexempel</h3>
+                        <div class="example-problem">
+                            <p><strong>Given:</strong> 0.50 mol NaCl löst i 1.0 dm³ vatten</p>
+                            <p><strong>Sökt:</strong> Koncentration c</p>
+                            <div class="formula-block">c = n/V = 0.50/1.0 = 0.50 mol/dm³</div>
+                        </div>
+                    </div>
+
+                    <div class="card card-mol">
+                        <h3>Spädning</h3>
+                        <div class="formula-block">c₁V₁ = c₂V₂</div>
+                        <p>Vid spädning är substansmängden oförändrad – bara volymen ökar.</p>
+                        <div class="example-problem">
+                            <p><strong>Exempel:</strong> Späda 1.0 M HCl till 0.10 M, 250 mL</p>
+                            <p>V₁ = c₂V₂/c₁ = (0.10 × 250)/1.0 = 25 mL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stoichiometry Section -->
+        <section id="stokiometri">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Stökiometriska beräkningar</h2>
+                    <p>Räkna ut mängder reaktanter och produkter i kemiska reaktioner.</p>
+                </div>
+
+                <div class="stoich-steps">
+                    <div class="stoich-step">
+                        <span class="step-number">1</span>
+                        <div>
+                            <h4>Skriv reaktionsformeln</h4>
+                            <p>Balansera ekvationen</p>
+                        </div>
+                    </div>
+                    <div class="stoich-step">
+                        <span class="step-number">2</span>
+                        <div>
+                            <h4>Omvandla till mol</h4>
+                            <p>Använd n = m/M</p>
+                        </div>
+                    </div>
+                    <div class="stoich-step">
+                        <span class="step-number">3</span>
+                        <div>
+                            <h4>Använd molförhållanden</h4>
+                            <p>Från balanserade koefficienter</p>
+                        </div>
+                    </div>
+                    <div class="stoich-step">
+                        <span class="step-number">4</span>
+                        <div>
+                            <h4>Omvandla tillbaka</h4>
+                            <p>Till massa eller volym</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reaction-example mt-xl">
+                    <h3>Exempel: Vätgas och syrgas</h3>
+                    <div class="formula-block">2H₂ + O₂ → 2H₂O</div>
+                    <div class="ratio-explanation">
+                        <div class="ratio-item">
+                            <span class="ratio-num">2</span>
+                            <span class="ratio-label">mol H₂</span>
+                        </div>
+                        <span class="ratio-plus">+</span>
+                        <div class="ratio-item">
+                            <span class="ratio-num">1</span>
+                            <span class="ratio-label">mol O₂</span>
+                        </div>
+                        <span class="ratio-arrow">→</span>
+                        <div class="ratio-item">
+                            <span class="ratio-num">2</span>
+                            <span class="ratio-label">mol H₂O</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h3>Begränsande reaktant</h3>
+                        <p>Den reaktant som tar slut först och begränsar produktmängden.</p>
+                        <ul class="concept-list">
+                            <li>Jämför mol av varje reaktant med molförhållandet</li>
+                            <li>Den som ger minst produkt är begränsande</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Utbyte</h3>
+                        <ul class="concept-list">
+                            <li><strong>Teoretiskt utbyte:</strong> Beräknad maximal mängd produkt</li>
+                            <li><strong>Verkligt utbyte:</strong> Faktisk mängd i labbet</li>
+                            <li><strong>Procentuellt utbyte:</strong> (verkligt/teoretiskt) × 100%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="kalkylator">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kalkylatorer</h2>
+                    <p>Verktyg för vanliga kemiska beräkningar.</p>
+                </div>
+
+                <div class="calc-tabs">
+                    <button class="calc-tab active" data-calc="molmassa">Molmassa</button>
+                    <button class="calc-tab" data-calc="molberakning">Mol ↔ Massa</button>
+                    <button class="calc-tab" data-calc="spadning">Spädning</button>
+                </div>
+
+                <div class="calc-panels">
+                    <div class="calc-panel active" id="molmassa-calc">
+                        <div class="calculator">
+                            <h3>Molmassa-kalkylator</h3>
+                            <div class="calc-input">
+                                <label for="formulaInput">Kemisk formel:</label>
+                                <input type="text" id="formulaInput" placeholder="t.ex. H2O, NaCl, C6H12O6" />
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="calculateMolarMass()">Beräkna</button>
+                            <div class="calc-result" id="molmassResult">
+                                <span class="result-label">Molmassa:</span>
+                                <span class="result-value">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-panel" id="molberakning-calc">
+                        <div class="calculator">
+                            <h3>Mol ↔ Massa</h3>
+                            <div class="calc-input">
+                                <label for="massInput">Massa (g):</label>
+                                <input type="number" id="massInput" step="any" placeholder="t.ex. 18" />
+                            </div>
+                            <div class="calc-input">
+                                <label for="molmassInput">Molmassa (g/mol):</label>
+                                <input type="number" id="molmassInput" step="any" placeholder="t.ex. 18" />
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="calculateMoles()">Beräkna mol</button>
+                            <div class="calc-result" id="molResult">
+                                <span class="result-label">Antal mol:</span>
+                                <span class="result-value">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-panel" id="spadning-calc">
+                        <div class="calculator">
+                            <h3>Spädningskalkylator</h3>
+                            <div class="calc-grid">
+                                <div class="calc-input">
+                                    <label for="c1">c₁ (mol/L):</label>
+                                    <input type="number" id="c1" step="any" placeholder="Start-konc." />
+                                </div>
+                                <div class="calc-input">
+                                    <label for="c2">c₂ (mol/L):</label>
+                                    <input type="number" id="c2" step="any" placeholder="Slut-konc." />
+                                </div>
+                                <div class="calc-input">
+                                    <label for="v2">V₂ (mL):</label>
+                                    <input type="number" id="v2" step="any" placeholder="Slutvolym" />
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-full" onclick="calculateDilution()">Beräkna V₁</button>
+                            <div class="calc-result" id="dilutionResult">
+                                <span class="result-label">Volym att ta (V₁):</span>
+                                <span class="result-value">- mL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions"></div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">Börja om</button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">Visa
+                            resultat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Mol och Stökiometri | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="mol-script.js"></script>
+</body>
+
+</html>

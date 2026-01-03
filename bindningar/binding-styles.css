@@ -1,0 +1,494 @@
+/* Binding Topic Specific Styles */
+
+.binding-accent {
+    color: #e74c3c;
+}
+
+.text-binding {
+    color: #e74c3c;
+}
+
+.card-binding {
+    border-left: 3px solid #e74c3c;
+}
+
+.card-polar {
+    border-left: 3px solid #f39c12;
+}
+
+.card-dipole {
+    border-left: 3px solid #9b59b6;
+}
+
+.card-metal {
+    border-left: 3px solid #3498db;
+}
+
+/* Octet Rule */
+.octet-rule {
+    text-align: center;
+    margin: var(--space-xl) 0;
+}
+
+/* Electron Transfer */
+.electron-transfer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    margin: var(--space-md) 0;
+}
+
+.atom-mini {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.atom-mini.positive {
+    background: rgba(255, 71, 87, 0.2);
+    color: var(--acid-primary);
+}
+
+.atom-mini.negative {
+    background: rgba(52, 152, 219, 0.2);
+    color: var(--base-primary);
+}
+
+.electron-mini {
+    font-size: 0.85rem;
+    color: var(--base-primary);
+}
+
+.arrow,
+.plus {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+}
+
+.shared-pair {
+    font-size: 1.5rem;
+    color: var(--neutral);
+}
+
+/* Bond Animation */
+.bond-animation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    padding: var(--space-2xl);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap;
+}
+
+.bond-reactants,
+.bond-products {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.bond-atom {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.bond-atom.metal {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.bond-atom.nonmetal {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.valence-electrons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ve {
+    position: absolute;
+    font-size: 0.75rem;
+    color: var(--accent-gold);
+}
+
+.bond-plus,
+.bond-arrow {
+    font-size: 2rem;
+    color: var(--text-muted);
+}
+
+.ion {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.cation {
+    background: rgba(255, 71, 87, 0.2);
+    border: 2px solid var(--acid-primary);
+    color: var(--acid-primary);
+}
+
+.anion {
+    background: rgba(52, 152, 219, 0.2);
+    border: 2px solid var(--base-primary);
+    color: var(--base-primary);
+}
+
+/* Step List */
+.step-list {
+    padding-left: var(--space-lg);
+    margin: var(--space-md) 0;
+}
+
+.step-list li {
+    padding: var(--space-sm) 0;
+    color: var(--text-secondary);
+}
+
+/* Property List */
+.property-list {
+    list-style: none;
+    padding: 0;
+}
+
+.property-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+}
+
+.prop-icon {
+    font-size: 1.25rem;
+}
+
+/* Example Box */
+.example-box {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.example-box h4 {
+    color: #e74c3c;
+    margin-bottom: var(--space-md);
+}
+
+/* Covalent Examples */
+.covalent-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+}
+
+.covalent-molecule {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.covalent-molecule h4 {
+    margin-bottom: var(--space-lg);
+}
+
+.molecule-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.cov-atom {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.shared-electrons {
+    font-weight: 700;
+    color: var(--neutral);
+    letter-spacing: 2px;
+}
+
+.shared-electrons.double {
+    color: #f39c12;
+}
+
+.shared-electrons.triple {
+    color: #e74c3c;
+}
+
+/* Polar Visual */
+.polar-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.polar-bond {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.delta {
+    font-size: 1.25rem;
+    color: var(--acid-primary);
+}
+
+.delta.negative {
+    color: var(--base-primary);
+}
+
+/* Dipole Examples */
+.dipole-examples {
+    display: flex;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.dipole-ex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.dipole-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-top: var(--space-sm);
+}
+
+/* Metallic Visual */
+.metallic-visual {
+    position: relative;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-2xl);
+    overflow: hidden;
+}
+
+.metal-lattice {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: var(--space-lg);
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.metal-ion {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.electron-sea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+.sea-electron {
+    font-size: 0.85rem;
+    color: var(--base-primary);
+    animation: float-electron 3s ease-in-out infinite;
+}
+
+.sea-electron:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.sea-electron:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.sea-electron:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.sea-electron:nth-child(5) {
+    animation-delay: 2s;
+}
+
+@keyframes float-electron {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(20px, 10px);
+    }
+
+    50% {
+        transform: translate(-10px, 20px);
+    }
+
+    75% {
+        transform: translate(-20px, -10px);
+    }
+}
+
+/* Metal Properties */
+.metal-properties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+}
+
+.metal-prop {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+}
+
+.metal-prop .prop-icon {
+    font-size: 2rem;
+}
+
+.metal-prop p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: var(--space-xs) 0 0;
+}
+
+/* Force Comparison */
+.force-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.force-card {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.force-header {
+    padding: var(--space-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.force-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.force-strength {
+    font-size: 0.75rem;
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.force-content {
+    padding: var(--space-lg);
+    background: var(--bg-card);
+}
+
+.force-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+}
+
+.force-content li {
+    padding: var(--space-xs) 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.force-card.london .force-header {
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.force-card.dipole .force-header {
+    background: linear-gradient(135deg, #f39c12, #d35400);
+}
+
+.force-card.hydrogen .force-header {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .bond-animation {
+        flex-direction: column;
+    }
+
+    .metal-lattice {
+        grid-template-columns: repeat(3, 50px);
+    }
+
+    .metal-ion {
+        width: 50px;
+        height: 50px;
+    }
+}

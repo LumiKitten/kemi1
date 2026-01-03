@@ -1,0 +1,553 @@
+/* Intro Topic Specific Styles */
+
+.intro-accent {
+    color: #e67e22;
+}
+
+.text-intro {
+    color: #e67e22;
+}
+
+.card-intro {
+    border-left: 3px solid #e67e22;
+}
+
+.card-warning {
+    border-left: 3px solid #f39c12;
+}
+
+/* Badge variants */
+.badge-solution {
+    background: rgba(52, 152, 219, 0.2);
+    color: var(--base-primary);
+}
+
+.badge-gas {
+    background: rgba(155, 89, 182, 0.2);
+    color: var(--accent-purple);
+}
+
+.badge-mixed {
+    background: rgba(241, 196, 15, 0.2);
+    color: var(--accent-gold);
+}
+
+/* Examples Grid */
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.example-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.example-icon {
+    font-size: 2rem;
+}
+
+.example-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Safety Lists */
+.safety-list,
+.equipment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.safety-list li,
+.equipment-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.safety-list li:last-child,
+.equipment-list li:last-child {
+    border-bottom: none;
+}
+
+/* Pictogram Grid */
+.pictogram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-md);
+}
+
+.pictogram-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.pictogram-symbol {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.pictogram-name {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Pictogram Game */
+.pictogram-game {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.game-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.game-question {
+    margin-bottom: var(--space-xl);
+}
+
+.game-symbol {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.game-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.game-option {
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.game-option:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: var(--bg-card-hover);
+}
+
+.game-option.correct {
+    border-color: var(--neutral);
+    background: rgba(46, 204, 113, 0.15);
+}
+
+.game-option.incorrect {
+    border-color: var(--acid-primary);
+    background: rgba(255, 71, 87, 0.15);
+}
+
+.game-feedback {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.game-feedback.correct {
+    background: rgba(46, 204, 113, 0.15);
+    color: var(--neutral);
+}
+
+.game-feedback.incorrect {
+    background: rgba(255, 71, 87, 0.15);
+    color: var(--acid-primary);
+}
+
+/* Matter Diagram */
+.matter-diagram {
+    overflow-x: auto;
+    padding: var(--space-xl) 0;
+}
+
+.matter-tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xl);
+}
+
+.matter-node {
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-align: center;
+}
+
+.matter-root {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    font-size: 1.25rem;
+}
+
+.matter-pure {
+    background: rgba(52, 152, 219, 0.2);
+    border: 2px solid var(--base-primary);
+}
+
+.matter-mix {
+    background: rgba(155, 89, 182, 0.2);
+    border: 2px solid var(--accent-purple);
+}
+
+.matter-branches {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2xl);
+    flex-wrap: wrap;
+}
+
+.matter-branch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.matter-sub-branches {
+    display: flex;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.matter-leaf {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    max-width: 180px;
+    text-align: center;
+}
+
+.matter-leaf p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: var(--space-xs) 0;
+}
+
+.matter-leaf .formula {
+    display: block;
+    margin-top: var(--space-sm);
+}
+
+/* Phase Diagram */
+.phase-diagram {
+    position: relative;
+    padding: var(--space-xl);
+}
+
+.phase-states {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.phase-state {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+    min-width: 150px;
+}
+
+.phase-particles {
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: var(--space-md);
+}
+
+.particle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--base-primary);
+}
+
+.phase-solid .particle {
+    animation: vibrate 0.3s ease-in-out infinite;
+}
+
+.phase-liquid .particle {
+    animation: flow 2s ease-in-out infinite;
+}
+
+.phase-gas .particle {
+    animation: float-gas 1.5s ease-in-out infinite;
+}
+
+@keyframes vibrate {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(1px, 1px);
+    }
+
+    75% {
+        transform: translate(-1px, -1px);
+    }
+}
+
+@keyframes flow {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes float-gas {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(10px, -5px);
+    }
+
+    50% {
+        transform: translate(-5px, 10px);
+    }
+
+    75% {
+        transform: translate(-10px, -10px);
+    }
+}
+
+.phase-arrows {
+    display: flex;
+    align-items: center;
+}
+
+.phase-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.arrow-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.arrow-label.reverse {
+    color: var(--text-muted);
+}
+
+.sublimation-arrow {
+    text-align: center;
+    margin-top: var(--space-xl);
+    padding: var(--space-md);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Temperature Slider */
+.temperature-slider {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.slider-container input[type="range"] {
+    flex: 1;
+}
+
+.temp-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    min-width: 50px;
+}
+
+.temp-display {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#currentTemp {
+    color: #e67e22;
+}
+
+#currentPhase {
+    color: var(--base-primary);
+}
+
+/* Separation Methods */
+.separation-tabs {
+    display: flex;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+}
+
+.sep-tab {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.sep-tab:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sep-tab.active {
+    background: #e67e22;
+    border-color: #e67e22;
+    color: white;
+}
+
+.sep-panel {
+    display: none;
+}
+
+.sep-panel.active {
+    display: block;
+}
+
+.sep-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.sep-info h3 {
+    color: #e67e22;
+}
+
+.sep-info ul {
+    list-style: disc;
+    padding-left: var(--space-lg);
+}
+
+.sep-info li {
+    padding: var(--space-xs) 0;
+}
+
+/* Filter Animation */
+.filter-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.filter-funnel {
+    width: 80px;
+    height: 100px;
+    position: relative;
+    border-left: 3px solid var(--text-secondary);
+    border-right: 3px solid var(--text-secondary);
+    border-bottom: 3px solid var(--text-secondary);
+    clip-path: polygon(0 0, 100% 0, 65% 100%, 35% 100%);
+}
+
+.filter-paper {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: var(--text-secondary);
+}
+
+.filter-beaker {
+    width: 60px;
+    height: 50px;
+    border: 3px solid var(--text-secondary);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+}
+
+.filter-liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: rgba(52, 152, 219, 0.5);
+    border-radius: 0 0 3px 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .phase-states {
+        flex-direction: column;
+    }
+
+    .phase-arrows {
+        transform: rotate(90deg);
+    }
+
+    .matter-branches {
+        flex-direction: column;
+    }
+
+    .game-options {
+        grid-template-columns: 1fr;
+    }
+}

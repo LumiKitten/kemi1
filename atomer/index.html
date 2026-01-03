@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atomens Byggnad | Kemi 1</title>
+    <meta name="description" content="Lär dig om atomer, protoner, neutroner, elektroner och elektronkonfiguration." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="atom-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="atom-accent">Atom</span>ens Byggnad
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#partiklar">Partiklar</a></li>
+                <li><a href="#atomnummer">Atomnummer</a></li>
+                <li><a href="#elektroner">Elektroner</a></li>
+                <li><a href="#kalkylator">Kalkylator</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    <span class="text-atom">Atomens</span> Byggnad
+                </h1>
+                <p>
+                    Utforska atomens fascinerande värld: partiklar, laddningar och elektronkonfiguration.
+                </p>
+                <div class="flex-center">
+                    <a href="#historia" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Section -->
+        <section id="historia">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Atommodellens utveckling</h2>
+                    <p>Från antiken till modern kvantfysik – hur vår förståelse av atomen har utvecklats.</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="timeline-year">~400 f.Kr.</span>
+                            <h3>Demokritos</h3>
+                            <p>Föreslog att materia består av odelbara partiklar – "atomos" (odelbar på grekiska).</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="timeline-year">1803</span>
+                            <h3>Dalton</h3>
+                            <p>Atomer som små, solida kulor. Varje grundämne har olikartade atomer.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="timeline-year">1897</span>
+                            <h3>Thomson</h3>
+                            <p>"Plommonpuddingmodellen" – elektroner inbäddade i en positiv massa.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="timeline-year">1911</span>
+                            <h3>Rutherford</h3>
+                            <p>Guldfolieexperimentet avslöjade en liten, massiv, positiv kärna.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content card">
+                            <span class="timeline-year">1913</span>
+                            <h3>Bohr</h3>
+                            <p>Elektroner i bestämda banor (skal) runt kärnan med fasta energinivåer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Idag:</strong> Vi använder en kvantmekanisk modell där elektroner finns i "elektronmoln" med
+                    sannolikhetsfördelningar. För Kemi 1 räcker Bohrs modell för grundläggande förståelse.
+                </div>
+            </div>
+        </section>
+
+        <!-- Particles Section -->
+        <section id="partiklar">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Elementarpartiklar</h2>
+                    <p>De tre grundläggande partiklar som bygger upp alla atomer.</p>
+                </div>
+
+                <div class="atom-visual">
+                    <div class="nucleus">
+                        <div class="proton" title="Proton">p⁺</div>
+                        <div class="neutron" title="Neutron">n</div>
+                        <div class="proton" title="Proton">p⁺</div>
+                        <div class="neutron" title="Neutron">n</div>
+                    </div>
+                    <div class="electron-orbit orbit-1">
+                        <div class="electron">e⁻</div>
+                    </div>
+                    <div class="electron-orbit orbit-2">
+                        <div class="electron">e⁻</div>
+                    </div>
+                </div>
+
+                <div class="grid-3 mt-xl">
+                    <div class="card card-proton">
+                        <h3>Proton (p⁺)</h3>
+                        <div class="particle-stats">
+                            <div class="stat">
+                                <span class="stat-label">Laddning</span>
+                                <span class="stat-value positive">+1</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Massa</span>
+                                <span class="stat-value">1 u</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Plats</span>
+                                <span class="stat-value">Kärnan</span>
+                            </div>
+                        </div>
+                        <p>Bestämmer vilket grundämne atomen tillhör.</p>
+                    </div>
+
+                    <div class="card card-neutron">
+                        <h3>Neutron (n)</h3>
+                        <div class="particle-stats">
+                            <div class="stat">
+                                <span class="stat-label">Laddning</span>
+                                <span class="stat-value neutral">0</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Massa</span>
+                                <span class="stat-value">1 u</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Plats</span>
+                                <span class="stat-value">Kärnan</span>
+                            </div>
+                        </div>
+                        <p>Stabiliserar kärnan. Olika antal ger isotoper.</p>
+                    </div>
+
+                    <div class="card card-electron">
+                        <h3>Elektron (e⁻)</h3>
+                        <div class="particle-stats">
+                            <div class="stat">
+                                <span class="stat-label">Laddning</span>
+                                <span class="stat-value negative">-1</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Massa</span>
+                                <span class="stat-value">≈0</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Plats</span>
+                                <span class="stat-value">Skal</span>
+                            </div>
+                        </div>
+                        <p>Bestämmer kemiska egenskaper och bindningar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atomic Number Section -->
+        <section id="atomnummer">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Atomnummer, masstal och isotoper</h2>
+                    <p>Hur vi identifierar och beskriver atomer.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-atom">
+                        <h3>Atomnummer (Z)</h3>
+                        <div class="formula-block">Z = antal protoner</div>
+                        <p>Atomnumret bestämmer vilket grundämne atomen tillhör. Alla kolatomer har Z = 6.</p>
+                        <ul class="info-list">
+                            <li>I en neutral atom: antal protoner = antal elektroner</li>
+                            <li>Avgör ämnets plats i periodiska systemet</li>
+                        </ul>
+                    </div>
+
+                    <div class="card card-atom">
+                        <h3>Masstal (A)</h3>
+                        <div class="formula-block">A = protoner + neutroner</div>
+                        <p>Masstalet anger den totala massan i kärnan (kärnpartiklar).</p>
+                        <ul class="info-list">
+                            <li>Neutroner = A - Z</li>
+                            <li>Anges ofta som upphöjd siffra före symbolen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="isotope-display mt-xl">
+                    <h3>Isotopnotation</h3>
+                    <div class="isotope-example">
+                        <span class="isotope-mass">12</span>
+                        <span class="isotope-symbol">C</span>
+                        <span class="isotope-number">6</span>
+                    </div>
+                    <p class="isotope-explanation">
+                        <span class="formula">¹²₆C</span> = Kol-12 med 6 protoner och 6 neutroner
+                    </p>
+                </div>
+
+                <h3 class="mt-2xl">Isotoper</h3>
+                <p>Atomer av samma grundämne med olika antal neutroner.</p>
+
+                <div class="isotope-comparison">
+                    <div class="isotope-card">
+                        <div class="isotope-nucleus nucleus-c12">
+                            <span>¹²C</span>
+                        </div>
+                        <h4>Kol-12</h4>
+                        <ul>
+                            <li>6 protoner</li>
+                            <li>6 neutroner</li>
+                            <li>Stabil, vanligast</li>
+                        </ul>
+                    </div>
+                    <div class="isotope-card">
+                        <div class="isotope-nucleus nucleus-c13">
+                            <span>¹³C</span>
+                        </div>
+                        <h4>Kol-13</h4>
+                        <ul>
+                            <li>6 protoner</li>
+                            <li>7 neutroner</li>
+                            <li>Stabil, ovanlig</li>
+                        </ul>
+                    </div>
+                    <div class="isotope-card">
+                        <div class="isotope-nucleus nucleus-c14">
+                            <span>¹⁴C</span>
+                        </div>
+                        <h4>Kol-14</h4>
+                        <ul>
+                            <li>6 protoner</li>
+                            <li>8 neutroner</li>
+                            <li>Radioaktiv, koldatering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Electron Configuration Section -->
+        <section id="elektroner">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Elektronkonfiguration</h2>
+                    <p>Hur elektroner fördelas i skal runt kärnan.</p>
+                </div>
+
+                <div class="card card-neutral">
+                    <h3>Elektronskal</h3>
+                    <p>Elektroner befinner sig i energinivåer (skal) runt kärnan:</p>
+                    <div class="shell-table">
+                        <div class="shell-row">
+                            <span class="shell-name">K-skal (n=1)</span>
+                            <span class="shell-max">Max 2 elektroner</span>
+                        </div>
+                        <div class="shell-row">
+                            <span class="shell-name">L-skal (n=2)</span>
+                            <span class="shell-max">Max 8 elektroner</span>
+                        </div>
+                        <div class="shell-row">
+                            <span class="shell-name">M-skal (n=3)</span>
+                            <span class="shell-max">Max 18 elektroner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shell-visualizer mt-xl">
+                    <h3>Elektronkonfiguration för valda grundämnen</h3>
+                    <div class="element-selector">
+                        <button class="element-btn active" data-element="Na">Na</button>
+                        <button class="element-btn" data-element="Cl">Cl</button>
+                        <button class="element-btn" data-element="O">O</button>
+                        <button class="element-btn" data-element="C">C</button>
+                        <button class="element-btn" data-element="Ne">Ne</button>
+                    </div>
+
+                    <div class="shell-diagram" id="shellDiagram">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="config-info" id="configInfo">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h3>Valenselektroner</h3>
+                        <p>Elektroner i det <strong>yttersta skalet</strong> kallas valenselektroner.</p>
+                        <ul class="info-list">
+                            <li>Styr hur atomen reagerar kemiskt</li>
+                            <li>Atomer strävar efter fullt yttersta skal</li>
+                            <li>Bestämmer bindningsförmåga</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Ädelgasstruktur</h3>
+                        <p>Atomer strävar efter samma elektronkonfiguration som ädelgaserna.</p>
+                        <ul class="info-list">
+                            <li>Helium: 2 elektroner (fullt K-skal)</li>
+                            <li>Neon: 2, 8 (fullt L-skal)</li>
+                            <li>Argon: 2, 8, 8 (fullt M-skal)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="kalkylator">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Atomkalkylator</h2>
+                    <p>Beräkna antal partiklar i atomer och joner.</p>
+                </div>
+
+                <div class="calculator">
+                    <div class="calc-inputs">
+                        <div class="calc-field">
+                            <label for="atomNumber">Atomnummer (Z):</label>
+                            <input type="number" id="atomNumber" min="1" max="118" value="11" />
+                        </div>
+                        <div class="calc-field">
+                            <label for="massNumber">Masstal (A):</label>
+                            <input type="number" id="massNumber" min="1" max="300" value="23" />
+                        </div>
+                        <div class="calc-field">
+                            <label for="ionCharge">Jonladdning:</label>
+                            <select id="ionCharge">
+                                <option value="0">Neutral (0)</option>
+                                <option value="1">+1</option>
+                                <option value="2">+2</option>
+                                <option value="3">+3</option>
+                                <option value="-1">-1</option>
+                                <option value="-2">-2</option>
+                                <option value="-3">-3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" onclick="calculateParticles()">Beräkna</button>
+
+                    <div class="calc-results mt-lg" id="calcResults">
+                        <div class="result-box">
+                            <span class="result-label">Protoner</span>
+                            <span class="result-value" id="resultProtons">11</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-label">Neutroner</span>
+                            <span class="result-value" id="resultNeutrons">12</span>
+                        </div>
+                        <div class="result-box">
+                            <span class="result-label">Elektroner</span>
+                            <span class="result-value" id="resultElectrons">11</span>
+                        </div>
+                    </div>
+
+                    <div class="config-display mt-lg" id="configDisplay">
+                        <span class="config-label">Elektronkonfiguration:</span>
+                        <span class="config-value" id="configValue">2, 8, 1</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">Börja om</button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">Visa
+                            resultat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Atomens Byggnad | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="atom-script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termokemi | Kemi 1</title>
+    <meta name="description"
+        content="Lär dig om entalpi, exoterma och endoterma reaktioner, Hess lag och energidiagram." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="thermo-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="thermo-accent">Termo</span>kemi
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#energi">Energi</a></li>
+                <li><a href="#entalpi">Entalpi</a></li>
+                <li><a href="#reaktioner">Reaktioner</a></li>
+                <li><a href="#hess">Hess lag</a></li>
+                <li><a href="#kalkylator">Kalkylator</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    <span class="text-thermo">Termo</span>kemi
+                </h1>
+                <p>
+                    Energi i kemiska reaktioner – hur värme frigörs och absorberas.
+                </p>
+                <div class="flex-center">
+                    <a href="#energi" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Energy Section -->
+        <section id="energi">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Energi i kemiska reaktioner</h2>
+                    <p>Kemiska reaktioner innebär alltid energiomvandlingar.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-thermo">
+                        <h3>Vad ska du kunna?</h3>
+                        <ul class="energy-list">
+                            <li>Förstå begreppen entalpi och entalpiförändring</li>
+                            <li>Skilja på exoterma och endoterma reaktioner</li>
+                            <li>Tolka och rita energidiagram</li>
+                            <li>Använda Hess lag för beräkningar</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Viktiga begrepp</h3>
+                        <div class="concept-grid">
+                            <div class="concept-item">
+                                <span class="formula">System</span>
+                                <p>Det vi studerar (reaktionen)</p>
+                            </div>
+                            <div class="concept-item">
+                                <span class="formula">Omgivning</span>
+                                <p>Allt utanför systemet</p>
+                            </div>
+                            <div class="concept-item">
+                                <span class="formula">Q</span>
+                                <p>Värme som överförs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enthalpy Section -->
+        <section id="entalpi">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entalpi (H)</h2>
+                    <p>Entalpi är ett mått på den totala energin i ett system vid konstant tryck.</p>
+                </div>
+
+                <div class="enthalpy-display">
+                    <div class="formula-block large">ΔH = H<sub>produkter</sub> - H<sub>reaktanter</sub></div>
+                    <p class="formula-note">Entalpiförändring vid en reaktion</p>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-exo">
+                        <h3>Exoterm reaktion</h3>
+                        <div class="reaction-type">
+                            <span class="delta-h negative">ΔH &lt; 0</span>
+                        </div>
+                        <p>Systemet <strong>avger värme</strong> till omgivningen.</p>
+                        <ul class="example-list">
+                            <li>Förbränning</li>
+                            <li>Neutralisation</li>
+                            <li>Kondensation</li>
+                        </ul>
+                        <div class="temp-indicator hot">🔥 Omgivningen blir varmare</div>
+                    </div>
+
+                    <div class="card card-endo">
+                        <h3>Endoterm reaktion</h3>
+                        <div class="reaction-type">
+                            <span class="delta-h positive">ΔH &gt; 0</span>
+                        </div>
+                        <p>Systemet <strong>tar upp värme</strong> från omgivningen.</p>
+                        <ul class="example-list">
+                            <li>Fotosyntes</li>
+                            <li>Smältning av is</li>
+                            <li>Sönderdelning av vatten</li>
+                        </ul>
+                        <div class="temp-indicator cold">❄️ Omgivningen blir kallare</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reactions Section -->
+        <section id="reaktioner">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Energidiagram</h2>
+                    <p>Visuell representation av energiförändringar i en reaktion.</p>
+                </div>
+
+                <div class="diagram-toggle">
+                    <button class="diagram-btn active" data-type="exo">Exoterm</button>
+                    <button class="diagram-btn" data-type="endo">Endoterm</button>
+                </div>
+
+                <div class="energy-diagram" id="energyDiagram">
+                    <div class="diagram-container">
+                        <div class="y-axis">
+                            <span>Energi</span>
+                        </div>
+                        <div class="diagram-content">
+                            <div class="energy-level reactants" id="reactantsLevel">
+                                <span>Reaktanter</span>
+                            </div>
+                            <div class="activation-energy" id="activationEnergy">
+                                <span class="ea-label">E<sub>a</sub></span>
+                            </div>
+                            <div class="delta-h-arrow" id="deltaHArrow">
+                                <span id="deltaHLabel">ΔH &lt; 0</span>
+                            </div>
+                            <div class="energy-level products" id="productsLevel">
+                                <span>Produkter</span>
+                            </div>
+                        </div>
+                        <div class="x-axis">
+                            <span>Reaktionskoordinat</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Aktiveringsenergi (E<sub>a</sub>):</strong> Den minsta energi som krävs för att en reaktion
+                    ska starta. Katalysatorer sänker aktiveringsenergin.
+                </div>
+            </div>
+        </section>
+
+        <!-- Hess Law Section -->
+        <section id="hess">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Hess lag</h2>
+                    <p>Entalpiförändringen beror bara på start- och slutpunkt, inte på vägen dit.</p>
+                </div>
+
+                <div class="hess-principle">
+                    <div class="formula-block large">ΔH<sub>total</sub> = ΔH₁ + ΔH₂ + ΔH₃ + ...</div>
+                    <p>Summera delreaktionernas entalpier</p>
+                </div>
+
+                <div class="hess-diagram mt-xl">
+                    <h3>Exempel: Bildning av CO₂</h3>
+                    <div class="hess-paths">
+                        <div class="hess-direct">
+                            <div class="hess-start">C + O₂</div>
+                            <div class="hess-arrow direct">
+                                <span>Direkt väg</span>
+                                <span class="hess-dh">ΔH = -394 kJ</span>
+                            </div>
+                            <div class="hess-end">CO₂</div>
+                        </div>
+                        <div class="hess-indirect">
+                            <div class="hess-step step-1">
+                                <span>C + ½O₂ → CO</span>
+                                <span class="hess-dh">ΔH₁ = -111 kJ</span>
+                            </div>
+                            <div class="hess-step step-2">
+                                <span>CO + ½O₂ → CO₂</span>
+                                <span class="hess-dh">ΔH₂ = -283 kJ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hess-result">
+                        <span class="formula">ΔH₁ + ΔH₂ = -111 + (-283) = -394 kJ = ΔH</span>
+                    </div>
+                </div>
+
+                <div class="card card-thermo mt-xl">
+                    <h3>Standardbildningsentalpi (ΔH°<sub>f</sub>)</h3>
+                    <p>Entalpiförändringen när 1 mol av ett ämne bildas från sina grundämnen i standardform.</p>
+                    <div class="formula-block">ΔH°<sub>reaktion</sub> = ΣΔH°<sub>f</sub>(produkter) -
+                        ΣΔH°<sub>f</sub>(reaktanter)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="kalkylator">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Entalpi-kalkylator</h2>
+                    <p>Beräkna entalpiförändringar med Hess lag.</p>
+                </div>
+
+                <div class="calculator">
+                    <h3>Beräkna reaktionsentalpi</h3>
+                    <div class="enthalpy-inputs">
+                        <div class="calc-section">
+                            <h4>Produkter (ΣΔH°<sub>f</sub>)</h4>
+                            <div class="enthalpy-row">
+                                <input type="number" id="prod1" placeholder="ΔH°f (kJ/mol)" />
+                                <span>×</span>
+                                <input type="number" id="prod1n" placeholder="mol" value="1" />
+                            </div>
+                            <div class="enthalpy-row">
+                                <input type="number" id="prod2" placeholder="ΔH°f (kJ/mol)" />
+                                <span>×</span>
+                                <input type="number" id="prod2n" placeholder="mol" value="1" />
+                            </div>
+                        </div>
+
+                        <div class="calc-divider">−</div>
+
+                        <div class="calc-section">
+                            <h4>Reaktanter (ΣΔH°<sub>f</sub>)</h4>
+                            <div class="enthalpy-row">
+                                <input type="number" id="react1" placeholder="ΔH°f (kJ/mol)" />
+                                <span>×</span>
+                                <input type="number" id="react1n" placeholder="mol" value="1" />
+                            </div>
+                            <div class="enthalpy-row">
+                                <input type="number" id="react2" placeholder="ΔH°f (kJ/mol)" />
+                                <span>×</span>
+                                <input type="number" id="react2n" placeholder="mol" value="1" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" onclick="calculateEnthalpy()">Beräkna ΔH°</button>
+
+                    <div class="calc-result mt-lg" id="enthalpyResult">
+                        <span class="result-label">ΔH° reaktion:</span>
+                        <span class="result-value">- kJ</span>
+                    </div>
+                    <div class="result-interpretation" id="resultInterp"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions"></div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">Börja om</button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">Visa
+                            resultat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Termokemi | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="thermo-script.js"></script>
+</body>
+
+</html>

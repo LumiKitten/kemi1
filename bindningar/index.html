@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kemisk Bindning | Kemi 1</title>
+    <meta name="description"
+        content="Lär dig om jonbindning, kovalent bindning, metallbindning och intermolekylära krafter." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="binding-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="binding-accent">Kemisk</span> Bindning
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#varfor">Varför?</a></li>
+                <li><a href="#jonbindning">Jonbindning</a></li>
+                <li><a href="#kovalent">Kovalent</a></li>
+                <li><a href="#metallbindning">Metall</a></li>
+                <li><a href="#intermolekylara">Intermolekylära</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    <span class="text-binding">Kemisk</span> Bindning
+                </h1>
+                <p>
+                    Hur atomer hålls samman – från starka bindningar till svaga intermolekylära krafter.
+                </p>
+                <div class="flex-center">
+                    <a href="#varfor" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Bonds Section -->
+        <section id="varfor">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Varför bildas bindningar?</h2>
+                    <p>Atomer strävar efter stabil elektronkonfiguration – oftast samma som ädelgaserna.</p>
+                </div>
+
+                <div class="octet-rule">
+                    <div class="formula-block">Oktettregeln: Atomer strävar efter 8 elektroner i yttersta skalet</div>
+                </div>
+
+                <div class="grid-3 mt-xl">
+                    <div class="card card-binding">
+                        <h3>Avge elektroner</h3>
+                        <div class="electron-transfer">
+                            <span class="atom-mini">Na</span>
+                            <span class="arrow">→</span>
+                            <span class="atom-mini positive">Na⁺</span>
+                            <span class="electron-mini">e⁻</span>
+                        </div>
+                        <p>Metaller avger elektroner för att få fullt skal.</p>
+                    </div>
+
+                    <div class="card card-binding">
+                        <h3>Ta upp elektroner</h3>
+                        <div class="electron-transfer">
+                            <span class="atom-mini">Cl</span>
+                            <span class="plus">+</span>
+                            <span class="electron-mini">e⁻</span>
+                            <span class="arrow">→</span>
+                            <span class="atom-mini negative">Cl⁻</span>
+                        </div>
+                        <p>Icke-metaller tar upp elektroner för att fylla skalet.</p>
+                    </div>
+
+                    <div class="card card-binding">
+                        <h3>Dela elektroner</h3>
+                        <div class="electron-transfer">
+                            <span class="atom-mini">H</span>
+                            <span class="shared-pair">:</span>
+                            <span class="atom-mini">H</span>
+                        </div>
+                        <p>Icke-metaller kan dela elektronpar sinsemellan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ionic Bonding Section -->
+        <section id="jonbindning">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Jonbindning</h2>
+                    <p>Bildas mellan metall och icke-metall genom elektronöverföring.</p>
+                </div>
+
+                <div class="bond-animation ionic-animation">
+                    <div class="bond-reactants">
+                        <div class="bond-atom metal">
+                            <span>Na</span>
+                            <div class="valence-electrons">
+                                <span class="ve">•</span>
+                            </div>
+                        </div>
+                        <span class="bond-plus">+</span>
+                        <div class="bond-atom nonmetal">
+                            <span>Cl</span>
+                            <div class="valence-electrons">
+                                <span class="ve">•</span><span class="ve">•</span><span class="ve">•</span>
+                                <span class="ve">•</span><span class="ve">•</span><span class="ve">•</span>
+                                <span class="ve">•</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="bond-arrow">→</span>
+                    <div class="bond-products">
+                        <div class="ion cation">Na⁺</div>
+                        <div class="ion anion">Cl⁻</div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h3>Hur det fungerar</h3>
+                        <ol class="step-list">
+                            <li>Metallen avger elektroner → blir positiv jon (katjon)</li>
+                            <li>Icke-metallen tar emot elektroner → blir negativ jon (anjon)</li>
+                            <li>Jonerna attraheras elektrostatiskt</li>
+                            <li>Bildar ett kristallgitter</li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3>Egenskaper hos jonföreningar</h3>
+                        <ul class="property-list">
+                            <li><span class="prop-icon">🔥</span> Höga smält- och kokpunkter</li>
+                            <li><span class="prop-icon">💎</span> Spröda kristaller</li>
+                            <li><span class="prop-icon">⚡</span> Leder ström i smälta/lösning</li>
+                            <li><span class="prop-icon">❌</span> Leder ej ström som fast</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="example-box mt-xl">
+                    <h4>Exempel: Natriumklorid (NaCl)</h4>
+                    <div class="formula-block">Na + Cl → Na⁺ + Cl⁻ → NaCl</div>
+                    <p>Koksalt – används i mat, vattenrening och kemisk industri.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Covalent Bonding Section -->
+        <section id="kovalent">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kovalent bindning</h2>
+                    <p>Bildas mellan icke-metaller genom att dela elektronpar.</p>
+                </div>
+
+                <div class="covalent-examples">
+                    <div class="covalent-molecule">
+                        <h4>Vätgas (H₂)</h4>
+                        <div class="molecule-visual">
+                            <div class="cov-atom">H</div>
+                            <div class="shared-electrons">••</div>
+                            <div class="cov-atom">H</div>
+                        </div>
+                        <p>Enkelbindning – 1 delat elektronpar</p>
+                    </div>
+
+                    <div class="covalent-molecule">
+                        <h4>Syrgas (O₂)</h4>
+                        <div class="molecule-visual">
+                            <div class="cov-atom">O</div>
+                            <div class="shared-electrons double">••••</div>
+                            <div class="cov-atom">O</div>
+                        </div>
+                        <p>Dubbelbindning – 2 delade elektronpar</p>
+                    </div>
+
+                    <div class="covalent-molecule">
+                        <h4>Kvävgas (N₂)</h4>
+                        <div class="molecule-visual">
+                            <div class="cov-atom">N</div>
+                            <div class="shared-electrons triple">••••••</div>
+                            <div class="cov-atom">N</div>
+                        </div>
+                        <p>Trippelbindning – 3 delade elektronpar</p>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-polar">
+                        <h3>Polär kovalent bindning</h3>
+                        <p>Om atomerna har olika elektronegativitet dras elektronerna mer mot en sida.</p>
+                        <div class="polar-visual">
+                            <span class="delta">δ⁺</span>
+                            <div class="polar-bond">
+                                <span>H</span>
+                                <span>—</span>
+                                <span>Cl</span>
+                            </div>
+                            <span class="delta negative">δ⁻</span>
+                        </div>
+                        <p>Ger en laddningsförskjutning (dipol).</p>
+                    </div>
+
+                    <div class="card card-dipole">
+                        <h3>Molekylär dipol</h3>
+                        <p>En molekyl blir dipol om:</p>
+                        <ul>
+                            <li>Den har polära bindningar</li>
+                            <li>Formen gör att laddningen inte tar ut sig</li>
+                        </ul>
+                        <div class="dipole-examples">
+                            <div class="dipole-ex">
+                                <span class="formula">H₂O</span>
+                                <span class="dipole-label">Böjd → Dipol</span>
+                            </div>
+                            <div class="dipole-ex">
+                                <span class="formula">CO₂</span>
+                                <span class="dipole-label">Linjär → Ingen dipol</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Metallic Bonding Section -->
+        <section id="metallbindning">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Metallbindning</h2>
+                    <p>Hur metallatomer hålls samman i ett "elektronhav".</p>
+                </div>
+
+                <div class="metallic-visual">
+                    <div class="metal-lattice">
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                        <div class="metal-ion">+</div>
+                    </div>
+                    <div class="electron-sea">
+                        <span class="sea-electron">e⁻</span>
+                        <span class="sea-electron">e⁻</span>
+                        <span class="sea-electron">e⁻</span>
+                        <span class="sea-electron">e⁻</span>
+                        <span class="sea-electron">e⁻</span>
+                    </div>
+                </div>
+
+                <div class="card card-metal mt-xl">
+                    <h3>Egenskaper</h3>
+                    <div class="metal-properties">
+                        <div class="metal-prop">
+                            <span class="prop-icon">⚡</span>
+                            <div>
+                                <strong>Elektrisk ledning</strong>
+                                <p>Elektroner rör sig fritt</p>
+                            </div>
+                        </div>
+                        <div class="metal-prop">
+                            <span class="prop-icon">🌡️</span>
+                            <div>
+                                <strong>Värmeledning</strong>
+                                <p>Energi sprids via elektronerna</p>
+                            </div>
+                        </div>
+                        <div class="metal-prop">
+                            <span class="prop-icon">🔨</span>
+                            <div>
+                                <strong>Formbarhet</strong>
+                                <p>Jonerna kan glida utan att brytas</p>
+                            </div>
+                        </div>
+                        <div class="metal-prop">
+                            <span class="prop-icon">✨</span>
+                            <div>
+                                <strong>Metallglans</strong>
+                                <p>Elektronerna reflekterar ljus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intermolecular Forces Section -->
+        <section id="intermolekylara">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Intermolekylära krafter</h2>
+                    <p>Svagare krafter mellan molekyler som påverkar fysikaliska egenskaper.</p>
+                </div>
+
+                <div class="force-comparison">
+                    <div class="force-card london">
+                        <div class="force-header">
+                            <h3>Londonkrafter</h3>
+                            <span class="force-strength">Svagast</span>
+                        </div>
+                        <div class="force-content">
+                            <p>Tillfälliga dipoler i alla ämnen.</p>
+                            <ul>
+                                <li>Finns i alla molekyler</li>
+                                <li>Ökar med molekylstorlek</li>
+                                <li>Viktig för opolära ämnen</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="force-card dipole">
+                        <div class="force-header">
+                            <h3>Dipol-dipol</h3>
+                            <span class="force-strength">Medium</span>
+                        </div>
+                        <div class="force-content">
+                            <p>Mellan permanenta dipoler.</p>
+                            <ul>
+                                <li>Polära molekyler attraheras</li>
+                                <li>Starkare än London</li>
+                                <li>Påverkar kokpunkt</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="force-card hydrogen">
+                        <div class="force-header">
+                            <h3>Vätebindning</h3>
+                            <span class="force-strength">Starkast</span>
+                        </div>
+                        <div class="force-content">
+                            <p>H bundet till N, O eller F.</p>
+                            <ul>
+                                <li>Extra stark dipol-dipol</li>
+                                <li>Förklarar vattnets höga kokpunkt</li>
+                                <li>Viktigt i biologi (DNA)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Kom ihåg:</strong> Intermolekylära krafter är MELLAN molekyler. Kovalenta bindningar är INOM
+                    molekyler och mycket starkare.
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions"></div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">Börja om</button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">Visa
+                            resultat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Kemisk Bindning | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="binding-script.js"></script>
+</body>
+
+</html>

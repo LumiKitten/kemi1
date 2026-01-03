@@ -1,0 +1,480 @@
+/* Thermo Topic Specific Styles */
+
+.thermo-accent {
+    color: #e74c3c;
+}
+
+.text-thermo {
+    color: #e74c3c;
+}
+
+.card-thermo {
+    border-left: 3px solid #e74c3c;
+}
+
+.card-exo {
+    border-left: 3px solid #e74c3c;
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.08), transparent);
+}
+
+.card-endo {
+    border-left: 3px solid #3498db;
+    background: linear-gradient(135deg, rgba(52, 152, 219, 0.08), transparent);
+}
+
+/* Energy List */
+.energy-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0;
+}
+
+.energy-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.energy-list li::before {
+    content: '⚡';
+    position: absolute;
+    left: 0;
+}
+
+/* Concept Grid */
+.concept-grid {
+    display: grid;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.concept-item {
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.concept-item p {
+    margin: var(--space-xs) 0 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* Enthalpy Display */
+.enthalpy-display {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-2xl);
+    text-align: center;
+}
+
+.formula-note {
+    margin-top: var(--space-md);
+    color: var(--text-secondary);
+}
+
+/* Reaction Type */
+.reaction-type {
+    text-align: center;
+    margin: var(--space-lg) 0;
+}
+
+.delta-h {
+    display: inline-block;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-sm);
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.delta-h.negative {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+}
+
+.delta-h.positive {
+    background: rgba(52, 152, 219, 0.2);
+    color: #3498db;
+}
+
+/* Example List */
+.example-list {
+    list-style: disc;
+    padding-left: var(--space-lg);
+    margin: var(--space-md) 0;
+}
+
+.example-list li {
+    padding: var(--space-xs) 0;
+    color: var(--text-secondary);
+}
+
+/* Temp Indicator */
+.temp-indicator {
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    margin-top: var(--space-lg);
+}
+
+.temp-indicator.hot {
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.temp-indicator.cold {
+    background: rgba(52, 152, 219, 0.1);
+}
+
+/* Diagram Toggle */
+.diagram-toggle {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.diagram-btn {
+    padding: var(--space-md) var(--space-xl);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.diagram-btn:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.diagram-btn.active {
+    background: #e74c3c;
+    border-color: #e74c3c;
+    color: white;
+}
+
+.diagram-btn[data-type="endo"].active {
+    background: #3498db;
+    border-color: #3498db;
+}
+
+/* Energy Diagram */
+.energy-diagram {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.diagram-container {
+    position: relative;
+    height: 300px;
+    display: flex;
+}
+
+.y-axis {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    padding-right: var(--space-md);
+    color: var(--text-secondary);
+}
+
+.diagram-content {
+    flex: 1;
+    position: relative;
+    border-left: 2px solid var(--text-muted);
+    border-bottom: 2px solid var(--text-muted);
+}
+
+.energy-level {
+    position: absolute;
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+}
+
+.energy-level.reactants {
+    top: 30%;
+    left: 10%;
+    border-left: 3px solid #e74c3c;
+}
+
+.energy-level.products {
+    bottom: 20%;
+    right: 10%;
+    border-left: 3px solid #27ae60;
+}
+
+.energy-level.products.endo {
+    top: 15%;
+    bottom: auto;
+}
+
+.activation-energy {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border: 2px dashed var(--text-muted);
+    border-radius: 50% 50% 0 0;
+    border-bottom: none;
+}
+
+.ea-label {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.delta-h-arrow {
+    position: absolute;
+    right: 30%;
+    top: 35%;
+    height: 35%;
+    width: 2px;
+    background: #e74c3c;
+}
+
+.delta-h-arrow::before,
+.delta-h-arrow::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #e74c3c;
+}
+
+.delta-h-arrow::before {
+    top: 0;
+    left: -4px;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+
+.delta-h-arrow::after {
+    bottom: 0;
+    left: -4px;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+}
+
+.delta-h-arrow span {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    font-size: 0.85rem;
+    font-family: 'JetBrains Mono', monospace;
+    color: #e74c3c;
+}
+
+.x-axis {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+/* Hess Principle */
+.hess-principle {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-2xl);
+    text-align: center;
+}
+
+.hess-principle p {
+    margin-top: var(--space-md);
+    color: var(--text-secondary);
+}
+
+/* Hess Diagram */
+.hess-diagram {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.hess-paths {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+.hess-direct {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+}
+
+.hess-start,
+.hess-end {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.hess-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+}
+
+.hess-arrow.direct {
+    color: #27ae60;
+}
+
+.hess-dh {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    margin-top: var(--space-xs);
+}
+
+.hess-indirect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.hess-step {
+    display: flex;
+    gap: var(--space-lg);
+    font-size: 0.9rem;
+}
+
+.hess-result {
+    text-align: center;
+    padding: var(--space-lg);
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: var(--radius-sm);
+}
+
+/* Calculator */
+.enthalpy-inputs {
+    display: flex;
+    gap: var(--space-xl);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.calc-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.calc-section h4 {
+    margin-bottom: var(--space-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.enthalpy-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.enthalpy-row input {
+    flex: 1;
+    padding: var(--space-sm);
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.enthalpy-row input:first-child {
+    flex: 2;
+}
+
+.calc-divider {
+    font-size: 2rem;
+    color: var(--text-muted);
+    padding: var(--space-xl) 0;
+}
+
+.calc-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.result-label {
+    color: var(--text-secondary);
+}
+
+.result-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: #e74c3c;
+}
+
+.result-interpretation {
+    text-align: center;
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+}
+
+.result-interpretation.exo {
+    background: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.result-interpretation.endo {
+    background: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .diagram-container {
+        height: 250px;
+    }
+
+    .enthalpy-inputs {
+        flex-direction: column;
+    }
+
+    .calc-divider {
+        transform: rotate(90deg);
+        padding: var(--space-md);
+    }
+
+    .hess-direct {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,532 @@
+/* Atom Topic Specific Styles */
+
+.atom-accent {
+    color: #9b59b6;
+}
+
+.text-atom {
+    color: #9b59b6;
+}
+
+.card-atom {
+    border-left: 3px solid #9b59b6;
+}
+
+.card-proton {
+    border-left: 3px solid var(--acid-primary);
+}
+
+.card-neutron {
+    border-left: 3px solid #95a5a6;
+}
+
+.card-electron {
+    border-left: 3px solid var(--base-primary);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, #9b59b6, var(--base-primary));
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--space-xl);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -24px;
+    top: var(--space-lg);
+    width: 12px;
+    height: 12px;
+    background: #9b59b6;
+    border-radius: 50%;
+    border: 2px solid var(--bg-primary);
+}
+
+.timeline-content {
+    margin-left: var(--space-lg);
+}
+
+.timeline-year {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    background: rgba(155, 89, 182, 0.2);
+    color: #9b59b6;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+}
+
+/* Atom Visualization */
+.atom-visual {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: var(--space-2xl) auto;
+}
+
+.nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.proton,
+.neutron {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: white;
+}
+
+.proton {
+    background: var(--acid-primary);
+    box-shadow: 0 0 10px var(--acid-glow);
+}
+
+.neutron {
+    background: #7f8c8d;
+}
+
+.electron-orbit {
+    position: absolute;
+    border: 1px dashed rgba(52, 152, 219, 0.3);
+    border-radius: 50%;
+}
+
+.orbit-1 {
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 2s linear infinite;
+}
+
+.orbit-2 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit 4s linear infinite reverse;
+}
+
+.electron {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: var(--base-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.5rem;
+    color: white;
+    box-shadow: 0 0 10px var(--base-glow);
+}
+
+@keyframes orbit {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Particle Stats */
+.particle-stats {
+    display: flex;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.stat-value {
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-value.positive {
+    color: var(--acid-primary);
+}
+
+.stat-value.negative {
+    color: var(--base-primary);
+}
+
+.stat-value.neutral {
+    color: #95a5a6;
+}
+
+/* Isotope Display */
+.isotope-display {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.isotope-example {
+    display: inline-flex;
+    position: relative;
+    font-size: 4rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin: var(--space-lg) 0;
+}
+
+.isotope-symbol {
+    color: #9b59b6;
+}
+
+.isotope-mass {
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    font-size: 1.5rem;
+    color: var(--acid-primary);
+}
+
+.isotope-number {
+    position: absolute;
+    bottom: 0.5rem;
+    left: -1.5rem;
+    font-size: 1.5rem;
+    color: var(--base-primary);
+}
+
+.isotope-explanation {
+    color: var(--text-secondary);
+}
+
+/* Isotope Comparison */
+.isotope-comparison {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.isotope-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.isotope-nucleus {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-md);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nucleus-c12 {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.nucleus-c13 {
+    background: linear-gradient(135deg, #8e44ad, #7d3c98);
+}
+
+.nucleus-c14 {
+    background: linear-gradient(135deg, #7d3c98, #6c3483);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 10px rgba(155, 89, 182, 0);
+    }
+}
+
+.isotope-card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+    text-align: left;
+}
+
+.isotope-card li {
+    padding: var(--space-xs) 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* Shell Table */
+.shell-table {
+    margin-top: var(--space-lg);
+}
+
+.shell-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.shell-name {
+    font-weight: 600;
+    color: #9b59b6;
+}
+
+.shell-max {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Shell Visualizer */
+.shell-visualizer {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.element-selector {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: var(--space-xl);
+}
+
+.element-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.element-btn:hover {
+    border-color: #9b59b6;
+}
+
+.element-btn.active {
+    background: #9b59b6;
+    border-color: #9b59b6;
+}
+
+.shell-diagram {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.shell-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shell-circle {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #9b59b6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #9b59b6;
+    margin-bottom: var(--space-sm);
+}
+
+.shell-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.config-info {
+    text-align: center;
+}
+
+.config-notation {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    color: #9b59b6;
+    margin-bottom: var(--space-md);
+}
+
+.valence-info {
+    color: var(--text-secondary);
+}
+
+/* Info List */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: var(--space-md);
+}
+
+.info-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.info-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #9b59b6;
+}
+
+/* Calculator */
+.calc-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.calc-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.calc-field label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.calc-field input,
+.calc-field select {
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1rem;
+}
+
+.calc-results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.result-box {
+    background: var(--bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.result-value {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: #9b59b6;
+}
+
+.config-display {
+    background: var(--bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.config-label {
+    color: var(--text-secondary);
+    margin-right: var(--space-md);
+}
+
+.config-value {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    color: #9b59b6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .atom-visual {
+        transform: scale(0.8);
+    }
+
+    .calc-results {
+        grid-template-columns: 1fr;
+    }
+
+    .isotope-example {
+        font-size: 3rem;
+    }
+}

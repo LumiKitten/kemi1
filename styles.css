@@ -229,7 +229,6 @@ nav {
 /* Sections */
 section {
   padding: var(--space-2xl) 0;
-  min-height: 100vh;
 }
 
 section:nth-child(even) {
@@ -991,6 +990,62 @@ sup {
 
 .topic-card-redox:hover {
   border-left-color: #4ecdc4;
+}
+
+.topic-card-intro {
+  border-left-color: #e67e22;
+}
+
+.topic-card-intro:hover {
+  border-left-color: #f39c12;
+}
+
+.topic-card-atom {
+  border-left-color: #9b59b6;
+}
+
+.topic-card-atom:hover {
+  border-left-color: #8e44ad;
+}
+
+.topic-card-periodic {
+  border-left-color: #1abc9c;
+}
+
+.topic-card-periodic:hover {
+  border-left-color: #16a085;
+}
+
+.topic-card-binding {
+  border-left-color: #e74c3c;
+}
+
+.topic-card-binding:hover {
+  border-left-color: #c0392b;
+}
+
+.topic-card-mol {
+  border-left-color: #27ae60;
+}
+
+.topic-card-mol:hover {
+  border-left-color: #2ecc71;
+}
+
+.topic-card-thermo {
+  border-left-color: #e74c3c;
+}
+
+.topic-card-thermo:hover {
+  border-left-color: #f39c12;
+}
+
+.topic-card-organic {
+  border-left-color: #2ecc71;
+}
+
+.topic-card-organic:hover {
+  border-left-color: #27ae60;
 }
 
 .topic-icon {

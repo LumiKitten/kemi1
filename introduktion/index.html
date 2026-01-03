@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduktion till Kemi | Kemi 1</title>
+    <meta name="description"
+        content="Lär dig grunderna i kemi: materia, aggregationsformer, separationsmetoder och laborationssäkerhet." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="intro-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="intro-accent">Intro</span>duktion
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#vad-ar-kemi">Vad är kemi?</a></li>
+                <li><a href="#sakerhet">Säkerhet</a></li>
+                <li><a href="#materia">Materia</a></li>
+                <li><a href="#aggregation">Faser</a></li>
+                <li><a href="#separation">Separation</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    <span class="text-intro">Introduktion</span> till Kemi
+                </h1>
+                <p>
+                    Utforska kemins grunder: vad ämnen är, hur de beter sig och hur man arbetar säkert i laboratoriet.
+                </p>
+                <div class="flex-center">
+                    <a href="#vad-ar-kemi" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- What is Chemistry Section -->
+        <section id="vad-ar-kemi">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Vad är kemi?</h2>
+                    <p>
+                        Kemi är vetenskapen om ämnen – hur de är uppbyggda, hur de reagerar och hur de används.
+                    </p>
+                </div>
+
+                <div class="card card-intro">
+                    <h3>Kemi i vardagen</h3>
+                    <p>Kemiska processer finns överallt omkring oss:</p>
+                    <div class="examples-grid">
+                        <div class="example-item">
+                            <span class="example-icon">🔥</span>
+                            <div>
+                                <strong>Förbränning</strong>
+                                <p>I bilmotorer, stearinljus och kaminer</p>
+                            </div>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-icon">🦠</span>
+                            <div>
+                                <strong>Korrosion</strong>
+                                <p>Rost på metaller, oxidering</p>
+                            </div>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-icon">🍽️</span>
+                            <div>
+                                <strong>Metabolism</strong>
+                                <p>Nedbrytning av mat i kroppen</p>
+                            </div>
+                        </div>
+                        <div class="example-item">
+                            <span class="example-icon">💊</span>
+                            <div>
+                                <strong>Tillverkning</strong>
+                                <p>Plast, läkemedel, batterier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Mål:</strong> Du ska kunna ge exempel på kemiska processer och förklara varför kemi är
+                    viktigt för
+                    samhälle och miljö.
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Section -->
+        <section id="sakerhet">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Laborationssäkerhet</h2>
+                    <p>Att arbeta säkert i laboratoriet är avgörande för din och andras hälsa.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-warning">
+                        <h3>Grundläggande regler</h3>
+                        <ul class="safety-list">
+                            <li>🥽 Använd alltid skyddsglasögon och labbrock</li>
+                            <li>👩‍🔬 Ha långt hår uppsatt</li>
+                            <li>🚫 Drick eller ät aldrig i labbet</li>
+                            <li>🚫 Smaka aldrig på kemikalier</li>
+                            <li>👃 Luktprov: vifta försiktigt luft mot näsan</li>
+                            <li>⚠️ Rapportera spill och skador direkt</li>
+                        </ul>
+                    </div>
+
+                    <div class="card card-intro">
+                        <h3>Vanlig utrustning</h3>
+                        <ul class="equipment-list">
+                            <li><span class="formula">Bägare</span> – för att hälla och blanda</li>
+                            <li><span class="formula">E-kolv</span> – rundkolv för uppvärmning</li>
+                            <li><span class="formula">Provrör</span> – för små reaktioner</li>
+                            <li><span class="formula">Pipett</span> – för exakta volymer</li>
+                            <li><span class="formula">Mätcylinder</span> – för volymätning</li>
+                            <li><span class="formula">Byrett</span> – för titrering</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Faropiktogram</h3>
+                <p class="mb-lg">Känna igen dessa symboler är viktigt för att arbeta säkert:</p>
+
+                <div class="pictogram-grid" id="pictogramGrid">
+                    <!-- Populated by JS -->
+                </div>
+
+                <div class="pictogram-game mt-xl">
+                    <h4>Testa dig själv: Matcha piktogrammen!</h4>
+                    <div class="game-container">
+                        <div class="game-question" id="gameQuestion">
+                            <span class="game-symbol" id="gameSymbol">🔥</span>
+                            <p id="gamePrompt">Vad betyder denna symbol?</p>
+                        </div>
+                        <div class="game-options" id="gameOptions">
+                            <!-- Populated by JS -->
+                        </div>
+                        <div class="game-feedback" id="gameFeedback"></div>
+                        <button class="btn btn-secondary mt-lg" id="nextPictogramBtn" onclick="nextPictogram()">Nästa
+                            symbol</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Matter Section -->
+        <section id="materia">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Materia, rena ämnen och blandningar</h2>
+                    <p>Allt som har massa och tar plats kallas materia.</p>
+                </div>
+
+                <div class="matter-diagram">
+                    <div class="matter-tree">
+                        <div class="matter-node matter-root">Materia</div>
+                        <div class="matter-branches">
+                            <div class="matter-branch">
+                                <div class="matter-node matter-pure">Rent ämne</div>
+                                <div class="matter-sub-branches">
+                                    <div class="matter-leaf">
+                                        <strong>Grundämne</strong>
+                                        <p>En sorts atom</p>
+                                        <span class="formula">O₂, Fe, Au</span>
+                                    </div>
+                                    <div class="matter-leaf">
+                                        <strong>Kemisk förening</strong>
+                                        <p>Olika atomslag bundna</p>
+                                        <span class="formula">H₂O, CO₂, NaCl</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="matter-branch">
+                                <div class="matter-node matter-mix">Blandning</div>
+                                <div class="matter-sub-branches">
+                                    <div class="matter-leaf">
+                                        <strong>Homogen</strong>
+                                        <p>Ser likadan ut överallt</p>
+                                        <span class="formula">Saltvatten, luft</span>
+                                    </div>
+                                    <div class="matter-leaf">
+                                        <strong>Heterogen</strong>
+                                        <p>Synliga olika delar</p>
+                                        <span class="formula">Sand + vatten</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h3>Homogena blandningar</h3>
+                        <p>Ser helt likadana ut – man kan inte se beståndsdelarna med blotta ögat.</p>
+                        <ul class="examples-list">
+                            <li>
+                                <span class="ph-badge badge-solution">Lösning</span>
+                                <span>Saltvatten</span>
+                            </li>
+                            <li>
+                                <span class="ph-badge badge-solution">Lösning</span>
+                                <span>Sockerlösning</span>
+                            </li>
+                            <li>
+                                <span class="ph-badge badge-gas">Gas</span>
+                                <span>Luft</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Heterogena blandningar</h3>
+                        <p>Man kan se olika faser eller delar i blandningen.</p>
+                        <ul class="examples-list">
+                            <li>
+                                <span class="ph-badge badge-mixed">Fast+Vätska</span>
+                                <span>Sand i vatten</span>
+                            </li>
+                            <li>
+                                <span class="ph-badge badge-mixed">Fast</span>
+                                <span>Granit</span>
+                            </li>
+                            <li>
+                                <span class="ph-badge badge-mixed">Vätska</span>
+                                <span>Olja + vatten</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase Transitions Section -->
+        <section id="aggregation">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Aggregationsformer och fasövergångar</h2>
+                    <p>Ämnen kan finnas som fast, flytande eller gas beroende på temperatur och tryck.</p>
+                </div>
+
+                <div class="phase-diagram">
+                    <div class="phase-states">
+                        <div class="phase-state phase-solid">
+                            <div class="phase-particles" id="solidParticles">
+                                <!-- Animated particles -->
+                            </div>
+                            <h4>Fast (s)</h4>
+                            <p>Partiklar i fasta positioner</p>
+                        </div>
+                        <div class="phase-arrows">
+                            <div class="phase-arrow">
+                                <span class="arrow-label">Smältning →</span>
+                                <span class="arrow-label reverse">← Stelning</span>
+                            </div>
+                        </div>
+                        <div class="phase-state phase-liquid">
+                            <div class="phase-particles" id="liquidParticles">
+                                <!-- Animated particles -->
+                            </div>
+                            <h4>Flytande (l)</h4>
+                            <p>Partiklar rör sig fritt</p>
+                        </div>
+                        <div class="phase-arrows">
+                            <div class="phase-arrow">
+                                <span class="arrow-label">Förångning →</span>
+                                <span class="arrow-label reverse">← Kondensation</span>
+                            </div>
+                        </div>
+                        <div class="phase-state phase-gas">
+                            <div class="phase-particles" id="gasParticles">
+                                <!-- Animated particles -->
+                            </div>
+                            <h4>Gas (g)</h4>
+                            <p>Partiklar spridda, snabb rörelse</p>
+                        </div>
+                    </div>
+
+                    <div class="sublimation-arrow">
+                        <span>Sublimering ⇌ Deposition</span>
+                    </div>
+                </div>
+
+                <div class="temperature-slider mt-xl">
+                    <label for="tempSlider">Justera temperatur:</label>
+                    <div class="slider-container">
+                        <span class="temp-label">-50°C</span>
+                        <input type="range" id="tempSlider" min="-50" max="150" value="25" />
+                        <span class="temp-label">150°C</span>
+                    </div>
+                    <div class="temp-display">
+                        <span id="currentTemp">25°C</span>
+                        <span id="currentPhase">Flytande</span>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Kom ihåg:</strong> Vid fasövergångar tillförs eller avges energi, men temperaturen är
+                    konstant under
+                    övergången (t.ex. 0°C när is smälter).
+                </div>
+            </div>
+        </section>
+
+        <!-- Separation Methods Section -->
+        <section id="separation">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Separationsmetoder</h2>
+                    <p>Olika tekniker för att separera blandningar baserat på ämnenas egenskaper.</p>
+                </div>
+
+                <div class="separation-tabs">
+                    <button class="sep-tab active" data-method="filtrering">Filtrering</button>
+                    <button class="sep-tab" data-method="indunstning">Indunstning</button>
+                    <button class="sep-tab" data-method="destillation">Destillation</button>
+                    <button class="sep-tab" data-method="kromatografi">Kromatografi</button>
+                </div>
+
+                <div class="separation-content">
+                    <div class="sep-panel active" id="filtrering">
+                        <div class="grid-2">
+                            <div class="sep-visual">
+                                <div class="filter-animation">
+                                    <div class="filter-funnel">
+                                        <div class="filter-paper"></div>
+                                        <div class="filter-mixture"></div>
+                                        <div class="filter-drops"></div>
+                                    </div>
+                                    <div class="filter-beaker">
+                                        <div class="filter-liquid"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sep-info">
+                                <h3>Filtrering</h3>
+                                <p>Separerar fasta partiklar från en vätska genom ett filter.</p>
+                                <div class="formula-block">Blandning → Filter → Fast + Vätska</div>
+                                <h4>Exempel:</h4>
+                                <ul>
+                                    <li>Sand från vatten</li>
+                                    <li>Kaffesump från kaffe</li>
+                                    <li>Fällningar i kemiska reaktioner</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sep-panel" id="indunstning">
+                        <div class="grid-2">
+                            <div class="sep-visual">
+                                <div class="evap-animation">
+                                    <div class="evap-dish">
+                                        <div class="evap-solution"></div>
+                                        <div class="evap-steam"></div>
+                                        <div class="evap-crystals"></div>
+                                    </div>
+                                    <div class="evap-heat"></div>
+                                </div>
+                            </div>
+                            <div class="sep-info">
+                                <h3>Indunstning</h3>
+                                <p>Avdunsta lösningsmedlet för att få fram det lösta ämnet.</p>
+                                <div class="formula-block">Lösning → Värme → Fast ämne</div>
+                                <h4>Exempel:</h4>
+                                <ul>
+                                    <li>Utvinna salt från havsvatten</li>
+                                    <li>Framställa kristaller</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sep-panel" id="destillation">
+                        <div class="grid-2">
+                            <div class="sep-visual">
+                                <div class="distill-animation">
+                                    <div class="distill-flask">
+                                        <div class="distill-liquid"></div>
+                                        <div class="distill-bubbles"></div>
+                                    </div>
+                                    <div class="distill-condenser"></div>
+                                    <div class="distill-collector">
+                                        <div class="distill-drops"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sep-info">
+                                <h3>Destillation</h3>
+                                <p>Utnyttjar olika kokpunkter för att separera ämnen.</p>
+                                <div class="formula-block">Blandning → Kokning → Kondensation → Separation</div>
+                                <h4>Exempel:</h4>
+                                <ul>
+                                    <li>Framställa destillerat vatten</li>
+                                    <li>Separera alkohol och vatten</li>
+                                    <li>Raffinering av olja</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sep-panel" id="kromatografi">
+                        <div class="grid-2">
+                            <div class="sep-visual">
+                                <div class="chroma-animation">
+                                    <div class="chroma-paper">
+                                        <div class="chroma-spot"></div>
+                                        <div class="chroma-bands"></div>
+                                    </div>
+                                    <div class="chroma-solvent"></div>
+                                </div>
+                            </div>
+                            <div class="sep-info">
+                                <h3>Kromatografi</h3>
+                                <p>Skiljer ämnen som rör sig olika snabbt i ett medium.</p>
+                                <div class="formula-block">Prov → Stationär fas + Rörlig fas → Separation</div>
+                                <h4>Exempel:</h4>
+                                <ul>
+                                    <li>Separera färgämnen i tusch</li>
+                                    <li>Analysera bläck</li>
+                                    <li>Identifiera ämnen i lösningar</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">
+                            Börja om
+                        </button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">
+                            Visa resultat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Introduktion till Kemi | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="intro-script.js"></script>
+</body>
+
+</html>

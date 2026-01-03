@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organisk Kemi | Kemi 1</title>
+    <meta name="description"
+        content="Lär dig om kolföreningar, alkaner, alkener, alkyner, alkoholer och funktionella grupper." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="organic-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="organic-accent">Organisk</span> Kemi
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#kolvateten">Kolväten</a></li>
+                <li><a href="#funktionella">Grupper</a></li>
+                <li><a href="#isomeri">Isomeri</a></li>
+                <li><a href="#namngivning">Namngivning</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    <span class="text-organic">Organisk</span> Kemi
+                </h1>
+                <p>
+                    Kolföreningarnas värld – från enkla alkaner till komplexa biomolekyler.
+                </p>
+                <div class="flex-center">
+                    <a href="#intro" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro Section -->
+        <section id="intro">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Vad är organisk kemi?</h2>
+                    <p>Kemin om kolföreningar – grunden för allt liv.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-organic">
+                        <h3>Kolets egenskaper</h3>
+                        <div class="carbon-props">
+                            <div class="carbon-atom">C</div>
+                            <ul class="carbon-features">
+                                <li>4 valenselektroner</li>
+                                <li>Kan bilda 4 kovalenta bindningar</li>
+                                <li>Binder till sig själv → långa kedjor</li>
+                                <li>Binder till H, O, N med flera</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Varför är kol så speciellt?</h3>
+                        <p>Kolets förmåga att bilda långa kedjor och ringar ger upphov till miljontals olika föreningar.
+                        </p>
+                        <div class="carbon-structures">
+                            <div class="structure">
+                                <span class="structure-visual">—C—C—C—</span>
+                                <span class="structure-label">Kedjor</span>
+                            </div>
+                            <div class="structure">
+                                <span class="structure-visual">—C=C—</span>
+                                <span class="structure-label">Dubbelbindningar</span>
+                            </div>
+                            <div class="structure">
+                                <span class="structure-visual">◯</span>
+                                <span class="structure-label">Ringar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hydrocarbons Section -->
+        <section id="kolvateten">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kolväten</h2>
+                    <p>Föreningar som endast innehåller kol och väte.</p>
+                </div>
+
+                <div class="hydrocarbon-tabs">
+                    <button class="hc-tab active" data-type="alkaner">Alkaner</button>
+                    <button class="hc-tab" data-type="alkener">Alkener</button>
+                    <button class="hc-tab" data-type="alkyner">Alkyner</button>
+                </div>
+
+                <div class="hc-panels">
+                    <div class="hc-panel active" id="alkaner">
+                        <div class="grid-2">
+                            <div class="hc-info">
+                                <h3>Alkaner (mättade kolväten)</h3>
+                                <div class="formula-block">C<sub>n</sub>H<sub>2n+2</sub></div>
+                                <ul class="hc-features">
+                                    <li>Endast enkelbindningar</li>
+                                    <li>Relativt oreaktiva</li>
+                                    <li>Används som bränslen</li>
+                                </ul>
+                            </div>
+                            <div class="hc-examples">
+                                <div class="molecule-card">
+                                    <span class="mol-name">Metan</span>
+                                    <span class="mol-formula">CH₄</span>
+                                </div>
+                                <div class="molecule-card">
+                                    <span class="mol-name">Etan</span>
+                                    <span class="mol-formula">C₂H₆</span>
+                                </div>
+                                <div class="molecule-card">
+                                    <span class="mol-name">Propan</span>
+                                    <span class="mol-formula">C₃H₈</span>
+                                </div>
+                                <div class="molecule-card">
+                                    <span class="mol-name">Butan</span>
+                                    <span class="mol-formula">C₄H₁₀</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hc-panel" id="alkener">
+                        <div class="grid-2">
+                            <div class="hc-info">
+                                <h3>Alkener (omättade)</h3>
+                                <div class="formula-block">C<sub>n</sub>H<sub>2n</sub></div>
+                                <ul class="hc-features">
+                                    <li>Minst en dubbelbindning (C=C)</li>
+                                    <li>Mer reaktiva än alkaner</li>
+                                    <li>Additionsreaktioner</li>
+                                </ul>
+                            </div>
+                            <div class="hc-examples">
+                                <div class="molecule-card">
+                                    <span class="mol-name">Eten</span>
+                                    <span class="mol-formula">C₂H₄</span>
+                                </div>
+                                <div class="molecule-card">
+                                    <span class="mol-name">Propen</span>
+                                    <span class="mol-formula">C₃H₆</span>
+                                </div>
+                                <div class="molecule-card">
+                                    <span class="mol-name">Buten</span>
+                                    <span class="mol-formula">C₄H₈</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hc-panel" id="alkyner">
+                        <div class="grid-2">
+                            <div class="hc-info">
+                                <h3>Alkyner</h3>
+                                <div class="formula-block">C<sub>n</sub>H<sub>2n-2</sub></div>
+                                <ul class="hc-features">
+                                    <li>Minst en trippelbindning (C≡C)</li>
+                                    <li>Mycket reaktiva</li>
+                                    <li>Används vid svetsning</li>
+                                </ul>
+                            </div>
+                            <div class="hc-examples">
+                                <div class="molecule-card">
+                                    <span class="mol-name">Etyn (acetylen)</span>
+                                    <span class="mol-formula">C₂H₂</span>
+                                </div>
+                                <div class="molecule-card">
+                                    <span class="mol-name">Propyn</span>
+                                    <span class="mol-formula">C₃H₄</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Functional Groups Section -->
+        <section id="funktionella">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Funktionella grupper</h2>
+                    <p>Atomgrupper som ger molekylen specifika egenskaper.</p>
+                </div>
+
+                <div class="func-groups">
+                    <div class="func-group">
+                        <div class="func-header alcohol">
+                            <h3>Alkoholer</h3>
+                            <span class="func-formula">—OH</span>
+                        </div>
+                        <div class="func-content">
+                            <p>Hydroxylgrupp bunden till kol</p>
+                            <div class="func-examples">
+                                <span>Metanol (CH₃OH)</span>
+                                <span>Etanol (C₂H₅OH)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="func-group">
+                        <div class="func-header aldehyde">
+                            <h3>Aldehyder</h3>
+                            <span class="func-formula">—CHO</span>
+                        </div>
+                        <div class="func-content">
+                            <p>Karbonylgrupp i änden av kedjan</p>
+                            <div class="func-examples">
+                                <span>Metanal (formaldehyd)</span>
+                                <span>Etanal (acetaldehyd)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="func-group">
+                        <div class="func-header ketone">
+                            <h3>Ketoner</h3>
+                            <span class="func-formula">—CO—</span>
+                        </div>
+                        <div class="func-content">
+                            <p>Karbonylgrupp mitt i kedjan</p>
+                            <div class="func-examples">
+                                <span>Propanon (aceton)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="func-group">
+                        <div class="func-header acid">
+                            <h3>Karboxylsyror</h3>
+                            <span class="func-formula">—COOH</span>
+                        </div>
+                        <div class="func-content">
+                            <p>Karboxylgrupp – syra</p>
+                            <div class="func-examples">
+                                <span>Metansyra (myrsyra)</span>
+                                <span>Etansyra (ättika)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="func-group">
+                        <div class="func-header ester">
+                            <h3>Estrar</h3>
+                            <span class="func-formula">—COO—</span>
+                        </div>
+                        <div class="func-content">
+                            <p>Bildas från syra + alkohol</p>
+                            <div class="func-examples">
+                                <span>Fruktdofter</span>
+                                <span>Fetter och oljor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="func-group">
+                        <div class="func-header amine">
+                            <h3>Aminer</h3>
+                            <span class="func-formula">—NH₂</span>
+                        </div>
+                        <div class="func-content">
+                            <p>Aminogrupp – bas</p>
+                            <div class="func-examples">
+                                <span>Metylamin (CH₃NH₂)</span>
+                                <span>Aminosyror</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Isomeri Section -->
+        <section id="isomeri">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Isomeri</h2>
+                    <p>Samma molekylformel, olika strukturformel.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-organic">
+                        <h3>Strukturisomeri</h3>
+                        <p>Atomerna sitter ihop på olika sätt.</p>
+                        <div class="isomer-example">
+                            <div class="isomer">
+                                <span class="isomer-name">Butan</span>
+                                <span class="isomer-visual">C—C—C—C</span>
+                                <span class="isomer-desc">Rak kedja</span>
+                            </div>
+                            <div class="isomer">
+                                <span class="isomer-name">Isobutan</span>
+                                <span class="isomer-visual">C—C(C)—C</span>
+                                <span class="isomer-desc">Förgrenad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Betydelse</h3>
+                        <ul class="isomer-list">
+                            <li>Olika fysikaliska egenskaper</li>
+                            <li>Olika kokpunkter</li>
+                            <li>Kan ha olika kemiska egenskaper</li>
+                            <li>Fler kol = fler möjliga isomerer</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Naming Section -->
+        <section id="namngivning">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Namngivning (IUPAC)</h2>
+                    <p>Systematisk namngivning av organiska föreningar.</p>
+                </div>
+
+                <div class="naming-steps">
+                    <div class="naming-step">
+                        <span class="step-num">1</span>
+                        <div>
+                            <h4>Hitta längsta kedjan</h4>
+                            <p>Bestämmer stamnamnet</p>
+                        </div>
+                    </div>
+                    <div class="naming-step">
+                        <span class="step-num">2</span>
+                        <div>
+                            <h4>Numrera kedjan</h4>
+                            <p>Så att substituenter får lägst nummer</p>
+                        </div>
+                    </div>
+                    <div class="naming-step">
+                        <span class="step-num">3</span>
+                        <div>
+                            <h4>Namnge substituenter</h4>
+                            <p>Med position och namn</p>
+                        </div>
+                    </div>
+                    <div class="naming-step">
+                        <span class="step-num">4</span>
+                        <div>
+                            <h4>Skriv fullständigt namn</h4>
+                            <p>Substituenter + stam + ändelse</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="naming-prefixes mt-xl">
+                    <h3>Prefix för kolantal</h3>
+                    <div class="prefix-table">
+                        <div class="prefix-row">
+                            <span class="prefix-num">1</span>
+                            <span class="prefix-name">Met-</span>
+                        </div>
+                        <div class="prefix-row">
+                            <span class="prefix-num">2</span>
+                            <span class="prefix-name">Et-</span>
+                        </div>
+                        <div class="prefix-row">
+                            <span class="prefix-num">3</span>
+                            <span class="prefix-name">Prop-</span>
+                        </div>
+                        <div class="prefix-row">
+                            <span class="prefix-num">4</span>
+                            <span class="prefix-name">But-</span>
+                        </div>
+                        <div class="prefix-row">
+                            <span class="prefix-num">5</span>
+                            <span class="prefix-name">Pent-</span>
+                        </div>
+                        <div class="prefix-row">
+                            <span class="prefix-num">6</span>
+                            <span class="prefix-name">Hex-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions"></div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">Börja om</button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">Visa
+                            resultat</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Organisk Kemi | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="organic-script.js"></script>
+</body>
+
+</html>
