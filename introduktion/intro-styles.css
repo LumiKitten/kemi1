@@ -533,6 +533,322 @@
     border-radius: 0 0 3px 3px;
 }
 
+/* Distillation Animation */
+.distill-animation {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
+
+.distill-flask {
+    width: 80px;
+    height: 100px;
+    border: 3px solid var(--text-secondary);
+    border-radius: 0 0 40% 40%;
+    position: relative;
+    background: linear-gradient(to bottom, transparent 30%, rgba(231, 76, 60, 0.4) 30%);
+}
+
+.distill-bubbles {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: bubble-rise 1.5s infinite;
+}
+
+.distill-bubbles::before,
+.distill-bubbles::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: bubble-rise 1.5s infinite;
+}
+
+.distill-bubbles::before {
+    left: -10px;
+    animation-delay: 0.3s;
+}
+
+.distill-bubbles::after {
+    left: 10px;
+    animation-delay: 0.6s;
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-40px);
+        opacity: 0;
+    }
+}
+
+.distill-condenser {
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(155, 89, 182, 0.3) 30%,
+            rgba(52, 152, 219, 0.3) 70%,
+            transparent 100%);
+    border: 2px solid var(--text-secondary);
+    border-radius: var(--radius-sm);
+    transform: rotate(-15deg);
+    margin-bottom: 30px;
+}
+
+.distill-collector {
+    width: 50px;
+    height: 60px;
+    border: 3px solid var(--text-secondary);
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.distill-drops {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 8px;
+    background: rgba(52, 152, 219, 0.7);
+    border-radius: 0 0 50% 50%;
+    animation: drip 2s infinite;
+}
+
+@keyframes drip {
+
+    0%,
+    40% {
+        top: -10px;
+        opacity: 1;
+    }
+
+    60% {
+        top: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 30px;
+        opacity: 0;
+    }
+}
+
+/* Chromatography Animation */
+.chroma-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
+
+.chroma-paper {
+    width: 40px;
+    height: 120px;
+    background: #f5f5f5;
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.chroma-spot {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #2c3e50;
+    border-radius: 50%;
+}
+
+.chroma-bands {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to top,
+            transparent 0%,
+            #e74c3c 20%,
+            transparent 25%,
+            #f39c12 45%,
+            transparent 50%,
+            #3498db 70%,
+            transparent 75%,
+            #2ecc71 90%,
+            transparent 100%);
+    opacity: 0.8;
+    animation: chroma-rise 4s ease-out infinite;
+}
+
+@keyframes chroma-rise {
+    0% {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+}
+
+.chroma-solvent {
+    width: 60px;
+    height: 30px;
+    background: rgba(52, 152, 219, 0.3);
+    border: 2px solid var(--text-secondary);
+    border-radius: 0 0 5px 5px;
+}
+
+/* Evaporation Animation */
+.evap-animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+}
+
+.evap-dish {
+    width: 100px;
+    height: 30px;
+    border: 3px solid var(--text-secondary);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    overflow: visible;
+}
+
+.evap-solution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: rgba(52, 152, 219, 0.5);
+    border-radius: 0 0 8px 8px;
+    animation: evap-shrink 4s ease-in-out infinite;
+}
+
+@keyframes evap-shrink {
+
+    0%,
+    100% {
+        height: 60%;
+        background: rgba(52, 152, 219, 0.5);
+    }
+
+    50% {
+        height: 20%;
+        background: rgba(52, 152, 219, 0.3);
+    }
+}
+
+.evap-steam {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.evap-steam::before,
+.evap-steam::after {
+    content: '';
+    width: 8px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: steam-rise 2s infinite;
+}
+
+.evap-steam::after {
+    animation-delay: 0.5s;
+}
+
+@keyframes steam-rise {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(-30px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.evap-crystals {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 10px;
+    background: radial-gradient(circle, #f1c40f 30%, transparent 30%);
+    background-size: 6px 6px;
+    animation: crystals-appear 4s infinite;
+}
+
+@keyframes crystals-appear {
+
+    0%,
+    30% {
+        opacity: 0;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+    }
+}
+
+.evap-heat {
+    width: 80px;
+    height: 10px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(231, 76, 60, 0.6) 20%,
+            rgba(241, 196, 15, 0.6) 50%,
+            rgba(231, 76, 60, 0.6) 80%,
+            transparent 100%);
+    border-radius: var(--radius-sm);
+    animation: heat-pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes heat-pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .phase-states {
