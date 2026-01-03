@@ -18,12 +18,12 @@
   <header>
     <nav>
       <a href="../" class="logo">
-        <span class="acid">Syror</span> & <span class="base">Baser</span>
+        <span class="acid">Syror</span> &amp; <span class="base">Baser</span>
       </a>
       <button class="nav-toggle" aria-label="Meny">&#9776;</button>
       <ul class="nav-links">
         <li><a href="#ph-skalan">pH-skalan</a></li>
-        <li><a href="#ph-poh">pH & pOH</a></li>
+        <li><a href="#ph-poh">pH &amp; pOH</a></li>
         <li><a href="#syror">Syror</a></li>
         <li><a href="#baser">Baser</a></li>
         <li><a href="#joner">Joner</a></li>
@@ -38,19 +38,14 @@
     <section class="hero" id="hem">
       <div class="hero-content">
         <h1>
-          Förstå <span style="color: var(--acid-primary)">Syror</span> och
-          <span style="color: var(--base-primary)">Baser</span>
+          Förstå <span class="text-acid">Syror</span> och
+          <span class="text-base">Baser</span>
         </h1>
         <p>
           En interaktiv guide till pH, pOH, joner och kemiska reaktioner.
           Utformad för Kemi 1.
         </p>
-        <div style="
-              display: flex;
-              gap: var(--space-md);
-              justify-content: center;
-              flex-wrap: wrap;
-            ">
+        <div class="flex-center">
           <a href="#ph-skalan" class="btn btn-primary">Börja lära dig</a>
           <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
         </div>
@@ -117,7 +112,7 @@
           </div>
         </div>
 
-        <h3 style="margin-top: var(--space-2xl)">
+        <h3 class="mt-2xl">
           Exempel vid olika pH-värden
         </h3>
         <ul class="examples-list" id="phExamples">
@@ -148,7 +143,7 @@
               </p>
             </div>
 
-            <div class="card card-base" style="margin-top: var(--space-lg)">
+            <div class="card card-base mt-lg">
               <h3>pOH-formeln</h3>
               <div class="formula-block">
                 pOH = -log<sub>10</sub>[OH<sup>-</sup>]
@@ -174,7 +169,7 @@
               </div>
             </div>
 
-            <div class="info-box" style="margin-top: var(--space-lg)">
+            <div class="info-box mt-lg">
               <strong>Kom ihåg:</strong> pH 7 är neutralt eftersom
               [H<sup>+</sup>] = [OH<sup>-</sup>] = 10<sup>-7</sup> M vid denna
               punkt.
@@ -182,7 +177,7 @@
           </div>
         </div>
 
-        <h3 style="margin-top: var(--space-2xl)">Kalkylator</h3>
+        <h3 class="mt-2xl">Kalkylator</h3>
         <div class="calculator">
           <div class="calculator-input">
             <label for="calcType">Välj beräkningstyp:</label>
@@ -199,11 +194,11 @@
             <input type="number" id="calcInput" placeholder="0.001" step="any" />
           </div>
 
-          <button class="btn btn-primary" onclick="calculate()" style="width: 100%; justify-content: center">
+          <button class="btn btn-primary btn-full" onclick="calculate()">
             Beräkna
           </button>
 
-          <div class="calculator-result" style="margin-top: var(--space-lg)">
+          <div class="calculator-result mt-lg">
             <div class="ph-value-box">
               <div class="label">pH</div>
               <div class="value" id="calcPh">-</div>
@@ -308,7 +303,7 @@
           </div>
         </div>
 
-        <div class="info-box warning" style="margin-top: var(--space-xl)">
+        <div class="info-box warning mt-xl">
           <strong>Viktigt:</strong> Stark vs svag handlar om
           dissociationsgrad, inte om hur farlig syran är. En koncentrerad svag
           syra kan vara farligare än en utspädd stark syra.
@@ -432,10 +427,7 @@
             <div class="formula-block">
               H<sup>+</sup> + H₂O → H₃O<sup>+</sup>
             </div>
-            <ul style="
-                  margin-left: var(--space-lg);
-                  margin-top: var(--space-md);
-                ">
+            <ul class="ml-lg mt-lg">
               <li>Hög [H<sup>+</sup>] = Lågt pH = Sur lösning</li>
               <li>Kommer från syror</li>
               <li>Reagerar med baser</li>
@@ -452,10 +444,7 @@
               en extra elektron som ger den negativ laddning.
             </p>
             <div class="formula-block">Bas → OH<sup>-</sup></div>
-            <ul style="
-                  margin-left: var(--space-lg);
-                  margin-top: var(--space-md);
-                ">
+            <ul class="ml-lg mt-lg">
               <li>Hög [OH<sup>-</sup>] = Högt pH = Basisk lösning</li>
               <li>Kommer från baser</li>
               <li>Reagerar med syror</li>
@@ -463,21 +452,21 @@
           </div>
         </div>
 
-        <div class="card card-neutral" style="margin-top: var(--space-xl)">
+        <div class="card card-neutral mt-xl">
           <h3>Koncentrationsförhållandet</h3>
           <p>I vatten vid 25°C gäller alltid:</p>
           <div class="formula-block">
             [H<sup>+</sup>] × [OH<sup>-</sup>] = 10<sup>-14</sup>
           </div>
 
-          <div style="margin-top: var(--space-lg)">
-            <label for="ionSlider" style="display: block; margin-bottom: var(--space-sm)">Justera [H<sup>+</sup>] och se
+          <div class="mt-lg">
+            <label for="ionSlider" class="ion-slider-label">Justera [H<sup>+</sup>] och se
               hur [OH<sup>-</sup>]
               förändras:</label>
-            <input type="range" id="ionSlider" min="-14" max="0" step="0.5" value="-7" style="width: 100%" />
+            <input type="range" id="ionSlider" min="-14" max="0" step="0.5" value="-7" class="ion-slider-input" />
           </div>
 
-          <div class="ph-display" style="margin-top: var(--space-lg)">
+          <div class="ph-display mt-lg">
             <div class="ph-value-box acid">
               <div class="label">[H<sup>+</sup>]</div>
               <div class="value" id="ionH">10<sup>-7</sup> M</div>
@@ -532,7 +521,7 @@
           </div>
         </div>
 
-        <h3 style="margin-top: var(--space-xl)">
+        <h3 class="mt-xl">
           Exempel på neutralisationsreaktioner
         </h3>
         <div class="grid-2">
@@ -566,7 +555,7 @@
           </div>
         </div>
 
-        <div class="info-box success" style="margin-top: var(--space-xl)">
+        <div class="info-box success mt-xl">
           <strong>Vardagsexempel:</strong> Magsyraneutraliserare (som Samarin)
           innehåller baser som neutraliserar överskott av magsyra (HCl) i
           magen.
@@ -585,7 +574,7 @@
         <div class="quiz-container">
           <div class="quiz-progress">
             <div class="quiz-progress-bar">
-              <div class="quiz-progress-fill" id="quizProgress" style="width: 0%"></div>
+              <div class="quiz-progress-fill" id="quizProgress"></div>
             </div>
             <span class="quiz-score" id="quizScore">0 / 0</span>
           </div>
@@ -594,12 +583,7 @@
             <!-- Populated by JS -->
           </div>
 
-          <div style="
-                display: flex;
-                gap: var(--space-md);
-                justify-content: center;
-                margin-top: var(--space-xl);
-              ">
+          <div class="flex-center mt-xl">
             <button class="btn btn-secondary" onclick="resetQuiz()">
               Börja om
             </button>
@@ -612,13 +596,8 @@
     </section>
   </main>
 
-  <footer style="
-        text-align: center;
-        padding: var(--space-2xl);
-        color: var(--text-muted);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-      ">
-    <p>Syror & Baser | Kemi 1 Interaktiv Guide</p>
+  <footer class="site-footer">
+    <p>Syror &amp; Baser | Kemi 1 Interaktiv Guide</p>
   </footer>
 
   <script src="../script.js"></script>

@@ -985,6 +985,14 @@ sup {
   cursor: default;
 }
 
+.topic-card-redox {
+  border-left-color: #ff6b35;
+}
+
+.topic-card-redox:hover {
+  border-left-color: #4ecdc4;
+}
+
 .topic-icon {
   font-size: 2.5rem;
   margin-bottom: var(--space-md);
@@ -1053,4 +1061,56 @@ a.logo:hover {
   padding: var(--space-xl);
   color: var(--text-muted);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Utility Classes */
+.mt-xl {
+  margin-top: var(--space-xl);
+}
+
+.mt-2xl {
+  margin-top: var(--space-2xl);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.ml-lg {
+  margin-left: var(--space-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+.flex-center {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-full {
+  width: 100%;
+  justify-content: center;
+}
+
+.site-footer {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-acid {
+  color: var(--acid-primary);
+}
+
+.text-base {
+  color: var(--base-primary);
 }

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redoxreaktioner | Kemi 1</title>
+    <meta name="description"
+        content="Lär dig om oxidation, reduktion, oxidationstal och spänningsserien på ett interaktivt sätt. Kemi 1 nivå." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="redox-styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../" class="logo">
+                <span class="oxidation">Redox</span><span class="reduction">reaktioner</span>
+            </a>
+            <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#grundbegrepp">Grundbegrepp</a></li>
+                <li><a href="#oxidationstal">Oxidationstal</a></li>
+                <li><a href="#spanningsserien">Spänningsserien</a></li>
+                <li><a href="#balansering">Balansering</a></li>
+                <li><a href="#exempel">Exempel</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hem">
+            <div class="hero-content">
+                <h1>
+                    Förstå <span class="text-oxidation">Oxidation</span> och
+                    <span class="text-reduction">Reduktion</span>
+                </h1>
+                <p>
+                    En interaktiv guide till redoxreaktioner, oxidationstal och elektronöverföring.
+                    Utformad för Kemi 1.
+                </p>
+                <div class="flex-center">
+                    <a href="#grundbegrepp" class="btn btn-primary">Börja lära dig</a>
+                    <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Basic Concepts Section -->
+        <section id="grundbegrepp">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Grundbegrepp</h2>
+                    <p>
+                        Oxidation och reduktion handlar om överföring av elektroner mellan ämnen.
+                    </p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-oxidation">
+                        <h3>Oxidation</h3>
+                        <div class="formula-block">
+                            <span class="highlight-oxidation">Avger elektroner</span>
+                        </div>
+                        <p>
+                            Ett ämne som <strong>förlorar elektroner</strong> sägs vara oxiderat.
+                            Oxidationstalet ökar.
+                        </p>
+                        <div class="formula-block">
+                            Mg → Mg<sup>2+</sup> + 2e<sup>−</sup>
+                        </div>
+                        <ul class="concept-list">
+                            <li>Elektroner lämnar ämnet</li>
+                            <li>Oxidationstalet ökar</li>
+                            <li>Ämnet fungerar som reduktionsmedel</li>
+                        </ul>
+                    </div>
+
+                    <div class="card card-reduction">
+                        <h3>Reduktion</h3>
+                        <div class="formula-block">
+                            <span class="highlight-reduction">Tar emot elektroner</span>
+                        </div>
+                        <p>
+                            Ett ämne som <strong>tar emot elektroner</strong> sägs vara reducerat.
+                            Oxidationstalet minskar.
+                        </p>
+                        <div class="formula-block">
+                            O + 2e<sup>−</sup> → O<sup>2−</sup>
+                        </div>
+                        <ul class="concept-list">
+                            <li>Elektroner tillförs ämnet</li>
+                            <li>Oxidationstalet minskar</li>
+                            <li>Ämnet fungerar som oxidationsmedel</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card card-neutral mt-xl">
+                    <h3>Redoxreaktion = Oxidation + Reduktion</h3>
+                    <p>I en redoxreaktion sker alltid oxidation och reduktion samtidigt. Elektroner överförs från ett
+                        ämne till
+                        ett annat.</p>
+                    <div class="formula-block">
+                        <span class="highlight-oxidation">2Mg</span> + <span class="highlight-reduction">O₂</span> →
+                        2MgO
+                    </div>
+                    <p class="text-center text-muted mt-lg">
+                        Magnesium oxideras (avger elektroner) • Syre reduceras (tar emot elektroner)
+                    </p>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Minnesregel - OIL RIG:</strong>
+                    <em>Oxidation Is Loss, Reduction Is Gain</em> (av elektroner)
+                </div>
+
+                <h3 class="mt-2xl">Oxidationsmedel och Reduktionsmedel</h3>
+                <div class="grid-2">
+                    <div class="card card-reduction">
+                        <h4>Oxidationsmedel</h4>
+                        <p>Ämnen som får andra ämnen att oxideras. Oxidationsmedlet <strong>tar emot elektroner</strong>
+                            och blir
+                            själv reducerat.</p>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Ämne</th>
+                                    <th>Formel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Syre</td>
+                                    <td><span class="formula">O₂</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Klor</td>
+                                    <td><span class="formula">Cl₂</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Brom</td>
+                                    <td><span class="formula">Br₂</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card card-oxidation">
+                        <h4>Reduktionsmedel</h4>
+                        <p>Ämnen som får andra ämnen att reduceras. Reduktionsmedlet <strong>avger elektroner</strong>
+                            och blir
+                            själv oxiderat.</p>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Ämne</th>
+                                    <th>Formel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Magnesium</td>
+                                    <td><span class="formula">Mg</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Zink</td>
+                                    <td><span class="formula">Zn</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Järn</td>
+                                    <td><span class="formula">Fe</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-box warning mt-xl">
+                    <strong>Viktigt att komma ihåg:</strong> Oxidationsmedlet blir reducerat och reduktionsmedlet blir
+                    oxiderat!
+                </div>
+            </div>
+        </section>
+
+        <!-- Oxidation Numbers Section -->
+        <section id="oxidationstal">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Oxidationstal</h2>
+                    <p>Ett system för att spåra elektronöverföring i kemiska reaktioner.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Regler för att bestämma oxidationstal</h3>
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <div class="rule-number">1</div>
+                            <div class="rule-content">
+                                <strong>Rena grundämnen:</strong> Oxidationstal = 0
+                                <div class="formula">Fe = 0, O₂ = 0, H₂ = 0</div>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">2</div>
+                            <div class="rule-content">
+                                <strong>Enatomiga joner:</strong> Oxidationstal = jonens laddning
+                                <div class="formula">Na<sup>+</sup> = +1, Cl<sup>−</sup> = −1, Mg<sup>2+</sup> = +2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">3</div>
+                            <div class="rule-content">
+                                <strong>Väte (H):</strong> Oftast +1 (−1 i metallhydrider)
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">4</div>
+                            <div class="rule-content">
+                                <strong>Syre (O):</strong> Oftast −2 (−1 i peroxider)
+                            </div>
+                        </div>
+                        <div class="rule-item">
+                            <div class="rule-number">5</div>
+                            <div class="rule-content">
+                                <strong>Summan av alla oxidationstal:</strong> = 0 för neutrala föreningar, =
+                                jonladdningen för
+                                jonföreningar
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Interaktiv Oxidationstalsberäknare</h3>
+                <div class="calculator">
+                    <div class="calculator-input">
+                        <label for="oxCalcCompound">Välj förening:</label>
+                        <select id="oxCalcCompound">
+                            <option value="H2O">H₂O (vatten)</option>
+                            <option value="NaCl">NaCl (koksalt)</option>
+                            <option value="H2SO4">H₂SO₄ (svavelsyra)</option>
+                            <option value="CO2">CO₂ (koldioxid)</option>
+                            <option value="KMnO4">KMnO₄ (kaliumpermanganat)</option>
+                            <option value="Fe2O3">Fe₂O₃ (järn(III)oxid)</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-primary btn-full" onclick="calculateOxidationNumbers()">
+                        Visa oxidationstal
+                    </button>
+
+                    <div id="oxCalcResult" class="oxidation-result mt-lg">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-2xl">
+                    <div class="card card-oxidation">
+                        <h4>Oxidation = Ökat oxidationstal</h4>
+                        <div class="ox-change">
+                            <span class="ox-before">0</span>
+                            <span class="ox-arrow">→</span>
+                            <span class="ox-after positive">+2</span>
+                        </div>
+                        <p>När oxidationstalet ökar har ämnet förlorat elektroner.</p>
+                    </div>
+
+                    <div class="card card-reduction">
+                        <h4>Reduktion = Minskat oxidationstal</h4>
+                        <div class="ox-change">
+                            <span class="ox-before">0</span>
+                            <span class="ox-arrow">→</span>
+                            <span class="ox-after negative">−2</span>
+                        </div>
+                        <p>När oxidationstalet minskar har ämnet tagit emot elektroner.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Electrochemical Series Section -->
+        <section id="spanningsserien">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Spänningsserien</h2>
+                    <p>Metaller rangordnade efter deras benägenhet att avge elektroner.</p>
+                </div>
+
+                <div class="voltage-series-container">
+                    <div class="voltage-series">
+                        <div class="voltage-header">
+                            <span>Starka reduktionsmedel</span>
+                            <span class="voltage-arrow">↑ Avger elektroner lättare</span>
+                        </div>
+
+                        <div class="voltage-item" data-metal="Li">
+                            <span class="metal-symbol">Li</span>
+                            <span class="metal-name">Litium</span>
+                            <span class="metal-reaction">Li → Li<sup>+</sup> + e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="K">
+                            <span class="metal-symbol">K</span>
+                            <span class="metal-name">Kalium</span>
+                            <span class="metal-reaction">K → K<sup>+</sup> + e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Ca">
+                            <span class="metal-symbol">Ca</span>
+                            <span class="metal-name">Kalcium</span>
+                            <span class="metal-reaction">Ca → Ca<sup>2+</sup> + 2e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Na">
+                            <span class="metal-symbol">Na</span>
+                            <span class="metal-name">Natrium</span>
+                            <span class="metal-reaction">Na → Na<sup>+</sup> + e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Mg">
+                            <span class="metal-symbol">Mg</span>
+                            <span class="metal-name">Magnesium</span>
+                            <span class="metal-reaction">Mg → Mg<sup>2+</sup> + 2e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Al">
+                            <span class="metal-symbol">Al</span>
+                            <span class="metal-name">Aluminium</span>
+                            <span class="metal-reaction">Al → Al<sup>3+</sup> + 3e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Zn">
+                            <span class="metal-symbol">Zn</span>
+                            <span class="metal-name">Zink</span>
+                            <span class="metal-reaction">Zn → Zn<sup>2+</sup> + 2e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Fe">
+                            <span class="metal-symbol">Fe</span>
+                            <span class="metal-name">Järn</span>
+                            <span class="metal-reaction">Fe → Fe<sup>2+</sup> + 2e<sup>−</sup></span>
+                        </div>
+
+                        <div class="voltage-item hydrogen" data-metal="H">
+                            <span class="metal-symbol">H₂</span>
+                            <span class="metal-name">Väte (referens)</span>
+                            <span class="metal-reaction">H₂ → 2H<sup>+</sup> + 2e<sup>−</sup></span>
+                        </div>
+
+                        <div class="voltage-item" data-metal="Cu">
+                            <span class="metal-symbol">Cu</span>
+                            <span class="metal-name">Koppar</span>
+                            <span class="metal-reaction">Cu → Cu<sup>2+</sup> + 2e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Ag">
+                            <span class="metal-symbol">Ag</span>
+                            <span class="metal-name">Silver</span>
+                            <span class="metal-reaction">Ag → Ag<sup>+</sup> + e<sup>−</sup></span>
+                        </div>
+                        <div class="voltage-item" data-metal="Au">
+                            <span class="metal-symbol">Au</span>
+                            <span class="metal-name">Guld</span>
+                            <span class="metal-reaction">Au → Au<sup>3+</sup> + 3e<sup>−</sup></span>
+                        </div>
+
+                        <div class="voltage-footer">
+                            <span>Svaga reduktionsmedel</span>
+                            <span class="voltage-arrow">↓ Avger elektroner svårare</span>
+                        </div>
+                    </div>
+
+                    <div class="voltage-info">
+                        <div class="card">
+                            <h4>Hur använder man spänningsserien?</h4>
+                            <ul class="concept-list">
+                                <li>Metaller <strong>ovanför</strong> väte kan reducera H<sup>+</sup> till H₂-gas</li>
+                                <li>En metall kan reducera joner av metaller som ligger <strong>under</strong> den i
+                                    serien</li>
+                                <li>Ju högre upp, desto starkare reduktionsmedel</li>
+                            </ul>
+                        </div>
+
+                        <div class="card mt-lg">
+                            <h4>Exempel: Zink i kopparsulfat</h4>
+                            <div class="formula-block">
+                                Zn + Cu<sup>2+</sup> → Zn<sup>2+</sup> + Cu
+                            </div>
+                            <p>Zink ligger över koppar i serien, så zink kan reducera kopparjoner till metallisk koppar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Balancing Redox Section -->
+        <section id="balansering">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Balansera Redoxreaktioner</h2>
+                    <p>Steg för steg-metod med halv-reaktioner.</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Identifiera oxidationstal</h4>
+                            <p>Tilldela oxidationstal till alla atomer före och efter reaktionen.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Bestäm vad som oxideras och reduceras</h4>
+                            <p>Ämnen vars oxidationstal ökar oxideras, de som minskar reduceras.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Skriv halv-reaktioner</h4>
+                            <p>Separera oxidations- och reduktionsprocesserna.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Balansera elektroner</h4>
+                            <p>Justera så att antalet elektroner är lika i båda halv-reaktionerna.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Kombinera halv-reaktionerna</h4>
+                            <p>Förkorta elektroner och övriga arter som förekommer på båda sidor.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-2xl">
+                    <h3>Exempel: Magnesium och Syre</h3>
+                    <div class="balancing-example">
+                        <div class="half-reaction oxidation-half">
+                            <h4>Oxidation (Mg)</h4>
+                            <div class="formula-block">
+                                Mg → Mg<sup>2+</sup> + 2e<sup>−</sup>
+                            </div>
+                            <p class="half-info">Magnesium avger 2 elektroner per atom</p>
+                        </div>
+                        <div class="half-reaction reduction-half">
+                            <h4>Reduktion (O₂)</h4>
+                            <div class="formula-block">
+                                O₂ + 4e<sup>−</sup> → 2O<sup>2−</sup>
+                            </div>
+                            <p class="half-info">Varje syremolekyl tar emot 4 elektroner</p>
+                        </div>
+                    </div>
+
+                    <div class="balancing-steps">
+                        <p><strong>Balansera elektroner:</strong> Multiplicera oxidationshalvan med 2 så att båda har 4
+                            elektroner.
+                        </p>
+                        <div class="formula-block">
+                            2Mg → 2Mg<sup>2+</sup> + 4e<sup>−</sup>
+                        </div>
+                        <p><strong>Kombinera:</strong></p>
+                        <div class="formula-block final-equation">
+                            2Mg + O₂ → 2MgO
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Examples Section -->
+        <section id="exempel">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Praktiska Exempel</h2>
+                    <p>Vanliga redoxreaktioner du kan stöta på.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Natrium och Klor</h4>
+                        <div class="formula-block">2Na + Cl₂ → 2NaCl</div>
+                        <div class="reaction-breakdown">
+                            <p><span class="highlight-oxidation">Na oxideras:</span> Na → Na<sup>+</sup> + e<sup>−</sup>
+                            </p>
+                            <p><span class="highlight-reduction">Cl reduceras:</span> Cl + e<sup>−</sup> →
+                                Cl<sup>−</sup></p>
+                        </div>
+                        <p>Bildar koksalt (natriumklorid).</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Zink och Saltsyra</h4>
+                        <div class="formula-block">Zn + 2HCl → H₂ + ZnCl₂</div>
+                        <div class="reaction-breakdown">
+                            <p><span class="highlight-oxidation">Zn oxideras:</span> Zn → Zn<sup>2+</sup> +
+                                2e<sup>−</sup></p>
+                            <p><span class="highlight-reduction">H reduceras:</span> 2H<sup>+</sup> + 2e<sup>−</sup> →
+                                H₂</p>
+                        </div>
+                        <p>Vätgas bildas när zink reagerar med syra.</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Förbränning av Metan</h4>
+                        <div class="formula-block">CH₄ + 2O₂ → CO₂ + 2H₂O</div>
+                        <div class="reaction-breakdown">
+                            <p><span class="highlight-oxidation">C oxideras:</span> −4 → +4</p>
+                            <p><span class="highlight-reduction">O reduceras:</span> 0 → −2</p>
+                        </div>
+                        <p>Alla förbränningsreaktioner är redoxreaktioner!</p>
+                    </div>
+
+                    <div class="card">
+                        <h4>Rost (Korrosion av järn)</h4>
+                        <div class="formula-block">4Fe + 3O₂ → 2Fe₂O₃</div>
+                        <div class="reaction-breakdown">
+                            <p><span class="highlight-oxidation">Fe oxideras:</span> Fe → Fe<sup>3+</sup> +
+                                3e<sup>−</sup></p>
+                            <p><span class="highlight-reduction">O reduceras:</span> O₂ + 4e<sup>−</sup> →
+                                2O<sup>2−</sup></p>
+                        </div>
+                        <p>Rost är oxiderat järn - en långsam redoxreaktion.</p>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Reaktionstyper</h3>
+                <div class="grid-2">
+                    <div class="card card-neutral">
+                        <h4>Alltid Redoxreaktioner</h4>
+                        <ul class="concept-list">
+                            <li>Förbränningsreaktioner</li>
+                            <li>Enkel substitutionsreaktioner</li>
+                            <li>Många syntesreaktioner</li>
+                            <li>Många sönderdelningsreaktioner</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h4>Aldrig Redoxreaktioner</h4>
+                        <ul class="concept-list">
+                            <li>Dubbel substitutionsreaktioner</li>
+                            <li>Fällningsreaktioner</li>
+                            <li>Syra-bas-neutralisering</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Testa dina kunskaper</h2>
+                    <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgress"></div>
+                        </div>
+                        <span class="quiz-score" id="quizScore">0 / 0</span>
+                    </div>
+
+                    <div id="quizQuestions">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="flex-center mt-xl">
+                        <button class="btn btn-secondary" onclick="resetQuiz()">
+                            Börja om
+                        </button>
+                        <button class="btn btn-primary" id="checkAnswersBtn" onclick="checkAllAnswers()">
+                            Visa resultat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Redoxreaktioner | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="redox-script.js"></script>
+</body>
+
+</html>

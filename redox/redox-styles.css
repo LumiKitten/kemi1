@@ -1,0 +1,393 @@
+/* Redox-specific CSS variables and styles */
+:root {
+    /* Oxidation colors (warm - losing electrons) */
+    --oxidation-primary: #ff6b35;
+    --oxidation-secondary: #ff8c5a;
+    --oxidation-glow: rgba(255, 107, 53, 0.3);
+
+    /* Reduction colors (cool - gaining electrons) */
+    --reduction-primary: #4ecdc4;
+    --reduction-secondary: #6ee7df;
+    --reduction-glow: rgba(78, 205, 196, 0.3);
+}
+
+/* Logo styling */
+.logo .oxidation {
+    color: var(--oxidation-primary);
+}
+
+.logo .reduction {
+    color: var(--reduction-primary);
+}
+
+/* Card variants for redox */
+.card-oxidation {
+    border-left: 3px solid var(--oxidation-primary);
+}
+
+.card-reduction {
+    border-left: 3px solid var(--reduction-primary);
+}
+
+/* Text highlights */
+.highlight-oxidation {
+    color: var(--oxidation-primary);
+    font-weight: 600;
+}
+
+.highlight-reduction {
+    color: var(--reduction-primary);
+    font-weight: 600;
+}
+
+/* Concept lists */
+.concept-list {
+    list-style: none;
+    margin-top: var(--space-md);
+}
+
+.concept-list li {
+    padding: var(--space-sm) 0;
+    padding-left: var(--space-lg);
+    position: relative;
+}
+
+.concept-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--text-muted);
+}
+
+/* Rules grid */
+.rules-grid {
+    display: grid;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.rule-item {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.rule-number {
+    width: 40px;
+    height: 40px;
+    background: var(--base-primary);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.rule-content {
+    flex: 1;
+}
+
+.rule-content .formula {
+    display: inline-block;
+    margin-top: var(--space-sm);
+}
+
+/* Oxidation change visualization */
+.ox-change {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.5rem;
+}
+
+.ox-before,
+.ox-after {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background: var(--bg-secondary);
+    font-weight: 700;
+}
+
+.ox-after.positive {
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--oxidation-primary);
+    border: 2px solid var(--oxidation-primary);
+}
+
+.ox-after.negative {
+    background: rgba(78, 205, 196, 0.2);
+    color: var(--reduction-primary);
+    border: 2px solid var(--reduction-primary);
+}
+
+.ox-arrow {
+    color: var(--text-muted);
+    font-size: 1.5rem;
+}
+
+/* Oxidation result display */
+.oxidation-result {
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}
+
+.oxidation-result .compound-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.oxidation-result .atom-ox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-md);
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    min-width: 60px;
+}
+
+.oxidation-result .atom-symbol {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.oxidation-result .atom-number {
+    font-size: 0.8rem;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    margin-top: var(--space-xs);
+}
+
+.oxidation-result .atom-number.positive {
+    background: rgba(255, 107, 53, 0.2);
+    color: var(--oxidation-primary);
+}
+
+.oxidation-result .atom-number.negative {
+    background: rgba(78, 205, 196, 0.2);
+    color: var(--reduction-primary);
+}
+
+.oxidation-result .atom-number.zero {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-secondary);
+}
+
+/* Voltage series */
+.voltage-series-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+}
+
+.voltage-series {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.voltage-header,
+.voltage-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    background: var(--bg-secondary);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.voltage-arrow {
+    color: var(--text-muted);
+}
+
+.voltage-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.voltage-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.voltage-item.hydrogen {
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 2px solid var(--accent-gold);
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.metal-symbol {
+    font-weight: 700;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.1rem;
+}
+
+.metal-name {
+    color: var(--text-secondary);
+}
+
+.metal-reaction {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: right;
+}
+
+.voltage-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Steps container */
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.step {
+    display: flex;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.step:hover {
+    background: var(--bg-card-hover);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--oxidation-primary), var(--reduction-primary));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    margin-bottom: var(--space-sm);
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Balancing example */
+.balancing-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-lg);
+}
+
+.half-reaction {
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+}
+
+.oxidation-half {
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid var(--oxidation-primary);
+}
+
+.reduction-half {
+    background: rgba(78, 205, 196, 0.1);
+    border: 1px solid var(--reduction-primary);
+}
+
+.half-reaction h4 {
+    margin-bottom: var(--space-sm);
+}
+
+.half-info {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.balancing-steps {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.final-equation {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(78, 205, 196, 0.1));
+    border: 2px solid var(--neutral);
+}
+
+/* Reaction breakdown */
+.reaction-breakdown {
+    background: var(--bg-secondary);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+    margin: var(--space-md) 0;
+}
+
+.reaction-breakdown p {
+    margin: var(--space-xs) 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .voltage-series-container {
+        grid-template-columns: 1fr;
+    }
+
+    .balancing-example {
+        grid-template-columns: 1fr;
+    }
+
+    .voltage-item {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .metal-reaction {
+        display: none;
+    }
+}
+
+/* Color utilities */
+.text-oxidation {
+    color: var(--oxidation-primary);
+}
+
+.text-reduction {
+    color: var(--reduction-primary);
+}
