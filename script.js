@@ -269,6 +269,17 @@ function initQuiz() {
     .join("");
 
   updateQuizProgress();
+
+  // Reset check button
+  const checkBtn = document.getElementById("checkAnswersBtn");
+  if (checkBtn) {
+    checkBtn.disabled = false;
+    checkBtn.style.opacity = "1";
+  }
+
+  // Reset progress bar color
+  const progressBar = document.getElementById("quizProgress");
+  if (progressBar) progressBar.style.background = "";
 }
 
 function selectOption(questionIndex, optionIndex) {
