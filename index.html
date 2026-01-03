@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syror och Baser | Kemi 1</title>
+    <meta
+      name="description"
+      content="Lär dig om syror, baser, pH, pOH och joner på ett interaktivt sätt. Kemi 1 nivå."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <span class="acid">Syror</span> & <span class="base">Baser</span>
+        </div>
+        <button class="nav-toggle" aria-label="Meny">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="#ph-skalan">pH-skalan</a></li>
+          <li><a href="#ph-poh">pH & pOH</a></li>
+          <li><a href="#syror">Syror</a></li>
+          <li><a href="#baser">Baser</a></li>
+          <li><a href="#joner">Joner</a></li>
+          <li><a href="#neutralisation">Neutralisation</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hem">
+        <div class="hero-content">
+          <h1>
+            Förstå <span style="color: var(--acid-primary)">Syror</span> och
+            <span style="color: var(--base-primary)">Baser</span>
+          </h1>
+          <p>
+            En interaktiv guide till pH, pOH, joner och kemiska reaktioner.
+            Utformad för Kemi 1.
+          </p>
+          <div
+            style="
+              display: flex;
+              gap: var(--space-md);
+              justify-content: center;
+              flex-wrap: wrap;
+            "
+          >
+            <a href="#ph-skalan" class="btn btn-primary">Börja lära dig</a>
+            <a href="#quiz" class="btn btn-secondary">Testa dina kunskaper</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- pH Scale Section -->
+      <section id="ph-skalan">
+        <div class="container">
+          <div class="section-header">
+            <h2>pH-skalan</h2>
+            <p>
+              pH-skalan mäter hur sur eller basisk en lösning är, från 0 (starkt
+              sur) till 14 (starkt basisk).
+            </p>
+          </div>
+
+          <div class="ph-scale-container">
+            <div class="ph-scale"></div>
+            <div class="ph-scale-labels">
+              <span>0</span>
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+              <span>4</span>
+              <span>5</span>
+              <span>6</span>
+              <span>7</span>
+              <span>8</span>
+              <span>9</span>
+              <span>10</span>
+              <span>11</span>
+              <span>12</span>
+              <span>13</span>
+              <span>14</span>
+            </div>
+
+            <div class="ph-slider-container">
+              <input
+                type="range"
+                min="0"
+                max="14"
+                step="0.1"
+                value="7"
+                class="ph-slider"
+                id="phSlider"
+              />
+            </div>
+          </div>
+
+          <div class="ph-display">
+            <div class="ph-value-box" id="phValueBox">
+              <div class="label">pH-värde</div>
+              <div class="value" id="phValue">7.0</div>
+            </div>
+            <div class="ph-value-box">
+              <div class="label">[H<sup>+</sup>] koncentration</div>
+              <div class="value" id="hConcentration">
+                1.0 × 10<sup>-7</sup> M
+              </div>
+            </div>
+            <div class="ph-value-box">
+              <div class="label">[OH<sup>-</sup>] koncentration</div>
+              <div class="value" id="ohConcentration">
+                1.0 × 10<sup>-7</sup> M
+              </div>
+            </div>
+            <div class="ph-value-box">
+              <div class="label">Klassificering</div>
+              <div class="value" id="phClassification">Neutral</div>
+            </div>
+          </div>
+
+          <h3 style="margin-top: var(--space-2xl)">
+            Exempel vid olika pH-värden
+          </h3>
+          <ul class="examples-list" id="phExamples">
+            <!-- Populated by JS -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- pH and pOH Section -->
+      <section id="ph-poh">
+        <div class="container">
+          <div class="section-header">
+            <h2>pH och pOH</h2>
+            <p>Förstå sambandet mellan pH, pOH och jonkoncentrationer.</p>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <div class="card card-acid">
+                <h3>pH-formeln</h3>
+                <div class="formula-block">
+                  pH = -log<sub>10</sub>[H<sup>+</sup>]
+                </div>
+                <p>
+                  pH mäter koncentrationen av vätejoner (H<sup>+</sup>) i en
+                  lösning. Ju fler H<sup>+</sup>-joner, desto lägre pH och desto
+                  surare lösning.
+                </p>
+              </div>
+
+              <div class="card card-base" style="margin-top: var(--space-lg)">
+                <h3>pOH-formeln</h3>
+                <div class="formula-block">
+                  pOH = -log<sub>10</sub>[OH<sup>-</sup>]
+                </div>
+                <p>
+                  pOH mäter koncentrationen av hydroxidjoner (OH<sup>-</sup>).
+                  Ju fler OH<sup>-</sup>-joner, desto lägre pOH och desto mer
+                  basisk lösning.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="card card-neutral">
+                <h3>Sambandet</h3>
+                <div class="formula-block">pH + pOH = 14</div>
+                <p>
+                  Vid 25°C gäller alltid att summan av pH och pOH är 14. Detta
+                  beror på vattnets jämviktskonstant:
+                </p>
+                <div class="formula-block">
+                  K<sub>w</sub> = [H<sup>+</sup>] × [OH<sup>-</sup>] = 10<sup
+                    >-14</sup
+                  >
+                </div>
+              </div>
+
+              <div class="info-box" style="margin-top: var(--space-lg)">
+                <strong>Kom ihåg:</strong> pH 7 är neutralt eftersom
+                [H<sup>+</sup>] = [OH<sup>-</sup>] = 10<sup>-7</sup> M vid denna
+                punkt.
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top: var(--space-2xl)">Kalkylator</h3>
+          <div class="calculator">
+            <div class="calculator-input">
+              <label for="calcType">Välj beräkningstyp:</label>
+              <select id="calcType">
+                <option value="concentration-to-ph">
+                  Koncentration → pH/pOH
+                </option>
+                <option value="ph-to-concentration">pH → Koncentration</option>
+              </select>
+            </div>
+
+            <div class="calculator-input" id="calcInputGroup">
+              <label for="calcInput" id="calcInputLabel"
+                >[H<sup>+</sup>] i mol/L (t.ex. 0.001):</label
+              >
+              <input
+                type="number"
+                id="calcInput"
+                placeholder="0.001"
+                step="any"
+              />
+            </div>
+
+            <button
+              class="btn btn-primary"
+              onclick="calculate()"
+              style="width: 100%; justify-content: center"
+            >
+              Beräkna
+            </button>
+
+            <div class="calculator-result" style="margin-top: var(--space-lg)">
+              <div class="ph-value-box">
+                <div class="label">pH</div>
+                <div class="value" id="calcPh">-</div>
+              </div>
+              <div class="ph-value-box">
+                <div class="label">pOH</div>
+                <div class="value" id="calcPoh">-</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Acids Section -->
+      <section id="syror">
+        <div class="container">
+          <div class="section-header">
+            <h2>Syror</h2>
+            <p>
+              Syror är ämnen som kan avge vätejoner (H<sup>+</sup>) till en
+              lösning.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card card-acid">
+              <h3>Starka syror</h3>
+              <p>
+                Starka syror dissocierar fullständigt i vatten. Alla molekyler
+                avger sina H<sup>+</sup>-joner.
+              </p>
+
+              <div class="formula-block">
+                HCl → H<sup>+</sup> + Cl<sup>-</sup>
+              </div>
+
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Syra</th>
+                    <th>Formel</th>
+                    <th>Användning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Saltsyra</td>
+                    <td><span class="formula">HCl</span></td>
+                    <td>Magsyra, rengöring</td>
+                  </tr>
+                  <tr>
+                    <td>Svavelsyra</td>
+                    <td><span class="formula">H₂SO₄</span></td>
+                    <td>Bilbatterier</td>
+                  </tr>
+                  <tr>
+                    <td>Salpetersyra</td>
+                    <td><span class="formula">HNO₃</span></td>
+                    <td>Gödsel, sprängämnen</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card card-acid">
+              <h3>Svaga syror</h3>
+              <p>
+                Svaga syror dissocierar endast delvis. En jämvikt uppstår mellan
+                molekyler och joner.
+              </p>
+
+              <div class="formula-block">
+                CH₃COOH ⇌ H<sup>+</sup> + CH₃COO<sup>-</sup>
+              </div>
+
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Syra</th>
+                    <th>Formel</th>
+                    <th>Finns i</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ättiksyra</td>
+                    <td><span class="formula">CH₃COOH</span></td>
+                    <td>Vinäger</td>
+                  </tr>
+                  <tr>
+                    <td>Kolsyra</td>
+                    <td><span class="formula">H₂CO₃</span></td>
+                    <td>Läsk</td>
+                  </tr>
+                  <tr>
+                    <td>Citronsyra</td>
+                    <td><span class="formula">C₆H₈O₇</span></td>
+                    <td>Citrusfrukter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="info-box warning" style="margin-top: var(--space-xl)">
+            <strong>Viktigt:</strong> Stark vs svag handlar om
+            dissociationsgrad, inte om hur farlig syran är. En koncentrerad svag
+            syra kan vara farligare än en utspädd stark syra.
+          </div>
+        </div>
+      </section>
+
+      <!-- Bases Section -->
+      <section id="baser">
+        <div class="container">
+          <div class="section-header">
+            <h2>Baser</h2>
+            <p>
+              Baser är ämnen som kan ta upp vätejoner (H<sup>+</sup>) eller avge
+              hydroxidjoner (OH<sup>-</sup>).
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card card-base">
+              <h3>Starka baser</h3>
+              <p>
+                Starka baser dissocierar fullständigt i vatten och avger alla
+                sina OH<sup>-</sup>-joner.
+              </p>
+
+              <div class="formula-block">
+                NaOH → Na<sup>+</sup> + OH<sup>-</sup>
+              </div>
+
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Bas</th>
+                    <th>Formel</th>
+                    <th>Användning</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Natriumhydroxid</td>
+                    <td><span class="formula">NaOH</span></td>
+                    <td>Tvål, avlopp</td>
+                  </tr>
+                  <tr>
+                    <td>Kaliumhydroxid</td>
+                    <td><span class="formula">KOH</span></td>
+                    <td>Batterier, tvål</td>
+                  </tr>
+                  <tr>
+                    <td>Kalciumhydroxid</td>
+                    <td><span class="formula">Ca(OH)₂</span></td>
+                    <td>Murbruk, vattenrening</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="card card-base">
+              <h3>Svaga baser</h3>
+              <p>
+                Svaga baser tar bara upp en del av de tillgängliga vätejonerna.
+              </p>
+
+              <div class="formula-block">
+                NH₃ + H₂O ⇌ NH₄<sup>+</sup> + OH<sup>-</sup>
+              </div>
+
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Bas</th>
+                    <th>Formel</th>
+                    <th>Finns i</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Ammoniak</td>
+                    <td><span class="formula">NH₃</span></td>
+                    <td>Rengöringsmedel</td>
+                  </tr>
+                  <tr>
+                    <td>Natriumvätekarbonat</td>
+                    <td><span class="formula">NaHCO₃</span></td>
+                    <td>Bakpulver</td>
+                  </tr>
+                  <tr>
+                    <td>Magnesiumhydroxid</td>
+                    <td><span class="formula">Mg(OH)₂</span></td>
+                    <td>Magsyraneutraliserare</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ions Section -->
+      <section id="joner">
+        <div class="container">
+          <div class="section-header">
+            <h2>Joner i syra-bas-kemi</h2>
+            <p>
+              Det är jonerna som avgör om en lösning är sur, basisk eller
+              neutral.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card card-acid">
+              <h3>Vätejon (H<sup>+</sup>)</h3>
+              <div class="molecule-container">
+                <div class="ion ion-h">H<sup>+</sup></div>
+              </div>
+              <p>
+                Egentligen existerar inte H<sup>+</sup> ensam i vatten. Den
+                binder till en vattenmolekyl och bildar oxoniumjon:
+              </p>
+              <div class="formula-block">
+                H<sup>+</sup> + H₂O → H₃O<sup>+</sup>
+              </div>
+              <ul
+                style="
+                  margin-left: var(--space-lg);
+                  margin-top: var(--space-md);
+                "
+              >
+                <li>Hög [H<sup>+</sup>] = Lågt pH = Sur lösning</li>
+                <li>Kommer från syror</li>
+                <li>Reagerar med baser</li>
+              </ul>
+            </div>
+
+            <div class="card card-base">
+              <h3>Hydroxidjon (OH<sup>-</sup>)</h3>
+              <div class="molecule-container">
+                <div class="ion ion-oh">OH<sup>-</sup></div>
+              </div>
+              <p>
+                Hydroxidjonen består av en syreatom bunden till en väteatom, med
+                en extra elektron som ger den negativ laddning.
+              </p>
+              <div class="formula-block">Bas → OH<sup>-</sup></div>
+              <ul
+                style="
+                  margin-left: var(--space-lg);
+                  margin-top: var(--space-md);
+                "
+              >
+                <li>Hög [OH<sup>-</sup>] = Högt pH = Basisk lösning</li>
+                <li>Kommer från baser</li>
+                <li>Reagerar med syror</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card card-neutral" style="margin-top: var(--space-xl)">
+            <h3>Koncentrationsförhållandet</h3>
+            <p>I vatten vid 25°C gäller alltid:</p>
+            <div class="formula-block">
+              [H<sup>+</sup>] × [OH<sup>-</sup>] = 10<sup>-14</sup>
+            </div>
+
+            <div style="margin-top: var(--space-lg)">
+              <label
+                for="ionSlider"
+                style="display: block; margin-bottom: var(--space-sm)"
+                >Justera [H<sup>+</sup>] och se hur [OH<sup>-</sup>]
+                förändras:</label
+              >
+              <input
+                type="range"
+                id="ionSlider"
+                min="-14"
+                max="0"
+                step="0.5"
+                value="-7"
+                style="width: 100%"
+              />
+            </div>
+
+            <div class="ph-display" style="margin-top: var(--space-lg)">
+              <div class="ph-value-box acid">
+                <div class="label">[H<sup>+</sup>]</div>
+                <div class="value" id="ionH">10<sup>-7</sup> M</div>
+              </div>
+              <div class="ph-value-box base">
+                <div class="label">[OH<sup>-</sup>]</div>
+                <div class="value" id="ionOH">10<sup>-7</sup> M</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Neutralization Section -->
+      <section id="neutralisation">
+        <div class="container">
+          <div class="section-header">
+            <h2>Neutralisation</h2>
+            <p>
+              När en syra och en bas reagerar med varandra bildas salt och
+              vatten.
+            </p>
+          </div>
+
+          <div class="formula-block">
+            <span class="highlight-acid">Syra</span> +
+            <span class="highlight-base">Bas</span> → Salt + H₂O
+          </div>
+
+          <div class="neutralization-container">
+            <div class="reaction-visual">
+              <div>
+                <div class="beaker beaker-acid">
+                  <div class="beaker-liquid"></div>
+                </div>
+                <div class="beaker-label">HCl (syra)</div>
+              </div>
+              <span class="plus">+</span>
+              <div>
+                <div class="beaker beaker-base">
+                  <div class="beaker-liquid"></div>
+                </div>
+                <div class="beaker-label">NaOH (bas)</div>
+              </div>
+              <span class="arrow">→</span>
+              <div>
+                <div class="beaker beaker-neutral">
+                  <div class="beaker-liquid"></div>
+                </div>
+                <div class="beaker-label">NaCl + H₂O</div>
+              </div>
+            </div>
+          </div>
+
+          <h3 style="margin-top: var(--space-xl)">
+            Exempel på neutralisationsreaktioner
+          </h3>
+          <div class="grid-2">
+            <div class="card">
+              <h4>Saltsyra + Natriumhydroxid</h4>
+              <div class="formula-block">HCl + NaOH → NaCl + H₂O</div>
+              <p>Bildar koksalt (natriumklorid) och vatten.</p>
+            </div>
+
+            <div class="card">
+              <h4>Svavelsyra + Kaliumhydroxid</h4>
+              <div class="formula-block">H₂SO₄ + 2KOH → K₂SO₄ + 2H₂O</div>
+              <p>Observera att svavelsyra har två H<sup>+</sup> att avge.</p>
+            </div>
+
+            <div class="card">
+              <h4>Salpetersyra + Ammoniak</h4>
+              <div class="formula-block">HNO₃ + NH₃ → NH₄NO₃</div>
+              <p>Bildar ammoniumnitrat, ett viktigt gödselmedel.</p>
+            </div>
+
+            <div class="card">
+              <h4>Ättiksyra + Natriumvätekarbonat</h4>
+              <div class="formula-block">
+                CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂
+              </div>
+              <p>
+                Den klassiska "vulkan"-reaktionen som också producerar
+                koldioxid.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-box success" style="margin-top: var(--space-xl)">
+            <strong>Vardagsexempel:</strong> Magsyraneutraliserare (som Samarin)
+            innehåller baser som neutraliserar överskott av magsyra (HCl) i
+            magen.
+          </div>
+        </div>
+      </section>
+
+      <!-- Quiz Section -->
+      <section id="quiz">
+        <div class="container">
+          <div class="section-header">
+            <h2>Testa dina kunskaper</h2>
+            <p>Svara på frågorna för att se hur mycket du har lärt dig.</p>
+          </div>
+
+          <div class="quiz-container">
+            <div class="quiz-progress">
+              <div class="quiz-progress-bar">
+                <div
+                  class="quiz-progress-fill"
+                  id="quizProgress"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <span class="quiz-score" id="quizScore">0 / 0</span>
+            </div>
+
+            <div id="quizQuestions">
+              <!-- Populated by JS -->
+            </div>
+
+            <div
+              style="
+                display: flex;
+                gap: var(--space-md);
+                justify-content: center;
+                margin-top: var(--space-xl);
+              "
+            >
+              <button class="btn btn-secondary" onclick="resetQuiz()">
+                Börja om
+              </button>
+              <button
+                class="btn btn-primary"
+                id="checkAnswersBtn"
+                onclick="checkAllAnswers()"
+              >
+                Visa resultat
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      style="
+        text-align: center;
+        padding: var(--space-2xl);
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      "
+    >
+      <p>Syror & Baser | Kemi 1 Interaktiv Guide</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
