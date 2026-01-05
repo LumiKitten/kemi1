@@ -169,7 +169,7 @@ const searchableTopics = [
   {
     title: "Jonbindning",
     desc: "Elektrostatisk attraktion mellan joner",
-    url: "bindningar/",
+    url: "bindningar/#jonbindning",
     icon: "⚡",
     category: "Begrepp",
     keywords: ["jon", "bindning", "elektrostatisk", "salt", "NaCl"]
@@ -177,7 +177,7 @@ const searchableTopics = [
   {
     title: "Kovalent bindning",
     desc: "Delning av elektronpar",
-    url: "bindningar/",
+    url: "bindningar/#kovalent",
     icon: "🔗",
     category: "Begrepp",
     keywords: ["kovalent", "bindning", "elektronpar", "molekyl", "H2O"]
@@ -186,7 +186,7 @@ const searchableTopics = [
   {
     title: "Molmassa",
     desc: "Massa per mol av ett ämne",
-    url: "mol-stokiometri/",
+    url: "mol-stokiometri/#molmassa",
     icon: "⚖️",
     category: "Begrepp",
     keywords: ["molmassa", "mol", "gram", "massa", "g/mol"]
@@ -194,7 +194,7 @@ const searchableTopics = [
   {
     title: "Avogadros tal",
     desc: "6,022 × 10²³ partiklar per mol",
-    url: "mol-stokiometri/",
+    url: "mol-stokiometri/#mol",
     icon: "🔢",
     category: "Begrepp",
     keywords: ["avogadro", "tal", "mol", "partiklar", "konstant"]
@@ -203,7 +203,7 @@ const searchableTopics = [
   {
     title: "Oxidation",
     desc: "Avgivande av elektroner",
-    url: "redox/",
+    url: "redox/#grundbegrepp",
     icon: "📤",
     category: "Begrepp",
     keywords: ["oxidation", "elektron", "avge", "oxidationstal"]
@@ -211,7 +211,7 @@ const searchableTopics = [
   {
     title: "Reduktion",
     desc: "Upptagande av elektroner",
-    url: "redox/",
+    url: "redox/#grundbegrepp",
     icon: "📥",
     category: "Begrepp",
     keywords: ["reduktion", "elektron", "uppta", "oxidationstal"]
@@ -220,7 +220,7 @@ const searchableTopics = [
   {
     title: "Entalpi",
     desc: "Energiinnehåll vid konstant tryck",
-    url: "termokemi/",
+    url: "termokemi/#entalpi",
     icon: "🌡️",
     category: "Begrepp",
     keywords: ["entalpi", "energi", "H", "värme", "reaktion"]
@@ -228,7 +228,7 @@ const searchableTopics = [
   {
     title: "Exoterm reaktion",
     desc: "Avger energi till omgivningen",
-    url: "termokemi/",
+    url: "termokemi/#reaktioner",
     icon: "🔥",
     category: "Begrepp",
     keywords: ["exoterm", "energi", "avge", "värme", "negativ"]
@@ -236,7 +236,7 @@ const searchableTopics = [
   {
     title: "Endoterm reaktion",
     desc: "Tar upp energi från omgivningen",
-    url: "termokemi/",
+    url: "termokemi/#reaktioner",
     icon: "❄️",
     category: "Begrepp",
     keywords: ["endoterm", "energi", "uppta", "kyla", "positiv"]
