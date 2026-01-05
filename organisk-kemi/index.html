@@ -24,6 +24,13 @@
             <a href="../" class="logo">
                 <span class="organic-accent">Organisk</span> Kemi
             </a>
+            <div class="nav-search">
+                <div class="search-container">
+                    <input type="text" id="globalSearch" class="search-input" placeholder="Sök efter ämne..." autocomplete="off" />
+                    <span class="search-icon">🔍</span>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="#intro">Intro</a></li>
@@ -438,6 +445,7 @@
         <p>Organisk Kemi | Kemi 1 Interaktiv Guide</p>
     </footer>
 
+    <script src="../search.js"></script>
     <script src="organic-script.js"></script>
 </body>
 

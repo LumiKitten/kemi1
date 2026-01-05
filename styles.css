@@ -59,9 +59,11 @@ html {
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
-  background: linear-gradient(135deg,
-      var(--bg-primary) 0%,
-      var(--bg-secondary) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
@@ -192,6 +194,135 @@ nav {
   display: none;
 }
 
+/* Universal Search */
+.nav-search {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 var(--space-xl);
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-lg);
+  padding-right: 40px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.search-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--base-primary);
+  box-shadow: 0 0 0 3px var(--base-glow);
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.search-results {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 350px;
+  width: max-content;
+  max-width: 500px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  max-height: 400px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1001;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  text-decoration: none;
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background var(--transition-fast);
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-result-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.search-result-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-result-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.search-result-desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.search-result-category {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.search-no-results {
+  padding: var(--space-lg);
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -279,22 +410,24 @@ section:nth-child(even) {
 
 .ph-scale {
   height: 60px;
-  background: linear-gradient(to right,
-      #ff0000 0%,
-      #ff4500 7%,
-      #ff8c00 14%,
-      #ffd700 21%,
-      #ffff00 28%,
-      #adff2f 35%,
-      #7fff00 42%,
-      #00ff00 50%,
-      #00fa9a 57%,
-      #00ced1 64%,
-      #1e90ff 71%,
-      #4169e1 78%,
-      #8a2be2 85%,
-      #9400d3 92%,
-      #4b0082 100%);
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ff4500 7%,
+    #ff8c00 14%,
+    #ffd700 21%,
+    #ffff00 28%,
+    #adff2f 35%,
+    #7fff00 42%,
+    #00ff00 50%,
+    #00fa9a 57%,
+    #00ced1 64%,
+    #1e90ff 71%,
+    #4169e1 78%,
+    #8a2be2 85%,
+    #9400d3 92%,
+    #4b0082 100%
+  );
   border-radius: var(--radius-sm);
   position: relative;
 }
@@ -591,7 +724,6 @@ section:nth-child(even) {
 }
 
 @keyframes float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -804,21 +936,27 @@ section:nth-child(even) {
 }
 
 .beaker-acid .beaker-liquid {
-  background: linear-gradient(to bottom,
-      rgba(255, 71, 87, 0.6),
-      rgba(255, 71, 87, 0.8));
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 71, 87, 0.6),
+    rgba(255, 71, 87, 0.8)
+  );
 }
 
 .beaker-base .beaker-liquid {
-  background: linear-gradient(to bottom,
-      rgba(52, 152, 219, 0.6),
-      rgba(52, 152, 219, 0.8));
+  background: linear-gradient(
+    to bottom,
+    rgba(52, 152, 219, 0.6),
+    rgba(52, 152, 219, 0.8)
+  );
 }
 
 .beaker-neutral .beaker-liquid {
-  background: linear-gradient(to bottom,
-      rgba(46, 204, 113, 0.6),
-      rgba(46, 204, 113, 0.8));
+  background: linear-gradient(
+    to bottom,
+    rgba(46, 204, 113, 0.6),
+    rgba(46, 204, 113, 0.8)
+  );
 }
 
 .beaker-label {
@@ -898,6 +1036,29 @@ section:nth-child(even) {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  .nav-search {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(10, 10, 18, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-search.active {
+    display: block;
+  }
+
+  .search-container {
+    max-width: 100%;
+  }
+
+  nav {
+    flex-wrap: wrap;
   }
 
   .nav-links {

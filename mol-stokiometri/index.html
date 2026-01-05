@@ -23,6 +23,13 @@
             <a href="../" class="logo">
                 <span class="mol-accent">Mol</span> & Stökiometri
             </a>
+            <div class="nav-search">
+                <div class="search-container">
+                    <input type="text" id="globalSearch" class="search-input" placeholder="Sök efter ämne..." autocomplete="off" />
+                    <span class="search-icon">🔍</span>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="#mol">Mol</a></li>
@@ -391,6 +398,7 @@
         <p>Mol och Stökiometri | Kemi 1 Interaktiv Guide</p>
     </footer>
 
+    <script src="../search.js"></script>
     <script src="mol-script.js"></script>
 </body>
 

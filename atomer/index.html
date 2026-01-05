@@ -23,6 +23,13 @@
             <a href="../" class="logo">
                 <span class="atom-accent">Atom</span>ens Byggnad
             </a>
+            <div class="nav-search">
+                <div class="search-container">
+                    <input type="text" id="globalSearch" class="search-input" placeholder="Sök efter ämne..." autocomplete="off" />
+                    <span class="search-icon">🔍</span>
+                    <div class="search-results" id="searchResults"></div>
+                </div>
+            </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="#historia">Historia</a></li>
@@ -439,6 +446,7 @@
         <p>Atomens Byggnad | Kemi 1 Interaktiv Guide</p>
     </footer>
 
+    <script src="../search.js"></script>
     <script src="atom-script.js"></script>
 </body>
 
