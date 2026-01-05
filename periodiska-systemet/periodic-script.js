@@ -79,8 +79,146 @@ const allQuestions = [
 const QUESTIONS_PER_ROUND = 8;
 
 // ============================================
-// MINI PERIODIC TABLE DATA (7 rows)
+// MINI PERIODIC TABLE DATA (7 rows) with element info
 // ============================================
+const elementInfo = {
+    // Row 1
+    H:  { name: 'Väte', number: 1, mass: '1.008', valence: 1, group: 1, category: 'Icke-metall', reactivity: 'Medel', electroneg: '2.20', ion: 'H⁺' },
+    He: { name: 'Helium', number: 2, mass: '4.003', valence: 2, group: 18, category: 'Ädelgas', reactivity: 'Ingen', electroneg: '-', ion: 'Bildar ej' },
+    
+    // Row 2
+    Li: { name: 'Litium', number: 3, mass: '6.94', valence: 1, group: 1, category: 'Alkalimetall', reactivity: 'Hög', electroneg: '0.98', ion: 'Li⁺' },
+    Be: { name: 'Beryllium', number: 4, mass: '9.01', valence: 2, group: 2, category: 'Metall', reactivity: 'Låg', electroneg: '1.57', ion: 'Be²⁺' },
+    B:  { name: 'Bor', number: 5, mass: '10.81', valence: 3, group: 13, category: 'Halvmetall', reactivity: 'Låg', electroneg: '2.04', ion: 'B³⁺' },
+    C:  { name: 'Kol', number: 6, mass: '12.01', valence: 4, group: 14, category: 'Icke-metall', reactivity: 'Varierar', electroneg: '2.55', ion: 'Kovalent' },
+    N:  { name: 'Kväve', number: 7, mass: '14.01', valence: 5, group: 15, category: 'Icke-metall', reactivity: 'Låg (N₂)', electroneg: '3.04', ion: 'N³⁻' },
+    O:  { name: 'Syre', number: 8, mass: '16.00', valence: 6, group: 16, category: 'Icke-metall', reactivity: 'Hög', electroneg: '3.44', ion: 'O²⁻' },
+    F:  { name: 'Fluor', number: 9, mass: '19.00', valence: 7, group: 17, category: 'Halogen', reactivity: 'Mycket hög', electroneg: '3.98', ion: 'F⁻', note: 'Mest reaktiv halogen' },
+    Ne: { name: 'Neon', number: 10, mass: '20.18', valence: 8, group: 18, category: 'Ädelgas', reactivity: 'Ingen', electroneg: '-', ion: 'Bildar ej' },
+    
+    // Row 3
+    Na: { name: 'Natrium', number: 11, mass: '22.99', valence: 1, group: 1, category: 'Alkalimetall', reactivity: 'Mycket hög', electroneg: '0.93', ion: 'Na⁺', note: 'Reagerar häftigt med vatten' },
+    Mg: { name: 'Magnesium', number: 12, mass: '24.31', valence: 2, group: 2, category: 'Metall', reactivity: 'Medel', electroneg: '1.31', ion: 'Mg²⁺' },
+    Al: { name: 'Aluminium', number: 13, mass: '26.98', valence: 3, group: 13, category: 'Metall', reactivity: 'Medel', electroneg: '1.61', ion: 'Al³⁺' },
+    Si: { name: 'Kisel', number: 14, mass: '28.09', valence: 4, group: 14, category: 'Halvmetall', reactivity: 'Låg', electroneg: '1.90', ion: 'Halvledare' },
+    P:  { name: 'Fosfor', number: 15, mass: '30.97', valence: 5, group: 15, category: 'Icke-metall', reactivity: 'Medel', electroneg: '2.19', ion: 'P³⁻' },
+    S:  { name: 'Svavel', number: 16, mass: '32.07', valence: 6, group: 16, category: 'Icke-metall', reactivity: 'Medel', electroneg: '2.58', ion: 'S²⁻' },
+    Cl: { name: 'Klor', number: 17, mass: '35.45', valence: 7, group: 17, category: 'Halogen', reactivity: 'Hög', electroneg: '3.16', ion: 'Cl⁻', note: 'Mindre reaktiv än F' },
+    Ar: { name: 'Argon', number: 18, mass: '39.95', valence: 8, group: 18, category: 'Ädelgas', reactivity: 'Ingen', electroneg: '-', ion: 'Bildar ej' },
+    
+    // Row 4
+    K:  { name: 'Kalium', number: 19, mass: '39.10', valence: 1, group: 1, category: 'Alkalimetall', reactivity: 'Mycket hög', electroneg: '0.82', ion: 'K⁺', note: 'Mer reaktiv än Na' },
+    Ca: { name: 'Kalcium', number: 20, mass: '40.08', valence: 2, group: 2, category: 'Metall', reactivity: 'Medel-hög', electroneg: '1.00', ion: 'Ca²⁺' },
+    Sc: { name: 'Skandium', number: 21, mass: '44.96', valence: 3, group: 3, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.36', ion: 'Sc³⁺' },
+    Ti: { name: 'Titan', number: 22, mass: '47.87', valence: 4, group: 4, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.54', ion: 'Ti⁴⁺' },
+    V:  { name: 'Vanadin', number: 23, mass: '50.94', valence: 5, group: 5, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.63', ion: 'V⁵⁺' },
+    Cr: { name: 'Krom', number: 24, mass: '52.00', valence: 6, group: 6, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.66', ion: 'Cr³⁺/Cr⁶⁺' },
+    Mn: { name: 'Mangan', number: 25, mass: '54.94', valence: 7, group: 7, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.55', ion: 'Mn²⁺' },
+    Fe: { name: 'Järn', number: 26, mass: '55.85', valence: 2, group: 8, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.83', ion: 'Fe²⁺/Fe³⁺', note: 'Rostar i fukt' },
+    Co: { name: 'Kobolt', number: 27, mass: '58.93', valence: 2, group: 9, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.88', ion: 'Co²⁺' },
+    Ni: { name: 'Nickel', number: 28, mass: '58.69', valence: 2, group: 10, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.91', ion: 'Ni²⁺' },
+    Cu: { name: 'Koppar', number: 29, mass: '63.55', valence: 1, group: 11, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.90', ion: 'Cu⁺/Cu²⁺', note: 'Ädelmetall' },
+    Zn: { name: 'Zink', number: 30, mass: '65.38', valence: 2, group: 12, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.65', ion: 'Zn²⁺' },
+    Ga: { name: 'Gallium', number: 31, mass: '69.72', valence: 3, group: 13, category: 'Metall', reactivity: 'Låg', electroneg: '1.81', ion: 'Ga³⁺' },
+    Ge: { name: 'Germanium', number: 32, mass: '72.63', valence: 4, group: 14, category: 'Halvmetall', reactivity: 'Låg', electroneg: '2.01', ion: 'Halvledare' },
+    As: { name: 'Arsenik', number: 33, mass: '74.92', valence: 5, group: 15, category: 'Halvmetall', reactivity: 'Låg', electroneg: '2.18', ion: 'As³⁻' },
+    Se: { name: 'Selen', number: 34, mass: '78.97', valence: 6, group: 16, category: 'Icke-metall', reactivity: 'Medel', electroneg: '2.55', ion: 'Se²⁻' },
+    Br: { name: 'Brom', number: 35, mass: '79.90', valence: 7, group: 17, category: 'Halogen', reactivity: 'Medel-hög', electroneg: '2.96', ion: 'Br⁻', note: 'Flytande vid rumstemperatur' },
+    Kr: { name: 'Krypton', number: 36, mass: '83.80', valence: 8, group: 18, category: 'Ädelgas', reactivity: 'Mycket låg', electroneg: '3.00', ion: 'Bildar ej' },
+    
+    // Row 5
+    Rb: { name: 'Rubidium', number: 37, mass: '85.47', valence: 1, group: 1, category: 'Alkalimetall', reactivity: 'Mycket hög', electroneg: '0.82', ion: 'Rb⁺' },
+    Sr: { name: 'Strontium', number: 38, mass: '87.62', valence: 2, group: 2, category: 'Metall', reactivity: 'Hög', electroneg: '0.95', ion: 'Sr²⁺' },
+    Y:  { name: 'Yttrium', number: 39, mass: '88.91', valence: 3, group: 3, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.22', ion: 'Y³⁺' },
+    Zr: { name: 'Zirkonium', number: 40, mass: '91.22', valence: 4, group: 4, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.33', ion: 'Zr⁴⁺' },
+    Nb: { name: 'Niob', number: 41, mass: '92.91', valence: 5, group: 5, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.60', ion: 'Nb⁵⁺' },
+    Mo: { name: 'Molybden', number: 42, mass: '95.95', valence: 6, group: 6, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.16', ion: 'Mo⁶⁺' },
+    Tc: { name: 'Teknetium', number: 43, mass: '98', valence: 7, group: 7, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.90', ion: 'Tc⁷⁺', note: 'Radioaktivt' },
+    Ru: { name: 'Rutenium', number: 44, mass: '101.1', valence: 3, group: 8, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.20', ion: 'Ru³⁺' },
+    Rh: { name: 'Rodium', number: 45, mass: '102.9', valence: 3, group: 9, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.28', ion: 'Rh³⁺' },
+    Pd: { name: 'Palladium', number: 46, mass: '106.4', valence: 2, group: 10, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.20', ion: 'Pd²⁺' },
+    Ag: { name: 'Silver', number: 47, mass: '107.9', valence: 1, group: 11, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.93', ion: 'Ag⁺', note: 'Ädelmetall' },
+    Cd: { name: 'Kadmium', number: 48, mass: '112.4', valence: 2, group: 12, category: 'Övergångsmetall', reactivity: 'Medel', electroneg: '1.69', ion: 'Cd²⁺' },
+    In: { name: 'Indium', number: 49, mass: '114.8', valence: 3, group: 13, category: 'Metall', reactivity: 'Låg', electroneg: '1.78', ion: 'In³⁺' },
+    Sn: { name: 'Tenn', number: 50, mass: '118.7', valence: 4, group: 14, category: 'Metall', reactivity: 'Låg', electroneg: '1.96', ion: 'Sn²⁺/Sn⁴⁺' },
+    Sb: { name: 'Antimon', number: 51, mass: '121.8', valence: 5, group: 15, category: 'Halvmetall', reactivity: 'Låg', electroneg: '2.05', ion: 'Sb³⁺' },
+    Te: { name: 'Tellur', number: 52, mass: '127.6', valence: 6, group: 16, category: 'Halvmetall', reactivity: 'Låg', electroneg: '2.10', ion: 'Te²⁻' },
+    I:  { name: 'Jod', number: 53, mass: '126.9', valence: 7, group: 17, category: 'Halogen', reactivity: 'Medel', electroneg: '2.66', ion: 'I⁻', note: 'Fast vid rumstemperatur' },
+    Xe: { name: 'Xenon', number: 54, mass: '131.3', valence: 8, group: 18, category: 'Ädelgas', reactivity: 'Mycket låg', electroneg: '2.60', ion: 'Kan bilda XeF₂' },
+    
+    // Row 6
+    Cs: { name: 'Cesium', number: 55, mass: '132.9', valence: 1, group: 1, category: 'Alkalimetall', reactivity: 'Extremt hög', electroneg: '0.79', ion: 'Cs⁺', note: 'Mest reaktiva stabila alkalimetall' },
+    Ba: { name: 'Barium', number: 56, mass: '137.3', valence: 2, group: 2, category: 'Metall', reactivity: 'Hög', electroneg: '0.89', ion: 'Ba²⁺' },
+    La: { name: 'Lantan', number: 57, mass: '138.9', valence: 3, group: 3, category: 'Övergångsmetall', reactivity: 'Hög', electroneg: '1.10', ion: 'La³⁺' },
+    Hf: { name: 'Hafnium', number: 72, mass: '178.5', valence: 4, group: 4, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.30', ion: 'Hf⁴⁺' },
+    Ta: { name: 'Tantal', number: 73, mass: '180.9', valence: 5, group: 5, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.50', ion: 'Ta⁵⁺' },
+    W:  { name: 'Volfram', number: 74, mass: '183.8', valence: 6, group: 6, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.36', ion: 'W⁶⁺', note: 'Högsta smältpunkt' },
+    Re: { name: 'Renium', number: 75, mass: '186.2', valence: 7, group: 7, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '1.90', ion: 'Re⁷⁺' },
+    Os: { name: 'Osmium', number: 76, mass: '190.2', valence: 3, group: 8, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.20', ion: 'Os⁴⁺' },
+    Ir: { name: 'Iridium', number: 77, mass: '192.2', valence: 3, group: 9, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.20', ion: 'Ir³⁺' },
+    Pt: { name: 'Platina', number: 78, mass: '195.1', valence: 2, group: 10, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.28', ion: 'Pt²⁺', note: 'Ädelmetall' },
+    Au: { name: 'Guld', number: 79, mass: '197.0', valence: 1, group: 11, category: 'Övergångsmetall', reactivity: 'Mycket låg', electroneg: '2.54', ion: 'Au⁺/Au³⁺', note: 'Ädelmetall' },
+    Hg: { name: 'Kvicksilver', number: 80, mass: '200.6', valence: 2, group: 12, category: 'Övergångsmetall', reactivity: 'Låg', electroneg: '2.00', ion: 'Hg²⁺', note: 'Flytande vid rumstemperatur' },
+    Tl: { name: 'Tallium', number: 81, mass: '204.4', valence: 3, group: 13, category: 'Metall', reactivity: 'Medel', electroneg: '1.62', ion: 'Tl⁺/Tl³⁺' },
+    Pb: { name: 'Bly', number: 82, mass: '207.2', valence: 4, group: 14, category: 'Metall', reactivity: 'Låg', electroneg: '2.33', ion: 'Pb²⁺', note: 'Giftigt' },
+    Bi: { name: 'Vismut', number: 83, mass: '209.0', valence: 5, group: 15, category: 'Metall', reactivity: 'Låg', electroneg: '2.02', ion: 'Bi³⁺' },
+    Po: { name: 'Polonium', number: 84, mass: '209', valence: 6, group: 16, category: 'Halvmetall', reactivity: 'Medel', electroneg: '2.00', ion: 'Po²⁻', note: 'Radioaktivt' },
+    At: { name: 'Astat', number: 85, mass: '210', valence: 7, group: 17, category: 'Halogen', reactivity: 'Låg', electroneg: '2.20', ion: 'At⁻', note: 'Radioaktivt' },
+    Rn: { name: 'Radon', number: 86, mass: '222', valence: 8, group: 18, category: 'Ädelgas', reactivity: 'Ingen', electroneg: '-', ion: 'Bildar ej', note: 'Radioaktiv gas' },
+    
+    // Row 7
+    Fr: { name: 'Francium', number: 87, mass: '223', valence: 1, group: 1, category: 'Alkalimetall', reactivity: 'Extremt hög', electroneg: '0.70', ion: 'Fr⁺', note: 'Mest reaktiva alkalimetall' },
+    Ra: { name: 'Radium', number: 88, mass: '226', valence: 2, group: 2, category: 'Metall', reactivity: 'Hög', electroneg: '0.90', ion: 'Ra²⁺', note: 'Radioaktivt' },
+    Ac: { name: 'Aktinium', number: 89, mass: '227', valence: 3, group: 3, category: 'Övergångsmetall', reactivity: 'Hög', electroneg: '1.10', ion: 'Ac³⁺', note: 'Radioaktivt' },
+    Rf: { name: 'Rutherfordium', number: 104, mass: '267', valence: 4, group: 4, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Db: { name: 'Dubnium', number: 105, mass: '268', valence: 5, group: 5, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Sg: { name: 'Seaborgium', number: 106, mass: '269', valence: 6, group: 6, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Bh: { name: 'Bohrium', number: 107, mass: '270', valence: 7, group: 7, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Hs: { name: 'Hassium', number: 108, mass: '269', valence: 8, group: 8, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Mt: { name: 'Meitnerium', number: 109, mass: '278', valence: 9, group: 9, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Ds: { name: 'Darmstadtium', number: 110, mass: '281', valence: 10, group: 10, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Rg: { name: 'Röntgenium', number: 111, mass: '282', valence: 11, group: 11, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Cn: { name: 'Copernicium', number: 112, mass: '285', valence: 12, group: 12, category: 'Övergångsmetall', reactivity: '-', electroneg: '-', ion: '-' },
+    Nh: { name: 'Nihonium', number: 113, mass: '286', valence: 3, group: 13, category: 'Metall', reactivity: '-', electroneg: '-', ion: '-' },
+    Fl: { name: 'Flerovium', number: 114, mass: '289', valence: 4, group: 14, category: 'Metall', reactivity: '-', electroneg: '-', ion: '-' },
+    Mc: { name: 'Moscovium', number: 115, mass: '290', valence: 5, group: 15, category: 'Metall', reactivity: '-', electroneg: '-', ion: '-' },
+    Lv: { name: 'Livermorium', number: 116, mass: '293', valence: 6, group: 16, category: 'Metall', reactivity: '-', electroneg: '-', ion: '-' },
+    Ts: { name: 'Tennessine', number: 117, mass: '294', valence: 7, group: 17, category: 'Halogen', reactivity: '-', electroneg: '-', ion: '-' },
+    Og: { name: 'Oganesson', number: 118, mass: '294', valence: 8, group: 18, category: 'Ädelgas', reactivity: '-', electroneg: '-', ion: '-' },
+    
+    // Lanthanides (57-71) - f-block elements
+    Ce: { name: 'Cerium', number: 58, mass: '140.1', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Hög', electroneg: '1.12', ion: 'Ce³⁺/Ce⁴⁺' },
+    Pr: { name: 'Praseodym', number: 59, mass: '140.9', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.13', ion: 'Pr³⁺' },
+    Nd: { name: 'Neodym', number: 60, mass: '144.2', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.14', ion: 'Nd³⁺', note: 'Används i starka magneter' },
+    Pm: { name: 'Prometium', number: 61, mass: '145', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: '-', electroneg: '1.13', ion: 'Pm³⁺', note: 'Radioaktivt' },
+    Sm: { name: 'Samarium', number: 62, mass: '150.4', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.17', ion: 'Sm³⁺' },
+    Eu: { name: 'Europium', number: 63, mass: '152.0', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Hög', electroneg: '1.20', ion: 'Eu²⁺/Eu³⁺' },
+    Gd: { name: 'Gadolinium', number: 64, mass: '157.3', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.20', ion: 'Gd³⁺', note: 'Magnetiskt' },
+    Tb: { name: 'Terbium', number: 65, mass: '158.9', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.20', ion: 'Tb³⁺' },
+    Dy: { name: 'Dysprosium', number: 66, mass: '162.5', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.22', ion: 'Dy³⁺' },
+    Ho: { name: 'Holmium', number: 67, mass: '164.9', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.23', ion: 'Ho³⁺' },
+    Er: { name: 'Erbium', number: 68, mass: '167.3', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.24', ion: 'Er³⁺' },
+    Tm: { name: 'Tulium', number: 69, mass: '168.9', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.25', ion: 'Tm³⁺' },
+    Yb: { name: 'Ytterbium', number: 70, mass: '173.0', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.10', ion: 'Yb²⁺/Yb³⁺' },
+    Lu: { name: 'Lutetium', number: 71, mass: '175.0', valence: 3, group: 'Ln', category: 'Lantanoid', reactivity: 'Medel', electroneg: '1.27', ion: 'Lu³⁺' },
+    
+    // Actinides (89-103) - f-block elements
+    Th: { name: 'Torium', number: 90, mass: '232.0', valence: 4, group: 'An', category: 'Aktinoid', reactivity: 'Medel', electroneg: '1.30', ion: 'Th⁴⁺', note: 'Radioaktivt' },
+    Pa: { name: 'Protaktinium', number: 91, mass: '231.0', valence: 5, group: 'An', category: 'Aktinoid', reactivity: 'Hög', electroneg: '1.50', ion: 'Pa⁵⁺', note: 'Radioaktivt' },
+    U:  { name: 'Uran', number: 92, mass: '238.0', valence: 6, group: 'An', category: 'Aktinoid', reactivity: 'Medel', electroneg: '1.38', ion: 'U⁶⁺', note: 'Kärnbränsle' },
+    Np: { name: 'Neptunium', number: 93, mass: '237', valence: 5, group: 'An', category: 'Aktinoid', reactivity: 'Hög', electroneg: '1.36', ion: 'Np⁵⁺', note: 'Radioaktivt' },
+    Pu: { name: 'Plutonium', number: 94, mass: '244', valence: 4, group: 'An', category: 'Aktinoid', reactivity: 'Hög', electroneg: '1.28', ion: 'Pu⁴⁺', note: 'Kärnvapen/bränsle' },
+    Am: { name: 'Americium', number: 95, mass: '243', valence: 3, group: 'An', category: 'Aktinoid', reactivity: 'Hög', electroneg: '1.30', ion: 'Am³⁺', note: 'I rökdetektorer' },
+    Cm: { name: 'Curium', number: 96, mass: '247', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'Cm³⁺', note: 'Radioaktivt' },
+    Bk: { name: 'Berkelium', number: 97, mass: '247', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'Bk³⁺' },
+    Cf: { name: 'Californium', number: 98, mass: '251', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'Cf³⁺' },
+    Es: { name: 'Einsteinium', number: 99, mass: '252', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'Es³⁺' },
+    Fm: { name: 'Fermium', number: 100, mass: '257', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'Fm³⁺' },
+    Md: { name: 'Mendelevium', number: 101, mass: '258', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'Md³⁺' },
+    No: { name: 'Nobelium', number: 102, mass: '259', valence: 2, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '1.30', ion: 'No²⁺' },
+    Lr: { name: 'Lawrencium', number: 103, mass: '266', valence: 3, group: 'An', category: 'Aktinoid', reactivity: '-', electroneg: '-', ion: 'Lr³⁺' }
+};
+
 const periodicData = [
     // Row 1
     { symbol: "H", type: "nonmetal" },
@@ -140,6 +278,60 @@ const periodicData = [
     { symbol: "Mc", type: "metal" }, { symbol: "Lv", type: "metal" }, { symbol: "Ts", type: "halogen" },
     { symbol: "Og", type: "noble" }
 ];
+
+// Lanthanides (58-71) - Ce to Lu (La is in main table)
+const lanthanideData = [
+    { symbol: "Ce", type: "lanthanide" },
+    { symbol: "Pr", type: "lanthanide" },
+    { symbol: "Nd", type: "lanthanide" },
+    { symbol: "Pm", type: "lanthanide" },
+    { symbol: "Sm", type: "lanthanide" },
+    { symbol: "Eu", type: "lanthanide" },
+    { symbol: "Gd", type: "lanthanide" },
+    { symbol: "Tb", type: "lanthanide" },
+    { symbol: "Dy", type: "lanthanide" },
+    { symbol: "Ho", type: "lanthanide" },
+    { symbol: "Er", type: "lanthanide" },
+    { symbol: "Tm", type: "lanthanide" },
+    { symbol: "Yb", type: "lanthanide" },
+    { symbol: "Lu", type: "lanthanide" }
+];
+
+// Actinides (90-103) - Th to Lr (Ac is in main table)
+const actinideData = [
+    { symbol: "Th", type: "actinide" },
+    { symbol: "Pa", type: "actinide" },
+    { symbol: "U", type: "actinide" },
+    { symbol: "Np", type: "actinide" },
+    { symbol: "Pu", type: "actinide" },
+    { symbol: "Am", type: "actinide" },
+    { symbol: "Cm", type: "actinide" },
+    { symbol: "Bk", type: "actinide" },
+    { symbol: "Cf", type: "actinide" },
+    { symbol: "Es", type: "actinide" },
+    { symbol: "Fm", type: "actinide" },
+    { symbol: "Md", type: "actinide" },
+    { symbol: "No", type: "actinide" },
+    { symbol: "Lr", type: "actinide" }
+];
+
+// View legends
+const viewLegends = {
+    metaltype: [
+        { class: 'metal-type-metal', label: 'Metaller' },
+        { class: 'metal-type-metalloid', label: 'Halvmetaller' },
+        { class: 'metal-type-nonmetal', label: 'Icke-metaller' }
+    ],
+    groups: [
+        { class: 'group-alkali', label: 'Alkalimetaller (Gr. 1)' },
+        { class: 'group-alkaline', label: 'Alkaliska jordartsmetaller (Gr. 2)' },
+        { class: 'group-halogen', label: 'Halogener (Gr. 17)' },
+        { class: 'group-noble', label: 'Ädelgaser (Gr. 18)' },
+        { class: 'group-other', label: 'Övriga grundämnen' }
+    ]
+};
+
+let currentView = 'metaltype';
 
 // ============================================
 // QUIZ SYSTEM
@@ -241,15 +433,153 @@ function resetQuiz() {
 }
 
 // ============================================
-// PERIODIC TABLE
+// PERIODIC TABLE WITH VIEWS
 // ============================================
 function initPeriodicTable() {
     const container = document.getElementById("miniPeriodicTable");
     if (!container) return;
 
-    container.innerHTML = periodicData.map(el =>
-        `<div class="pt-element ${el.type}" title="${el.symbol}">${el.symbol}</div>`
-    ).join("");
+    // Helper function to build element HTML
+    function buildElementHtml(el, periodNum) {
+        if (el.type === 'empty') {
+            return `<div class="pt-element empty"></div>`;
+        }
+        const info = elementInfo[el.symbol];
+        let tooltip = el.symbol;
+        if (info) {
+            tooltip = `${info.name} (${el.symbol})`;
+            tooltip += `\nAtomnummer: ${info.number}`;
+            tooltip += `\nAtommassa: ${info.mass} u`;
+            if (typeof info.group === 'number') {
+                tooltip += `\nGrupp: ${info.group} | Period: ${periodNum}`;
+            } else {
+                tooltip += `\nSerie: ${info.category}`;
+            }
+            tooltip += `\nKategori: ${info.category}`;
+            tooltip += `\nValenselektroner: ${info.valence}`;
+            tooltip += `\nTypisk jon: ${info.ion}`;
+            if (info.electroneg && info.electroneg !== '-') {
+                tooltip += `\nElektronegativitet: ${info.electroneg}`;
+            }
+            if (info.reactivity && info.reactivity !== '-') {
+                tooltip += `\nReaktivitet: ${info.reactivity}`;
+            }
+            if (info.note) {
+                tooltip += `\n⚡ ${info.note}`;
+            }
+        }
+        return `<div class="pt-element ${el.type}" title="${tooltip}">${el.symbol}</div>`;
+    }
+
+    // Group numbers for header row
+    const groupNumbers = ['', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+    
+    // Build header row with group numbers
+    let html = groupNumbers.map((g, i) => {
+        if (i === 0) return `<div class="pt-label pt-corner"></div>`;
+        return `<div class="pt-label pt-group">${g}</div>`;
+    }).join('');
+    
+    // Build periodic table rows with period labels
+    let elementIndex = 0;
+    
+    for (let period = 0; period < 7; period++) {
+        // Add period label
+        html += `<div class="pt-label pt-period">${period + 1}</div>`;
+        
+        // Add elements for this period
+        for (let col = 0; col < 18; col++) {
+            const el = periodicData[elementIndex];
+            elementIndex++;
+            html += buildElementHtml(el, period + 1);
+        }
+    }
+    
+    container.innerHTML = html;
+
+    // Build collapsible f-block section using same grid as main table
+    // Grid: 30px label + 18 group columns = 19 total columns
+    const fblockContainer = document.getElementById("fBlockElements");
+    if (fblockContainer) {
+        let fblockHtml = '';
+        
+        // Lanthanide row (period 6, elements 58-71 under groups 3-16)
+        fblockHtml += `<div class="fblock-label">Ln</div>`;
+        // Groups 1-2: 2 empty spacers
+        fblockHtml += `<div class="fblock-spacer"></div><div class="fblock-spacer"></div>`;
+        // Groups 3-16: Ce-Lu (14 elements)
+        lanthanideData.forEach(el => {
+            fblockHtml += buildElementHtml(el, 6);
+        });
+        // Groups 17-18: 2 empty spacers
+        fblockHtml += `<div class="fblock-spacer"></div><div class="fblock-spacer"></div>`;
+        
+        // Actinide row (period 7, elements 90-103 under groups 3-16)
+        fblockHtml += `<div class="fblock-label">An</div>`;
+        // Groups 1-2: 2 empty spacers
+        fblockHtml += `<div class="fblock-spacer"></div><div class="fblock-spacer"></div>`;
+        // Groups 3-16: Th-Lr (14 elements)
+        actinideData.forEach(el => {
+            fblockHtml += buildElementHtml(el, 7);
+        });
+        // Groups 17-18: 2 empty spacers
+        fblockHtml += `<div class="fblock-spacer"></div><div class="fblock-spacer"></div>`;
+        
+        fblockContainer.innerHTML = fblockHtml;
+    }
+
+    // Toggle button for f-block
+    const toggleBtn = document.getElementById("fblockToggle");
+    const fblockSection = document.getElementById("fBlockSection");
+    if (toggleBtn && fblockSection) {
+        toggleBtn.addEventListener('click', () => {
+            fblockSection.classList.toggle('collapsed');
+        });
+    }
+
+    // Set initial view
+    container.classList.add('view-metaltype');
+    updateLegend('metaltype');
+
+    // View selector buttons
+    const viewButtons = document.querySelectorAll('.view-btn');
+    viewButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const view = btn.dataset.view;
+            
+            // Update active button
+            viewButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            // Update table view
+            container.classList.remove('view-metaltype', 'view-groups');
+            container.classList.add(`view-${view}`);
+            
+            // Also update f-block section
+            const fblock = document.getElementById("fBlockElements");
+            if (fblock) {
+                fblock.classList.remove('view-metaltype', 'view-groups');
+                fblock.classList.add(`view-${view}`);
+            }
+            
+            // Update legend
+            updateLegend(view);
+            currentView = view;
+        });
+    });
+}
+
+function updateLegend(view) {
+    const legendContainer = document.getElementById('viewLegend');
+    if (!legendContainer) return;
+
+    const items = viewLegends[view] || [];
+    legendContainer.innerHTML = items.map(item => `
+        <div class="legend-item">
+            <span class="legend-color ${item.class}"></span>
+            <span>${item.label}</span>
+        </div>
+    `).join('');
 }
 
 // ============================================
