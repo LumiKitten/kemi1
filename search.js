@@ -155,7 +155,15 @@ const searchableTopics = [
     url: "atomer/#atomnummer",
     icon: "🔄",
     category: "Begrepp",
-    keywords: ["isotop", "neutron", "masstal", "kol-14", "radioaktiv"]
+    keywords: ["isotop", "neutron", "masstal", "kol-14", "radioaktiv", "nuklid", "nuklider"]
+  },
+  {
+    title: "Nuklider",
+    desc: "En specifik atomkärna med bestämt antal protoner och neutroner",
+    url: "atomer/#nuklider",
+    icon: "⚛️",
+    category: "Begrepp",
+    keywords: ["nuklid", "nuklider", "atomkärna", "masstal", "atomnummer", "isotop"]
   },
   // Specific concepts within Kemisk Bindning
   {
