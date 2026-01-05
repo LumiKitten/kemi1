@@ -32,13 +32,19 @@
             </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="#mol">Mol</a></li>
-                <li><a href="#molmassa">Molmassa</a></li>
-                <li><a href="#koncentration">Koncentration</a></li>
-                <li><a href="#stokiometri">Stökiometri</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Teori ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#mol">Begreppet mol</a></li>
+                        <li><a href="#molmassa">Molmassa</a></li>
+                        <li><a href="#koncentration">Koncentration</a></li>
+                        <li><a href="#stokiometri">Stökiometri</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exempel">Exempel</a></li>
                 <li><a href="#kalkylator">Kalkylator</a></li>
                 <li><a href="#quiz">Quiz</a></li>
-                <li class="nav-menu-back"><a href="../">← Tillbaka till meny</a></li>
+                <li class="nav-menu-back"><a href="../">← Tillbaka</a></li>
             </ul>
         </nav>
     </header>
@@ -284,6 +290,126 @@
                             <li><strong>Verkligt utbyte:</strong> Faktisk mängd i labbet</li>
                             <li><strong>Procentuellt utbyte:</strong> (verkligt/teoretiskt) × 100%</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Worked Examples Section -->
+        <section id="exempel">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Steg-för-steg beräkningar</h2>
+                    <p>Lär dig genom att följa genomarbetade exempel.</p>
+                </div>
+
+                <div class="worked-example">
+                    <h3>Exempel 1: Massa till mol</h3>
+                    <div class="example-problem">
+                        <span class="problem-label">Problem:</span>
+                        Hur många mol är 50 gram natriumklorid (NaCl)?
+                    </div>
+                    
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Beräkna molmassan</strong>
+                                <p>M(NaCl) = M(Na) + M(Cl) = 23 + 35.5 = 58.5 g/mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">2</span>
+                            <div class="step-content">
+                                <strong>Använd formeln n = m / M</strong>
+                                <p>n = 50 g / 58.5 g/mol = 0.855 mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>Svar: 0.855 mol NaCl</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="worked-example mt-xl">
+                    <h3>Exempel 2: Begränsande reaktant</h3>
+                    <div class="example-problem">
+                        <span class="problem-label">Problem:</span>
+                        2 mol H₂ reagerar med 2 mol O₂. Vilken är begränsande?
+                    </div>
+                    <div class="formula-block">2H₂ + O₂ → 2H₂O</div>
+                    
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Titta på molförhållandet</strong>
+                                <p>Enligt reaktionen behövs 2 mol H₂ för varje 1 mol O₂</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">2</span>
+                            <div class="step-content">
+                                <strong>Beräkna hur mycket som behövs</strong>
+                                <p>2 mol H₂ kräver 1 mol O₂, men vi har 2 mol O₂ (överskott)</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">3</span>
+                            <div class="step-content">
+                                <strong>Alternativt: 2 mol O₂ kräver 4 mol H₂</strong>
+                                <p>Vi har bara 2 mol H₂ (underskott)</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>Svar: H₂ är begränsande reaktant</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-2xl">
+                    <div class="card card-mol">
+                        <h3>Formelsamling</h3>
+                        <div class="formula-list">
+                            <div class="formula-item">
+                                <span class="formula-name">Substansmängd:</span>
+                                <span class="formula-eq">n = m / M</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula-name">Koncentration:</span>
+                                <span class="formula-eq">c = n / V</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula-name">Spädning:</span>
+                                <span class="formula-eq">c₁V₁ = c₂V₂</span>
+                            </div>
+                            <div class="formula-item">
+                                <span class="formula-name">Antal partiklar:</span>
+                                <span class="formula-eq">N = n × Nₐ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Utbytesberäkning</h3>
+                        <div class="yield-calc">
+                            <div class="yield-formula">
+                                <span class="yield-label">Procentuellt utbyte:</span>
+                                <div class="formula-block">
+                                    η = (verkligt utbyte / teoretiskt utbyte) × 100%
+                                </div>
+                            </div>
+                            <div class="yield-example">
+                                <p><strong>Om:</strong> Teoretiskt utbyte = 10 g, Verkligt utbyte = 8 g</p>
+                                <p><strong>Då:</strong> η = (8/10) × 100% = 80%</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

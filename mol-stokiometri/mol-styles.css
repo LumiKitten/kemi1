@@ -366,3 +366,118 @@
         flex-direction: column;
     }
 }
+
+/* Worked Examples */
+.worked-example {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+}
+
+.worked-example h3 {
+    color: #27ae60;
+    margin-bottom: var(--space-lg);
+}
+
+.example-problem {
+    background: var(--bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-lg);
+}
+
+.problem-label {
+    font-weight: 600;
+    color: #27ae60;
+    margin-right: var(--space-sm);
+}
+
+.example-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.example-step {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--text-muted);
+}
+
+.example-step.answer {
+    border-left-color: #27ae60;
+    background: rgba(39, 174, 96, 0.1);
+}
+
+.step-badge {
+    width: 30px;
+    height: 30px;
+    background: var(--bg-card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.example-step.answer .step-badge {
+    background: #27ae60;
+    color: white;
+}
+
+.step-content p {
+    margin: var(--space-xs) 0 0;
+    color: var(--text-secondary);
+}
+
+/* Formula List */
+.formula-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.formula-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.formula-name {
+    color: var(--text-secondary);
+}
+
+.formula-eq {
+    font-family: 'JetBrains Mono', monospace;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* Yield Calc */
+.yield-calc {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.yield-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.yield-example {
+    background: var(--bg-secondary);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+}
+
+.yield-example p {
+    margin: var(--space-xs) 0;
+}

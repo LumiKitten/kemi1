@@ -33,13 +33,26 @@
             </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="#energi">Energi</a></li>
-                <li><a href="#entalpi">Entalpi</a></li>
-                <li><a href="#reaktioner">Reaktioner</a></li>
-                <li><a href="#hess">Hess lag</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Teori ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#energi">Energi</a></li>
+                        <li><a href="#entalpi">Entalpi</a></li>
+                        <li><a href="#reaktioner">Reaktioner</a></li>
+                        <li><a href="#hess">Hess lag</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Fördjupning ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#bindningsenergi">Bindningsenergi</a></li>
+                        <li><a href="#katalysatorer">Katalysatorer</a></li>
+                        <li><a href="#vardagsexempel">Vardagsexempel</a></li>
+                    </ul>
+                </li>
                 <li><a href="#kalkylator">Kalkylator</a></li>
                 <li><a href="#quiz">Quiz</a></li>
-                <li class="nav-menu-back"><a href="../">← Tillbaka till meny</a></li>
+                <li class="nav-menu-back"><a href="../">← Tillbaka</a></li>
             </ul>
         </nav>
     </header>
@@ -236,6 +249,310 @@
                     <p>Entalpiförändringen när 1 mol av ett ämne bildas från sina grundämnen i standardform.</p>
                     <div class="formula-block">ΔH°<sub>reaktion</sub> = ΣΔH°<sub>f</sub>(produkter) -
                         ΣΔH°<sub>f</sub>(reaktanter)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bond Energies Section -->
+        <section id="bindningsenergi">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bindningsenergier</h2>
+                    <p>Energi som krävs för att bryta kemiska bindningar, eller frigörs när de bildas.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-thermo">
+                        <h3>Bryta bindningar</h3>
+                        <div class="formula-block">Kräver energi (endotemt)</div>
+                        <p>För att bryta en bindning måste man tillföra energi. Bindningsenergin anger hur mycket energi som krävs.</p>
+                        <div class="bond-visual breaking">
+                            <span class="bond-atom">H</span>
+                            <span class="bond-line">—</span>
+                            <span class="bond-atom">H</span>
+                            <span class="bond-arrow">+ 436 kJ →</span>
+                            <span class="bond-atom">H</span>
+                            <span class="bond-plus">+</span>
+                            <span class="bond-atom">H</span>
+                        </div>
+                    </div>
+
+                    <div class="card card-exo">
+                        <h3>Bilda bindningar</h3>
+                        <div class="formula-block">Frigör energi (exotermt)</div>
+                        <p>När en bindning bildas frigörs energi. Samma mängd energi som krävs för att bryta den.</p>
+                        <div class="bond-visual forming">
+                            <span class="bond-atom">H</span>
+                            <span class="bond-plus">+</span>
+                            <span class="bond-atom">H</span>
+                            <span class="bond-arrow">→ − 436 kJ</span>
+                            <span class="bond-atom">H</span>
+                            <span class="bond-line">—</span>
+                            <span class="bond-atom">H</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bond-energy-table mt-xl">
+                    <h3>Vanliga bindningsenergier</h3>
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Bindning</th>
+                                <th>Energi (kJ/mol)</th>
+                                <th>Typ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="formula">H—H</span></td>
+                                <td>436</td>
+                                <td>Enkel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">O=O</span></td>
+                                <td>498</td>
+                                <td>Dubbel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">C—H</span></td>
+                                <td>414</td>
+                                <td>Enkel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">C—C</span></td>
+                                <td>347</td>
+                                <td>Enkel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">C=C</span></td>
+                                <td>614</td>
+                                <td>Dubbel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">C≡C</span></td>
+                                <td>839</td>
+                                <td>Trippel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">O—H</span></td>
+                                <td>464</td>
+                                <td>Enkel</td>
+                            </tr>
+                            <tr>
+                                <td><span class="formula">C=O</span></td>
+                                <td>805</td>
+                                <td>Dubbel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card card-neutral mt-xl">
+                    <h3>Beräkna ΔH med bindningsenergier</h3>
+                    <div class="formula-block large">ΔH = Σ(bindningar brutna) − Σ(bindningar bildade)</div>
+                    <p class="mt-lg">Om mer energi frigörs vid bildning av nya bindningar än vad som krävs för att bryta de gamla, är reaktionen exoterm (ΔH < 0).</p>
+                    
+                    <div class="bond-calc-example mt-xl">
+                        <h4>Exempel: Förbränning av metan</h4>
+                        <div class="formula-block">CH₄ + 2O₂ → CO₂ + 2H₂O</div>
+                        
+                        <div class="grid-2 mt-lg">
+                            <div class="calc-box breaking">
+                                <h5>Bindningar som bryts:</h5>
+                                <ul>
+                                    <li>4 × C—H = 4 × 414 = 1656 kJ</li>
+                                    <li>2 × O=O = 2 × 498 = 996 kJ</li>
+                                    <li><strong>Summa: +2652 kJ</strong></li>
+                                </ul>
+                            </div>
+                            <div class="calc-box forming">
+                                <h5>Bindningar som bildas:</h5>
+                                <ul>
+                                    <li>2 × C=O = 2 × 805 = 1610 kJ</li>
+                                    <li>4 × O—H = 4 × 464 = 1856 kJ</li>
+                                    <li><strong>Summa: −3466 kJ</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="formula-block result mt-lg">
+                            ΔH = 2652 − 3466 = −814 kJ (exoterm)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catalysts Section -->
+        <section id="katalysatorer">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Katalysatorer</h2>
+                    <p>Ämnen som ökar reaktionshastigheten utan att själva förbrukas.</p>
+                </div>
+
+                <div class="catalyst-diagram">
+                    <div class="catalyst-visual">
+                        <div class="energy-path without-catalyst">
+                            <div class="path-line"></div>
+                            <span class="path-label">Utan katalysator</span>
+                            <span class="ea-high">Hög E<sub>a</sub></span>
+                        </div>
+                        <div class="energy-path with-catalyst">
+                            <div class="path-line"></div>
+                            <span class="path-label">Med katalysator</span>
+                            <span class="ea-low">Låg E<sub>a</sub></span>
+                        </div>
+                        <div class="catalyst-reactants">Reaktanter</div>
+                        <div class="catalyst-products">Produkter</div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h3>Vad gör en katalysator?</h3>
+                        <ul class="catalyst-list">
+                            <li><span class="icon">⚡</span> Sänker aktiveringsenergin (E<sub>a</sub>)</li>
+                            <li><span class="icon">🔄</span> Återbildas efter reaktionen</li>
+                            <li><span class="icon">⏱️</span> Ökar reaktionshastigheten</li>
+                            <li><span class="icon">📊</span> Påverkar INTE ΔH</li>
+                        </ul>
+                    </div>
+
+                    <div class="card card-thermo">
+                        <h3>Viktigt att komma ihåg</h3>
+                        <p>En katalysator:</p>
+                        <ul class="concept-list">
+                            <li>Ändrar <strong>inte</strong> entalpiförändringen (ΔH)</li>
+                            <li>Ändrar <strong>inte</strong> jämviktsläget</li>
+                            <li>Påskyndar både fram- och backreaktionen lika mycket</li>
+                            <li>Gör reaktionen snabbare, inte "bättre"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Exempel på katalysatorer</h3>
+                <div class="grid-3">
+                    <div class="catalyst-card">
+                        <div class="catalyst-icon">🚗</div>
+                        <h4>Katalysator i bilar</h4>
+                        <p>Platina och palladium omvandlar giftiga avgaser till mindre farliga ämnen.</p>
+                        <div class="formula-block small">2CO + O₂ → 2CO₂</div>
+                    </div>
+                    <div class="catalyst-card">
+                        <div class="catalyst-icon">🧬</div>
+                        <h4>Enzymer</h4>
+                        <p>Biologiska katalysatorer i kroppen som möjliggör livsprocesser.</p>
+                        <div class="formula-block small">Amylas: stärkelse → socker</div>
+                    </div>
+                    <div class="catalyst-card">
+                        <div class="catalyst-icon">🏭</div>
+                        <h4>Industriella processer</h4>
+                        <p>Järn används vid tillverkning av ammoniak (Haber-processen).</p>
+                        <div class="formula-block small">N₂ + 3H₂ ⇌ 2NH₃</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Everyday Examples Section -->
+        <section id="vardagsexempel">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Termokemi i vardagen</h2>
+                    <p>Exoterma och endoterma reaktioner finns överallt omkring oss.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-exo">
+                        <h3>Exoterma reaktioner</h3>
+                        <p>Frigör värme till omgivningen (ΔH < 0)</p>
+                        <div class="everyday-examples">
+                            <div class="example-item">
+                                <span class="example-icon">🔥</span>
+                                <div>
+                                    <strong>Förbränning</strong>
+                                    <p>Ved i en brasa, bensin i en motor</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">🤲</span>
+                                <div>
+                                    <strong>Handvärmare</strong>
+                                    <p>Järnpulver oxideras och frigör värme</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">🍞</span>
+                                <div>
+                                    <strong>Cellandning</strong>
+                                    <p>Glukos + O₂ → CO₂ + H₂O + energi</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">💡</span>
+                                <div>
+                                    <strong>Neutralisation</strong>
+                                    <p>Syra + bas → salt + vatten (+ värme)</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">❄️</span>
+                                <div>
+                                    <strong>Kondensation</strong>
+                                    <p>Vattenånga → vatten (fryser på fönster)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-endo">
+                        <h3>Endoterma reaktioner</h3>
+                        <p>Tar upp värme från omgivningen (ΔH > 0)</p>
+                        <div class="everyday-examples">
+                            <div class="example-item">
+                                <span class="example-icon">🌱</span>
+                                <div>
+                                    <strong>Fotosyntes</strong>
+                                    <p>CO₂ + H₂O + ljus → glukos + O₂</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">🧊</span>
+                                <div>
+                                    <strong>Kylpåsar</strong>
+                                    <p>Ammoniumnitrat löses i vatten, blir kallt</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">🍳</span>
+                                <div>
+                                    <strong>Matlagning</strong>
+                                    <p>Ägg koagulerar när de värms</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">💧</span>
+                                <div>
+                                    <strong>Avdunstning</strong>
+                                    <p>Svett kyler kroppen när det avdunstar</p>
+                                </div>
+                            </div>
+                            <div class="example-item">
+                                <span class="example-icon">🧁</span>
+                                <div>
+                                    <strong>Bakning</strong>
+                                    <p>Bakpulver sönderdelas → CO₂ (jäser)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box success mt-xl">
+                    <strong>Minnesregel:</strong> Exoterm = "exit" (energi lämnar systemet, omgivningen blir varm). 
+                    Endoterm = "enter" (energi går in i systemet, omgivningen blir kall).
                 </div>
             </div>
         </section>

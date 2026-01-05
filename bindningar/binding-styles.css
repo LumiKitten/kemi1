@@ -492,3 +492,43 @@
         height: 50px;
     }
 }
+
+/* Polarity Scale */
+.polarity-scale {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.scale-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.scale-range {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-secondary);
+}
+
+.scale-type {
+    font-weight: 600;
+}
+
+/* Table Strength Colors */
+.td-strong {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.td-medium {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.td-weak {
+    color: #95a5a6;
+}

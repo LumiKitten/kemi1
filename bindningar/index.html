@@ -33,13 +33,19 @@
             </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="#varfor">Varför?</a></li>
-                <li><a href="#jonbindning">Jonbindning</a></li>
-                <li><a href="#kovalent">Kovalent</a></li>
-                <li><a href="#metallbindning">Metall</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Bindningar ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#varfor">Varför bindningar?</a></li>
+                        <li><a href="#jonbindning">Jonbindning</a></li>
+                        <li><a href="#kovalent">Kovalent</a></li>
+                        <li><a href="#metallbindning">Metallbindning</a></li>
+                    </ul>
+                </li>
                 <li><a href="#intermolekylara">Intermolekylära</a></li>
+                <li><a href="#jamforelse">Jämförelse</a></li>
                 <li><a href="#quiz">Quiz</a></li>
-                <li class="nav-menu-back"><a href="../">← Tillbaka till meny</a></li>
+                <li class="nav-menu-back"><a href="../">← Tillbaka</a></li>
             </ul>
         </nav>
     </header>
@@ -374,6 +380,97 @@
                 <div class="info-box mt-xl">
                     <strong>Kom ihåg:</strong> Intermolekylära krafter är MELLAN molekyler. Kovalenta bindningar är INOM
                     molekyler och mycket starkare.
+                </div>
+            </div>
+        </section>
+
+        <!-- Bond Comparison Section -->
+        <section id="jamforelse">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Jämförelse av bindningar</h2>
+                    <p>Översikt av alla bindningstyper och deras egenskaper.</p>
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Bindningstyp</th>
+                            <th>Mellan</th>
+                            <th>Styrka</th>
+                            <th>Exempel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Jonbindning</strong></td>
+                            <td>Metall + Icke-metall</td>
+                            <td class="td-strong">Stark</td>
+                            <td>NaCl, MgO</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kovalent</strong></td>
+                            <td>Icke-metall + Icke-metall</td>
+                            <td class="td-strong">Stark</td>
+                            <td>H₂O, CO₂, CH₄</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Metallbindning</strong></td>
+                            <td>Metall + Metall</td>
+                            <td class="td-strong">Stark</td>
+                            <td>Fe, Cu, Au</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vätebindning</strong></td>
+                            <td>Molekyler med H-N/O/F</td>
+                            <td class="td-medium">Medel</td>
+                            <td>H₂O...H₂O</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dipol-dipol</strong></td>
+                            <td>Polära molekyler</td>
+                            <td class="td-weak">Svag</td>
+                            <td>HCl...HCl</td>
+                        </tr>
+                        <tr>
+                            <td><strong>London</strong></td>
+                            <td>Alla molekyler</td>
+                            <td class="td-weak">Svagast</td>
+                            <td>He...He, CH₄...CH₄</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-binding">
+                        <h3>Polär eller opolär?</h3>
+                        <p>Elektronegativitetsskillnad (ΔEN) avgör:</p>
+                        <div class="polarity-scale">
+                            <div class="scale-item">
+                                <span class="scale-range">ΔEN < 0.4</span>
+                                <span class="scale-type">Opolär kovalent</span>
+                            </div>
+                            <div class="scale-item">
+                                <span class="scale-range">0.4 ≤ ΔEN < 1.7</span>
+                                <span class="scale-type">Polär kovalent</span>
+                            </div>
+                            <div class="scale-item">
+                                <span class="scale-range">ΔEN ≥ 1.7</span>
+                                <span class="scale-type">Jonbindning</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Hur identifierar du bindningstyp?</h3>
+                        <ol class="step-list">
+                            <li><strong>Identifiera ämnena:</strong> Metall eller icke-metall?</li>
+                            <li><strong>Metall + Icke-metall:</strong> Jonbindning</li>
+                            <li><strong>Metall + Metall:</strong> Metallbindning</li>
+                            <li><strong>Icke-metall + Icke-metall:</strong> Kovalent bindning</li>
+                            <li><strong>Kolla ΔEN:</strong> Polär eller opolär kovalent?</li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </section>

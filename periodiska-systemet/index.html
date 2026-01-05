@@ -32,12 +32,25 @@
             </div>
             <button class="nav-toggle" aria-label="Meny">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="#uppbyggnad">Uppbyggnad</a></li>
-                <li><a href="#grupper">Grupper</a></li>
-                <li><a href="#metaller">Metaller</a></li>
-                <li><a href="#trender">Trender</a></li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Lär dig ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#uppbyggnad">Uppbyggnad</a></li>
+                        <li><a href="#grupper">Grupper</a></li>
+                        <li><a href="#metaller">Metaller</a></li>
+                        <li><a href="#trender">Trender</a></li>
+                    </ul>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Verktyg ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#utforska">Utforska grundämnen</a></li>
+                        <li><a href="#vanliga-joner">Vanliga joner</a></li>
+                        <li><a href="#elektronkonfiguration">Elektronkonfiguration</a></li>
+                    </ul>
+                </li>
                 <li><a href="#quiz">Quiz</a></li>
-                <li class="nav-menu-back"><a href="../">← Tillbaka till meny</a></li>
+                <li class="nav-menu-back"><a href="../">← Tillbaka</a></li>
             </ul>
         </nav>
     </header>
@@ -322,6 +335,200 @@
                 <div class="info-box mt-xl">
                     <strong>Kom ihåg:</strong> Alla trender beror på balansen mellan kärnladdning (attraktionskraft) och
                     avstånd till yttersta elektroner (avskärmning).
+                </div>
+            </div>
+        </section>
+
+        <!-- Element Explorer Section -->
+        <section id="utforska">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Utforska grundämnen</h2>
+                    <p>Klicka på ett grundämne för att se dess egenskaper.</p>
+                </div>
+
+                <div class="element-explorer">
+                    <div class="element-selector-grid" id="elementGrid">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <div class="element-detail-card" id="elementDetail">
+                        <div class="element-symbol-large" id="detailSymbol">Na</div>
+                        <div class="element-info-grid">
+                            <div class="info-item">
+                                <span class="info-label">Namn</span>
+                                <span class="info-value" id="detailName">Natrium</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Atomnummer</span>
+                                <span class="info-value" id="detailNumber">11</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Atommassa</span>
+                                <span class="info-value" id="detailMass">22.99 u</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Grupp</span>
+                                <span class="info-value" id="detailGroup">1 (Alkalimetaller)</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Period</span>
+                                <span class="info-value" id="detailPeriod">3</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Elektronkonfiguration</span>
+                                <span class="info-value" id="detailConfig">2, 8, 1</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Valenselektroner</span>
+                                <span class="info-value" id="detailValence">1</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">Typisk jon</span>
+                                <span class="info-value" id="detailIon">Na⁺</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Ions Section -->
+        <section id="vanliga-joner">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Vanliga joner</h2>
+                    <p>Vilka joner grundämnen bildar baserat på deras gruppnummer.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-periodic">
+                        <h3>Positiva joner (katjoner)</h3>
+                        <p>Metaller avger elektroner för att få ädelgasstruktur.</p>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Grupp</th>
+                                    <th>Avger</th>
+                                    <th>Jon</th>
+                                    <th>Exempel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1 e⁻</td>
+                                    <td class="ion-positive">+1</td>
+                                    <td>Na⁺, K⁺, Li⁺</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2 e⁻</td>
+                                    <td class="ion-positive">+2</td>
+                                    <td>Mg²⁺, Ca²⁺</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>3 e⁻</td>
+                                    <td class="ion-positive">+3</td>
+                                    <td>Al³⁺</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="card card-periodic">
+                        <h3>Negativa joner (anjoner)</h3>
+                        <p>Icke-metaller tar upp elektroner för att få ädelgasstruktur.</p>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Grupp</th>
+                                    <th>Tar upp</th>
+                                    <th>Jon</th>
+                                    <th>Exempel</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>17</td>
+                                    <td>1 e⁻</td>
+                                    <td class="ion-negative">-1</td>
+                                    <td>Cl⁻, Br⁻, F⁻</td>
+                                </tr>
+                                <tr>
+                                    <td>16</td>
+                                    <td>2 e⁻</td>
+                                    <td class="ion-negative">-2</td>
+                                    <td>O²⁻, S²⁻</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>3 e⁻</td>
+                                    <td class="ion-negative">-3</td>
+                                    <td>N³⁻, P³⁻</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Tips:</strong> För huvudgrupperna gäller: Grupp 1-2 bildar positiva joner med laddning = gruppnumret.
+                    Grupp 15-17 bildar negativa joner med laddning = gruppnumret - 18.
+                </div>
+            </div>
+        </section>
+
+        <!-- Electron Configuration Preview -->
+        <section id="elektronkonfiguration">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Elektronkonfiguration i periodiska systemet</h2>
+                    <p>Se hur elektronerna fördelas för olika grundämnen.</p>
+                </div>
+
+                <div class="config-explorer">
+                    <div class="config-buttons">
+                        <button class="config-btn active" data-element="H">H (1)</button>
+                        <button class="config-btn" data-element="C">C (6)</button>
+                        <button class="config-btn" data-element="O">O (8)</button>
+                        <button class="config-btn" data-element="Na">Na (11)</button>
+                        <button class="config-btn" data-element="Cl">Cl (17)</button>
+                        <button class="config-btn" data-element="Ar">Ar (18)</button>
+                        <button class="config-btn" data-element="K">K (19)</button>
+                        <button class="config-btn" data-element="Ca">Ca (20)</button>
+                    </div>
+
+                    <div class="config-display-area">
+                        <div class="shell-visual" id="shellVisual">
+                            <!-- Populated by JS -->
+                        </div>
+                        <div class="config-text" id="configText">
+                            <span class="config-name">Väte (H)</span>
+                            <span class="config-number">Z = 1</span>
+                            <span class="config-shells">K: 1</span>
+                            <span class="config-valence">Valenselektroner: 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-3 mt-xl">
+                    <div class="config-card">
+                        <div class="config-card-header">K-skal (n=1)</div>
+                        <div class="config-card-max">Max 2 e⁻</div>
+                        <p>Det innersta skalet, närmast kärnan.</p>
+                    </div>
+                    <div class="config-card">
+                        <div class="config-card-header">L-skal (n=2)</div>
+                        <div class="config-card-max">Max 8 e⁻</div>
+                        <p>Andra skalet, fylls efter K-skalet.</p>
+                    </div>
+                    <div class="config-card">
+                        <div class="config-card-header">M-skal (n=3)</div>
+                        <div class="config-card-max">Max 18 e⁻</div>
+                        <p>Tredje skalet (ofta max 8 för lätta ämnen).</p>
+                    </div>
                 </div>
             </div>
         </section>
