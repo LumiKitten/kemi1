@@ -79,17 +79,50 @@ const allQuestions = [
 const QUESTIONS_PER_ROUND = 8;
 
 // ============================================
-// HAZARD PICTOGRAMS
+// HAZARD PICTOGRAMS (GHS - Globally Harmonized System)
 // ============================================
+// Official GHS pictograms from Wikimedia Commons
 const pictograms = [
-    { symbol: "🔥", name: "Brandfarligt", description: "Lättantändliga ämnen" },
-    { symbol: "💥", name: "Explosivt", description: "Risk för explosion" },
-    { symbol: "☠️", name: "Giftigt", description: "Akut giftigt vid kontakt" },
-    { symbol: "⚗️", name: "Frätande", description: "Kan orsaka frätskador" },
-    { symbol: "⚠️", name: "Hälsofarligt", description: "Kan orsaka irritation" },
-    { symbol: "🌊", name: "Miljöfarligt", description: "Farligt för vattenmiljön" },
-    { symbol: "🫁", name: "Allvarlig hälsofara", description: "Cancerframkallande m.m." },
-    { symbol: "🧪", name: "Gas under tryck", description: "Trycksatt gasbehållare" }
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/6/6d/GHS-pictogram-flamme.svg", 
+        name: "Brandfarligt", 
+        description: "Lättantändliga ämnen (GHS02)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/4/4a/GHS-pictogram-explos.svg", 
+        name: "Explosivt", 
+        description: "Risk för explosion (GHS01)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/5/58/GHS-pictogram-skull.svg", 
+        name: "Giftigt", 
+        description: "Akut giftigt vid kontakt (GHS06)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/a/a1/GHS-pictogram-acid.svg", 
+        name: "Frätande", 
+        description: "Kan orsaka frätskador (GHS05)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/c/c3/GHS-pictogram-exclam.svg", 
+        name: "Hälsofarligt", 
+        description: "Kan orsaka irritation (GHS07)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/b/b9/GHS-pictogram-pollu.svg", 
+        name: "Miljöfarligt", 
+        description: "Farligt för vattenmiljön (GHS09)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/2/21/GHS-pictogram-silhouette.svg", 
+        name: "Allvarlig hälsofara", 
+        description: "Cancerframkallande m.m. (GHS08)" 
+    },
+    { 
+        symbol: "https://upload.wikimedia.org/wikipedia/commons/6/6a/GHS-pictogram-bottle.svg", 
+        name: "Gas under tryck", 
+        description: "Trycksatt gasbehållare (GHS04)" 
+    }
 ];
 
 let currentPictogramIndex = 0;
@@ -203,7 +236,7 @@ function initPictograms() {
 
     grid.innerHTML = pictograms.map(p => `
     <div class="pictogram-item">
-      <span class="pictogram-symbol">${p.symbol}</span>
+      <img src="${p.symbol}" alt="${p.name}" class="pictogram-symbol" />
       <span class="pictogram-name">${p.name}</span>
     </div>
   `).join("");
@@ -227,14 +260,15 @@ function showPictogramQuestion() {
     feedbackEl.className = "game-feedback";
 
     const current = pictograms[currentPictogramIndex];
-    symbolEl.textContent = current.symbol;
+    symbolEl.innerHTML = `<img src="${current.symbol}" alt="GHS pictogram" class="game-symbol-img" />`;
 
     // Generate 4 options including correct answer
     let options = [current.name];
     const others = pictograms.filter(p => p.name !== current.name);
     shuffleArray(others);
     options.push(...others.slice(0, 3).map(p => p.name));
-    shuffleArray(options);
+    // Properly shuffle the options array
+    options = shuffleArray(options);
 
     optionsEl.innerHTML = options.map(opt => `
     <button class="game-option" onclick="checkPictogram('${opt}')">${opt}</button>

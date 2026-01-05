@@ -96,7 +96,8 @@
 }
 
 .pictogram-symbol {
-    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
     margin-bottom: var(--space-sm);
 }
 
@@ -124,9 +125,16 @@
 }
 
 .game-symbol {
-    font-size: 4rem;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: var(--space-md);
+    min-height: 100px;
+}
+
+.game-symbol-img {
+    width: 100px;
+    height: 100px;
 }
 
 .game-options {
