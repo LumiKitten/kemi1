@@ -273,12 +273,156 @@ function initNavigation() {
 }
 
 // ============================================
+// ELECTRON CONFIGURATION EXPLORER
+// ============================================
+const electronConfigs = {
+    H:  { name: 'Väte', number: 1, shells: [1], valence: 1 },
+    C:  { name: 'Kol', number: 6, shells: [2, 4], valence: 4 },
+    O:  { name: 'Syre', number: 8, shells: [2, 6], valence: 6 },
+    Na: { name: 'Natrium', number: 11, shells: [2, 8, 1], valence: 1 },
+    Cl: { name: 'Klor', number: 17, shells: [2, 8, 7], valence: 7 },
+    Ar: { name: 'Argon', number: 18, shells: [2, 8, 8], valence: 8 },
+    K:  { name: 'Kalium', number: 19, shells: [2, 8, 8, 1], valence: 1 },
+    Ca: { name: 'Kalcium', number: 20, shells: [2, 8, 8, 2], valence: 2 }
+};
+
+function initConfigExplorer() {
+    const buttons = document.querySelectorAll('.config-btn');
+    if (!buttons.length) return;
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active state
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Get element symbol from button
+            const element = btn.dataset.element;
+            updateConfigDisplay(element);
+        });
+    });
+
+    // Initialize with first element (H)
+    updateConfigDisplay('H');
+}
+
+function updateConfigDisplay(element) {
+    const config = electronConfigs[element];
+    if (!config) return;
+
+    const shellNames = ['K', 'L', 'M', 'N'];
+    
+    // Update text display
+    const configName = document.querySelector('.config-name');
+    const configNumber = document.querySelector('.config-number');
+    const configShells = document.querySelector('.config-shells');
+    const configValence = document.querySelector('.config-valence');
+
+    if (configName) configName.textContent = `${config.name} (${element})`;
+    if (configNumber) configNumber.textContent = `Z = ${config.number}`;
+    if (configShells) {
+        const shellText = config.shells.map((e, i) => `${shellNames[i]}: ${e}`).join('  ');
+        configShells.textContent = shellText;
+    }
+    if (configValence) configValence.textContent = `Valenselektroner: ${config.valence}`;
+
+    // Update visual display
+    const shellVisual = document.getElementById('shellVisual');
+    if (shellVisual) {
+        const maxElectrons = [2, 8, 18, 32];
+        shellVisual.innerHTML = config.shells.map((electrons, i) => {
+            const max = maxElectrons[i];
+            let dots = '';
+            for (let j = 0; j < Math.min(electrons, 8); j++) {
+                dots += '<span class="electron-dot"></span>';
+            }
+            if (electrons > 8) {
+                dots += `<span style="font-size: 0.7rem; color: var(--text-secondary);">+${electrons - 8}</span>`;
+            }
+            return `
+                <div class="shell">
+                    <span class="shell-name">${shellNames[i]}</span>
+                    <div class="shell-electrons">${dots}</div>
+                    <span style="font-size: 0.75rem; color: var(--text-muted);">(${electrons})</span>
+                </div>
+            `;
+        }).join('');
+    }
+}
+
+// ============================================
+// ELEMENT EXPLORER
+// ============================================
+const elementData = {
+    H:  { name: 'Väte', number: 1, mass: '1.008 u', group: '1', period: 1, config: '1', valence: 1, ion: 'H⁺ eller H⁻' },
+    He: { name: 'Helium', number: 2, mass: '4.003 u', group: '18 (Ädelgaser)', period: 1, config: '2', valence: 2, ion: 'Bildar ej jon' },
+    Li: { name: 'Litium', number: 3, mass: '6.94 u', group: '1 (Alkalimetaller)', period: 2, config: '2, 1', valence: 1, ion: 'Li⁺' },
+    Be: { name: 'Beryllium', number: 4, mass: '9.01 u', group: '2 (Alkaliska jordartsmetaller)', period: 2, config: '2, 2', valence: 2, ion: 'Be²⁺' },
+    B:  { name: 'Bor', number: 5, mass: '10.81 u', group: '13', period: 2, config: '2, 3', valence: 3, ion: 'B³⁺' },
+    C:  { name: 'Kol', number: 6, mass: '12.01 u', group: '14', period: 2, config: '2, 4', valence: 4, ion: 'Bildar kovalenta bindningar' },
+    N:  { name: 'Kväve', number: 7, mass: '14.01 u', group: '15', period: 2, config: '2, 5', valence: 5, ion: 'N³⁻' },
+    O:  { name: 'Syre', number: 8, mass: '16.00 u', group: '16', period: 2, config: '2, 6', valence: 6, ion: 'O²⁻' },
+    F:  { name: 'Fluor', number: 9, mass: '19.00 u', group: '17 (Halogener)', period: 2, config: '2, 7', valence: 7, ion: 'F⁻' },
+    Ne: { name: 'Neon', number: 10, mass: '20.18 u', group: '18 (Ädelgaser)', period: 2, config: '2, 8', valence: 8, ion: 'Bildar ej jon' },
+    Na: { name: 'Natrium', number: 11, mass: '22.99 u', group: '1 (Alkalimetaller)', period: 3, config: '2, 8, 1', valence: 1, ion: 'Na⁺' },
+    Mg: { name: 'Magnesium', number: 12, mass: '24.31 u', group: '2', period: 3, config: '2, 8, 2', valence: 2, ion: 'Mg²⁺' },
+    Al: { name: 'Aluminium', number: 13, mass: '26.98 u', group: '13', period: 3, config: '2, 8, 3', valence: 3, ion: 'Al³⁺' },
+    Si: { name: 'Kisel', number: 14, mass: '28.09 u', group: '14', period: 3, config: '2, 8, 4', valence: 4, ion: 'Halvmetall' },
+    P:  { name: 'Fosfor', number: 15, mass: '30.97 u', group: '15', period: 3, config: '2, 8, 5', valence: 5, ion: 'P³⁻' },
+    S:  { name: 'Svavel', number: 16, mass: '32.07 u', group: '16', period: 3, config: '2, 8, 6', valence: 6, ion: 'S²⁻' },
+    Cl: { name: 'Klor', number: 17, mass: '35.45 u', group: '17 (Halogener)', period: 3, config: '2, 8, 7', valence: 7, ion: 'Cl⁻' },
+    Ar: { name: 'Argon', number: 18, mass: '39.95 u', group: '18 (Ädelgaser)', period: 3, config: '2, 8, 8', valence: 8, ion: 'Bildar ej jon' },
+    K:  { name: 'Kalium', number: 19, mass: '39.10 u', group: '1 (Alkalimetaller)', period: 4, config: '2, 8, 8, 1', valence: 1, ion: 'K⁺' },
+    Ca: { name: 'Kalcium', number: 20, mass: '40.08 u', group: '2', period: 4, config: '2, 8, 8, 2', valence: 2, ion: 'Ca²⁺' }
+};
+
+function initElementExplorer() {
+    const grid = document.getElementById('elementGrid');
+    if (!grid) return;
+
+    // Create element buttons
+    const elements = Object.keys(elementData);
+    grid.innerHTML = elements.map(el => `
+        <button class="element-btn${el === 'Na' ? ' active' : ''}" data-element="${el}">${el}</button>
+    `).join('');
+
+    // Add click handlers
+    grid.querySelectorAll('.element-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            grid.querySelectorAll('.element-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            updateElementDetail(btn.dataset.element);
+        });
+    });
+
+    // Initialize with Sodium
+    updateElementDetail('Na');
+}
+
+function updateElementDetail(symbol) {
+    const el = elementData[symbol];
+    if (!el) return;
+
+    document.getElementById('detailSymbol').textContent = symbol;
+    document.getElementById('detailName').textContent = el.name;
+    document.getElementById('detailNumber').textContent = el.number;
+    document.getElementById('detailMass').textContent = el.mass;
+    document.getElementById('detailGroup').textContent = el.group;
+    document.getElementById('detailPeriod').textContent = el.period;
+    document.getElementById('detailConfig').textContent = el.config;
+    document.getElementById('detailValence').textContent = el.valence;
+    document.getElementById('detailIon').textContent = el.ion;
+}
+
+// ============================================
 // INITIALIZATION
 // ============================================
 document.addEventListener("DOMContentLoaded", () => {
     initQuiz();
     initPeriodicTable();
     initNavigation();
+    initConfigExplorer();
+    initElementExplorer();
 });
 
 // Smooth scroll

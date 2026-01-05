@@ -827,6 +827,199 @@
     gap: var(--space-lg);
 }
 
+/* Catalyst Cards */
+.catalyst-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    padding: var(--space-xl);
+    text-align: center;
+}
+
+.catalyst-card h4 {
+    color: #e74c3c;
+    margin: var(--space-md) 0;
+}
+
+.catalyst-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.catalyst-icon {
+    font-size: 2.5rem;
+}
+
+.formula-block.small {
+    font-size: 0.9rem;
+    padding: var(--space-sm) var(--space-md);
+}
+
+/* Catalyst Visual Diagram */
+.catalyst-visual {
+    position: relative;
+    height: 200px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.energy-path {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.energy-path .path-line {
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: var(--text-muted);
+    top: 50%;
+    left: 10%;
+}
+
+.energy-path.without-catalyst {
+    opacity: 0.6;
+}
+
+.energy-path.without-catalyst .path-line {
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        transparent 10%,
+        var(--text-muted) 10%,
+        var(--text-muted) 25%,
+        transparent 25%,
+        transparent 35%,
+        var(--acid-primary) 35%,
+        var(--acid-primary) 65%,
+        transparent 65%,
+        transparent 75%,
+        var(--text-muted) 75%,
+        var(--text-muted) 90%,
+        transparent 90%
+    );
+    height: 80px;
+    top: 20%;
+    border-radius: var(--radius-md);
+}
+
+.energy-path.with-catalyst .path-line {
+    background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        transparent 10%,
+        var(--text-muted) 10%,
+        var(--text-muted) 25%,
+        transparent 25%,
+        transparent 35%,
+        #27ae60 35%,
+        #27ae60 65%,
+        transparent 65%,
+        transparent 75%,
+        var(--text-muted) 75%,
+        var(--text-muted) 90%,
+        transparent 90%
+    );
+    height: 40px;
+    top: 45%;
+    border-radius: var(--radius-md);
+}
+
+.path-label {
+    position: relative;
+    z-index: 1;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.ea-high, .ea-low {
+    position: absolute;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.ea-high {
+    color: var(--acid-primary);
+    top: 10%;
+    right: 10%;
+}
+
+.ea-low {
+    color: #27ae60;
+    bottom: 30%;
+    right: 10%;
+}
+
+.catalyst-reactants, .catalyst-products {
+    position: absolute;
+    bottom: 10%;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.catalyst-reactants {
+    left: 10%;
+}
+
+.catalyst-products {
+    right: 10%;
+}
+
+/* Catalyst List */
+.catalyst-list {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0;
+}
+
+.catalyst-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-sm) 0;
+}
+
+.catalyst-list .icon {
+    font-size: 1.25rem;
+}
+
+/* Bond Energy Section */
+.bond-energy-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bond-energy-table th,
+.bond-energy-table td {
+    padding: var(--space-md);
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bond-energy-table th {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.bond-energy-table .bond-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+}
+
+.bond-energy-table .bond-value {
+    color: #e74c3c;
+    font-family: 'JetBrains Mono', monospace;
+}
+
 @media (max-width: 768px) {
     .bond-visual {
         font-size: 0.85rem;
