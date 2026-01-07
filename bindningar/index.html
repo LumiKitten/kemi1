@@ -39,10 +39,12 @@
                         <li><a href="#varfor">Varför bindningar?</a></li>
                         <li><a href="#jonbindning">Jonbindning</a></li>
                         <li><a href="#kovalent">Kovalent</a></li>
+                        <li><a href="#elektronformel">Elektronformel</a></li>
                         <li><a href="#metallbindning">Metallbindning</a></li>
                     </ul>
                 </li>
                 <li><a href="#intermolekylara">Intermolekylära</a></li>
+                <li><a href="#fasovergangar">Fasövergångar</a></li>
                 <li><a href="#jamforelse">Jämförelse</a></li>
                 <li><a href="#quiz">Quiz</a></li>
                 <li class="nav-menu-back"><a href="../">← Tillbaka</a></li>
@@ -257,6 +259,80 @@
             </div>
         </section>
 
+        <!-- Lewis Structure Section -->
+        <section id="elektronformel">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Elektronformel (Lewisstruktur)</h2>
+                    <p>Hur vi ritar bindningar med elektronpar.</p>
+                </div>
+
+                <div class="card card-neutral">
+                    <h3>Oktettregeln</h3>
+                    <p>Atomer strävar efter <strong>8 elektroner</strong> i yttersta skalet (som ädelgaser).</p>
+                    <p>Väte är undantag: strävar bara efter <strong>2 elektroner</strong>.</p>
+                </div>
+
+                <h3 class="mt-2xl">Så ritar du en elektronformel</h3>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Steg för steg</h4>
+                        <ol class="step-list">
+                            <li>Räkna totala valenselektroner för alla atomer</li>
+                            <li>Placera centralatomen i mitten</li>
+                            <li>Rita bindande elektronpar som streck (—)</li>
+                            <li>Rita fria elektronpar som prickar ( : )</li>
+                            <li>Kontrollera att oktettregeln uppfylls</li>
+                        </ol>
+                    </div>
+                    <div class="card card-dipole">
+                        <h4>Valenselektroner per grupp</h4>
+                        <table class="comparison-table">
+                            <tbody>
+                                <tr><td>Grupp 1</td><td>1 valens-e⁻</td></tr>
+                                <tr><td>Grupp 14</td><td>4 valens-e⁻</td></tr>
+                                <tr><td>Grupp 15</td><td>5 valens-e⁻</td></tr>
+                                <tr><td>Grupp 16</td><td>6 valens-e⁻</td></tr>
+                                <tr><td>Grupp 17</td><td>7 valens-e⁻</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Exempel</h3>
+                <div class="grid-3">
+                    <div class="card">
+                        <h4>H₂O (vatten)</h4>
+                        <div class="formula-block">
+                            H—O—H<br>    ˙˙
+                        </div>
+                        <p>O har 2 fria elektronpar + 2 bindningar = 8 e⁻ ✓</p>
+                    </div>
+                    <div class="card">
+                        <h4>NH₃ (ammoniak)</h4>
+                        <div class="formula-block">
+                                ˙˙<br>
+                            H—N—H<br>
+                                |<br>
+                                H
+                        </div>
+                        <p>N har 1 fritt par + 3 bindningar = 8 e⁻ ✓</p>
+                    </div>
+                    <div class="card">
+                        <h4>CO₂ (koldioxid)</h4>
+                        <div class="formula-block">
+                            O=C=O
+                        </div>
+                        <p>Dubbelbindningar! C har 4 bindande par = 8 e⁻ ✓</p>
+                    </div>
+                </div>
+
+                <div class="info-box warning mt-xl">
+                    <strong>Vanligt tentatips:</strong> "Vad är fel med denna elektronformel?" - kontrollera att oktettregeln är uppfylld för ALLA atomer och att elektrontalet stämmer!
+                </div>
+            </div>
+        </section>
+
         <!-- Metallic Bonding Section -->
         <section id="metallbindning">
             <div class="container">
@@ -380,6 +456,112 @@
                 <div class="info-box mt-xl">
                     <strong>Kom ihåg:</strong> Intermolekylära krafter är MELLAN molekyler. Kovalenta bindningar är INOM
                     molekyler och mycket starkare.
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase Transitions Section -->
+        <section id="fasovergangar">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fasövergångar och bindningar</h2>
+                    <p>Vilka bindningar bryts eller bildas när ämnen byter aggregationstillstånd?</p>
+                </div>
+
+                <div class="info-box warning mb-xl">
+                    <strong>Viktigt för tentamen:</strong> Det är de intermolekylära krafterna som bryts vid fasövergångar, INTE de kovalenta bindningarna inom molekylen (om ämnet inte är ett jonämne eller metall).
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Ämne</th>
+                            <th>Fasövergång</th>
+                            <th>Bindning som bryts/bildas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Kaliumbromid (KBr)</strong></td>
+                            <td>smälter (s→l)</td>
+                            <td class="td-strong">Jonbindningar bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Torris (CO₂)</strong></td>
+                            <td>sublimerar (s→g)</td>
+                            <td class="td-weak">Van der Waals bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Etanol (C₂H₅OH)</strong></td>
+                            <td>kokar (l→g)</td>
+                            <td class="td-medium">Vätebindningar + van der Waals bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jod (I₂)</strong></td>
+                            <td>sublimerar (s→g)</td>
+                            <td class="td-weak">Van der Waals bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Klormetan (CH₃Cl)</strong></td>
+                            <td>kondenserar (g→l)</td>
+                            <td class="td-medium">Dipol-dipol bildas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Järn (Fe)</strong></td>
+                            <td>stelnar (l→s)</td>
+                            <td class="td-strong">Metallbindningar bildas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vatten (H₂O)</strong></td>
+                            <td>förångas (l→g)</td>
+                            <td class="td-medium">Vätebindningar bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Is (H₂O)</strong></td>
+                            <td>smälter (s→l)</td>
+                            <td class="td-medium">Vätebindningar bryts (delvis)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Metan (CH₄)</strong></td>
+                            <td>kokar (l→g)</td>
+                            <td class="td-weak">Van der Waals bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kvävgas (N₂)</strong></td>
+                            <td>kokar (l→g)</td>
+                            <td class="td-weak">Van der Waals bryts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Koppar (Cu)</strong></td>
+                            <td>smälter (s→l)</td>
+                            <td class="td-strong">Metallbindningar bryts (delvis)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Salt i vatten</strong></td>
+                            <td>löses (s→aq)</td>
+                            <td class="td-strong">Jonbindningar bryts, jon-dipol bildas</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-binding">
+                        <h3>Minnesregel för molekylära ämnen</h3>
+                        <ol class="step-list">
+                            <li><strong>Identifiera ämnet</strong> – är det polärt eller opolärt?</li>
+                            <li><strong>Har den H bundet till N/O/F?</strong> → Vätebindingar</li>
+                            <li><strong>Är den polär men utan H-N/O/F?</strong> → Dipol-dipol</li>
+                            <li><strong>Är den opolär?</strong> → Van der Waals</li>
+                        </ol>
+                    </div>
+
+                    <div class="card">
+                        <h3>Varför är isens densitet lägre än vattnets?</h3>
+                        <p>Vätebindningar i is bildar en <strong>hexagonal kristallstruktur</strong> där molekylerna sitter längre ifrån varandra än i flytande vatten.</p>
+                        <div class="info-box mt-xl">
+                            <strong>Konsekvens:</strong> Is flyter på vatten, vilket är avgörande för livet i sjöar under vintern!
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

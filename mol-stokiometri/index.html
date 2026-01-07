@@ -39,6 +39,14 @@
                         <li><a href="#molmassa">Molmassa</a></li>
                         <li><a href="#koncentration">Koncentration</a></li>
                         <li><a href="#stokiometri">Stökiometri</a></li>
+                        <li><a href="#empirisk">Empirisk formel</a></li>
+                        <li><a href="#jonkoncentration">Jonkoncentration</a></li>
+                        <li><a href="#massprocent">Massprocent</a></li>
+                        <li><a href="#kristallvatten">Kristallvatten</a></li>
+                        <li><a href="#utbyte">Utbyte</a></li>
+                        <li><a href="#formel-reaktion">Formel från reaktion</a></li>
+                        <li><a href="#gaslagen">Gasberäkningar</a></li>
+                        <li><a href="#fallning">Fällning</a></li>
                     </ul>
                 </li>
                 <li><a href="#exempel">Exempel</a></li>
@@ -415,6 +423,369 @@
             </div>
         </section>
 
+        <!-- Empirical Formula Section -->
+        <section id="empirisk">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Empirisk och Molekylformel</h2>
+                    <p>Bestäm formler från procentsammansättning – en vanlig tentamensuppgift!</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-mol">
+                        <h3>Empirisk formel</h3>
+                        <p>Det enklaste heltalsförhållandet mellan atomer i en molekyl.</p>
+                        <div class="formula-block">CH₂O (glukos empiriskt)</div>
+                    </div>
+                    <div class="card card-mol">
+                        <h3>Molekylformel</h3>
+                        <p>Det verkliga antalet atomer i molekylen.</p>
+                        <div class="formula-block">C₆H₁₂O₆ (glukos verklig)</div>
+                    </div>
+                </div>
+
+                <div class="worked-example mt-xl">
+                    <h3>Metod: Från procentsammansättning till formel</h3>
+                    <ol class="calc-steps">
+                        <li><strong>Anta 100 g</strong> – då blir procent = gram direkt</li>
+                        <li><strong>Beräkna mol</strong> för varje grundämne (n = m/M)</li>
+                        <li><strong>Dividera</strong> alla molvärden med det minsta</li>
+                        <li><strong>Avrunda</strong> till heltal = empirisk formel</li>
+                        <li><strong>Molekylformel:</strong> n = Molmassa / Empirisk massa</li>
+                    </ol>
+                </div>
+
+                <div class="worked-example mt-xl">
+                    <h3>Exempel: 40% C, 6,67% H, 53,33% O. Molmassa = 180 g/mol</h3>
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Anta 100 g prov</strong>
+                                <p>40 g C, 6,67 g H, 53,33 g O</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">2</span>
+                            <div class="step-content">
+                                <strong>Beräkna mol</strong>
+                                <p>n(C) = 40/12 = 3,33 mol</p>
+                                <p>n(H) = 6,67/1 = 6,67 mol</p>
+                                <p>n(O) = 53,33/16 = 3,33 mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">3</span>
+                            <div class="step-content">
+                                <strong>Dividera med minsta (3,33)</strong>
+                                <p>C: 3,33/3,33 = 1, H: 6,67/3,33 = 2, O: 3,33/3,33 = 1</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">4</span>
+                            <div class="step-content">
+                                <strong>Empirisk formel: CH₂O</strong>
+                                <p>Empirisk massa = 12 + 2 + 16 = 30 g/mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>Molekylformel: C₆H₁₂O₆</strong>
+                                <p>n = 180/30 = 6 → (CH₂O)₆ = C₆H₁₂O₆ (glukos!)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ion Concentration Section -->
+        <section id="jonkoncentration">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Jonkoncentration</h2>
+                    <p>Beräkna koncentrationen av enskilda joner när ett salt löses.</p>
+                </div>
+
+                <div class="info-box warning mb-xl">
+                    <strong>Viktigt!</strong> När ett salt löses i vatten dissocierar det till joner. Jonkoncentrationerna beror på hur saltet sönderdelas!
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Salt</th>
+                            <th>Dissociation</th>
+                            <th>Om c(salt) = 0,25 M</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NaCl</strong></td>
+                            <td>Na⁺ + Cl⁻</td>
+                            <td>[Na⁺] = 0,25 M, [Cl⁻] = 0,25 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CaCl₂</strong></td>
+                            <td>Ca²⁺ + 2Cl⁻</td>
+                            <td>[Ca²⁺] = 0,25 M, [Cl⁻] = <strong>0,50 M</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>AlCl₃</strong></td>
+                            <td>Al³⁺ + 3Cl⁻</td>
+                            <td>[Al³⁺] = 0,25 M, [Cl⁻] = <strong>0,75 M</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>K₂SO₄</strong></td>
+                            <td>2K⁺ + SO₄²⁻</td>
+                            <td>[K⁺] = <strong>0,50 M</strong>, [SO₄²⁻] = 0,25 M</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fe₂(SO₄)₃</strong></td>
+                            <td>2Fe³⁺ + 3SO₄²⁻</td>
+                            <td>[Fe³⁺] = <strong>0,50 M</strong>, [SO₄²⁻] = <strong>0,75 M</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mg(NO₃)₂</strong></td>
+                            <td>Mg²⁺ + 2NO₃⁻</td>
+                            <td>[Mg²⁺] = 0,25 M, [NO₃⁻] = <strong>0,50 M</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Mass Percent Section -->
+        <section id="massprocent">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Massprocent</h2>
+                    <p>Hur stor del av en förenings massa som utgörs av ett visst grundämne.</p>
+                </div>
+
+                <div class="formula-highlight">
+                    <div class="formula-block large">
+                        Massprocent = (Massa av ämnet / Total massa) × 100%
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="worked-example">
+                        <h3>Exempel: Massprocent Cu i CuFeS₂</h3>
+                        <div class="example-steps">
+                            <div class="example-step">
+                                <span class="step-badge">1</span>
+                                <div class="step-content">
+                                    <strong>Beräkna molmassan</strong>
+                                    <p>M = 64 + 56 + 2(32) = 184 g/mol</p>
+                                </div>
+                            </div>
+                            <div class="example-step answer">
+                                <span class="step-badge">✓</span>
+                                <div class="step-content">
+                                    <strong>Massprocent Cu = 64/184 × 100 = 34,8%</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Exempel: Gram Fe i 150 g Fe₃O₄</h3>
+                        <div class="example-steps">
+                            <div class="example-step">
+                                <span class="step-badge">1</span>
+                                <div class="step-content">
+                                    <strong>Molmassa Fe₃O₄</strong>
+                                    <p>M = 3(56) + 4(16) = 232 g/mol</p>
+                                </div>
+                            </div>
+                            <div class="example-step">
+                                <span class="step-badge">2</span>
+                                <div class="step-content">
+                                    <strong>Massprocent Fe = 168/232 = 72,4%</strong>
+                                </div>
+                            </div>
+                            <div class="example-step answer">
+                                <span class="step-badge">✓</span>
+                                <div class="step-content">
+                                    <strong>Massa Fe = 150 × 0,724 = 108,6 g</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Crystal Water Section -->
+        <section id="kristallvatten">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Kristallvatten</h2>
+                    <p>Bestäm x i formeln för kristalliserade salter.</p>
+                </div>
+
+                <div class="card card-mol mb-xl">
+                    <h3>Vad är kristallvatten?</h3>
+                    <p>Många salter kristalliserar med vattenmolekyler bundna i kristallen:</p>
+                    <div class="formula-block">CuSO₄·5H₂O, CaSO₄·2H₂O, Na₂CO₃·10H₂O</div>
+                    <p class="mt-xl">När saltet upphettas avdunstar kristallvattnet och kvar blir det vattenfria saltet.</p>
+                </div>
+
+                <div class="worked-example">
+                    <h3>Exempel: Bestäm x i CaSO₄·xH₂O</h3>
+                    <div class="example-problem">
+                        <span class="problem-label">Given:</span>
+                        79,2 g hydrerat salt upphettas → 61,3 g vattenfritt CaSO₄
+                    </div>
+                    
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Beräkna massa vatten</strong>
+                                <p>m(H₂O) = 79,2 - 61,3 = 17,9 g</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">2</span>
+                            <div class="step-content">
+                                <strong>Beräkna mol vatten</strong>
+                                <p>n(H₂O) = 17,9/18 = 0,994 mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">3</span>
+                            <div class="step-content">
+                                <strong>Beräkna mol salt</strong>
+                                <p>n(CaSO₄) = 61,3/136 = 0,451 mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">4</span>
+                            <div class="step-content">
+                                <strong>Beräkna x = n(H₂O)/n(salt)</strong>
+                                <p>x = 0,994/0,451 ≈ 2,2 ≈ 2</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>Formel: CaSO₄·2H₂O (gips)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Percent Yield Section -->
+        <section id="utbyte">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Utbyte (Yield)</h2>
+                    <p>Beräkna hur effektiv en reaktion är.</p>
+                </div>
+
+                <div class="formula-highlight">
+                    <div class="formula-block large">
+                        Utbyte = (Verkligt utbyte / Teoretiskt utbyte) × 100%
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-mol">
+                        <h4>Teoretiskt utbyte</h4>
+                        <p>Det utbyte man <strong>förväntar sig</strong> enligt stökiometriska beräkningar (om reaktionen är 100% effektiv).</p>
+                    </div>
+                    <div class="card">
+                        <h4>Verkligt utbyte</h4>
+                        <p>Det utbyte man <strong>faktiskt får</strong> vid reaktionen (alltid lägre p.g.a. förluster).</p>
+                    </div>
+                </div>
+
+                <div class="worked-example mt-xl">
+                    <h3>Exempel: Framställning av Na från NaCl</h3>
+                    <div class="example-problem">
+                        <span class="problem-label">Problem:</span>
+                        En elektrolys ger 78% utbyte. Om teoretiskt utbyte är 50 g Na, hur mycket Na får man verkligen?
+                    </div>
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Sätt in i formeln</strong>
+                                <p>Verkligt utbyte = Teoretiskt × (utbyte/100)</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>Verkligt = 50 × 0,78 = 39 g Na</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formula from Reaction Section -->
+        <section id="formel-reaktion">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bestämma formel från reaktion</h2>
+                    <p>Hitta formeln för en produkt genom massberäkningar.</p>
+                </div>
+
+                <div class="worked-example">
+                    <h3>Exempel: Vilken oxidformel bildas?</h3>
+                    <div class="example-problem">
+                        <span class="problem-label">Problem:</span>
+                        1,25 g Fe reagerar med syre och bildar 1,78 g järnoxid. Bestäm formeln.
+                    </div>
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Beräkna massa syre som bundits</strong>
+                                <p>m(O) = 1,78 - 1,25 = 0,53 g</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">2</span>
+                            <div class="step-content">
+                                <strong>Beräkna mol Fe och O</strong>
+                                <p>n(Fe) = 1,25/56 = 0,0223 mol</p>
+                                <p>n(O) = 0,53/16 = 0,0331 mol</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">3</span>
+                            <div class="step-content">
+                                <strong>Beräkna förhållandet</strong>
+                                <p>Fe: 0,0223/0,0223 = 1</p>
+                                <p>O: 0,0331/0,0223 = 1,48 ≈ 1,5</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">4</span>
+                            <div class="step-content">
+                                <strong>Multiplicera för heltal</strong>
+                                <p>Fe: 1 × 2 = 2, O: 1,5 × 2 = 3</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>Formel: Fe₂O₃ (järn(III)oxid)</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Calculator Section -->
         <section id="kalkylator">
             <div class="container">
@@ -488,6 +859,165 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gas Laws Section -->
+        <section id="gaslagen">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Gasberäkningar</h2>
+                    <p>Idealgaslagen och beräkningar med gaser.</p>
+                </div>
+
+                <div class="formula-highlight">
+                    <div class="formula-block large">
+                        pV = nRT
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card card-mol">
+                        <h4>Variabler</h4>
+                        <ul class="concept-list">
+                            <li><strong>p</strong> = tryck (Pa eller kPa)</li>
+                            <li><strong>V</strong> = volym (m³ eller dm³)</li>
+                            <li><strong>n</strong> = substansmängd (mol)</li>
+                            <li><strong>R</strong> = 8,314 J/(mol·K)</li>
+                            <li><strong>T</strong> = temperatur (K = °C + 273)</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Vid NTP (Normal Temperature Pressure)</h4>
+                        <ul class="concept-list">
+                            <li>T = 0°C = 273 K</li>
+                            <li>p = 101,3 kPa</li>
+                            <li><strong>1 mol gas = 22,4 dm³</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="worked-example mt-xl">
+                    <h3>Exempel: Volym av gas</h3>
+                    <div class="example-problem">
+                        <span class="problem-label">Problem:</span>
+                        Vilken volym upptar 1,5 mol O₂ vid 28°C och 100 kPa?
+                    </div>
+                    <div class="example-steps">
+                        <div class="example-step">
+                            <span class="step-badge">1</span>
+                            <div class="step-content">
+                                <strong>Konvertera temperatur</strong>
+                                <p>T = 28 + 273 = 301 K</p>
+                            </div>
+                        </div>
+                        <div class="example-step">
+                            <span class="step-badge">2</span>
+                            <div class="step-content">
+                                <strong>Sätt in i formeln V = nRT/p</strong>
+                                <p>V = (1,5 × 8,314 × 301) / 100000</p>
+                            </div>
+                        </div>
+                        <div class="example-step answer">
+                            <span class="step-badge">✓</span>
+                            <div class="step-content">
+                                <strong>V = 0,0375 m³ = 37,5 dm³</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Boyles lag (konstant temperatur)</h3>
+                <div class="card card-mol">
+                    <div class="formula-block large">p₁V₁ = p₂V₂</div>
+                    <p class="mt-lg">När temperaturen är konstant är produkten av tryck och volym konstant.</p>
+                    <div class="worked-example mt-lg">
+                        <h4>Exempel:</h4>
+                        <p>1,0 dm³ gas vid 200 kPa komprimeras till 0,50 dm³. Beräkna det nya trycket.</p>
+                        <div class="formula-block mt-lg">p₂ = p₁V₁/V₂ = (200 × 1,0)/0,50 = <strong>400 kPa</strong></div>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Partialtryck (Daltons lag)</h3>
+                <div class="card">
+                    <div class="formula-block">p(total) = p₁ + p₂ + p₃ + ...</div>
+                    <p class="mt-lg">I en gasblandning är totaltrycket summan av varje enskild gas partialtryck.</p>
+                    <div class="info-box mt-lg">
+                        <strong>Exempel:</strong> Om luftens totaltryck är 101 kPa och O₂ utgör ca 21%, då är partialtrycket O₂ ≈ 21 kPa.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Precipitation Reactions Section -->
+        <section id="fallning">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Fällningsreaktioner</h2>
+                    <p>Reaktioner där olösliga salter bildas och faller ut.</p>
+                </div>
+
+                <div class="info-box mb-xl">
+                    <strong>Definition:</strong> En fällningsreaktion sker när två lösningar blandas och en olöslig produkt bildas (fällning = nedfall).
+                </div>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Olösligt salt</th>
+                            <th>Färg</th>
+                            <th>Bildas från</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AgCl</strong></td>
+                            <td>Vit</td>
+                            <td>Ag⁺ + Cl⁻</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AgBr</strong></td>
+                            <td>Gulvit</td>
+                            <td>Ag⁺ + Br⁻</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AgI</strong></td>
+                            <td>Gul</td>
+                            <td>Ag⁺ + I⁻</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BaSO₄</strong></td>
+                            <td>Vit</td>
+                            <td>Ba²⁺ + SO₄²⁻</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PbI₂</strong></td>
+                            <td>Gul</td>
+                            <td>Pb²⁺ + 2I⁻</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="grid-2 mt-xl">
+                    <div class="card">
+                        <h4>Exempel 1: Silvernitrat + Natriumklorid</h4>
+                        <div class="formula-block">
+                            AgNO₃(aq) + NaCl(aq) → AgCl(s)↓ + NaNO₃(aq)
+                        </div>
+                        <p class="mt-lg">Vit fällning av silverklorid bildas.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Exempel 2: Bariumklorid + Natriumsulfat</h4>
+                        <div class="formula-block">
+                            BaCl₂(aq) + Na₂SO₄(aq) → BaSO₄(s)↓ + 2NaCl(aq)
+                        </div>
+                        <p class="mt-lg">Vit fällning av bariumsulfat bildas.</p>
+                    </div>
+                </div>
+
+                <div class="info-box warning mt-xl">
+                    <strong>OBS:</strong> Fällningsreaktioner är INTE redoxreaktioner! Inga oxidationstal förändras.
                 </div>
             </div>
         </section>

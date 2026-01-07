@@ -70,6 +70,21 @@
 .equipment-list li {
     padding: var(--space-sm) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.safety-icon,
+.equipment-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.icon-white {
+    filter: brightness(0) invert(1);
+    opacity: 0.8;
 }
 
 .safety-list li:last-child,

@@ -38,6 +38,7 @@
                 <li><a href="#spanningsserien">Spänningsserien</a></li>
                 <li><a href="#balansering">Balansering</a></li>
                 <li><a href="#exempel">Exempel</a></li>
+                <li><a href="#galvaniskt">Galvaniska celler</a></li>
                 <li><a href="#quiz">Quiz</a></li>
                 <li class="nav-menu-back"><a href="../">← Tillbaka till meny</a></li>
             </ul>
@@ -401,6 +402,14 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="info-box success mt-xl">
+                    <strong>Väteutdrivande metaller:</strong> Alla metaller som ligger OVANFÖR väte (H₂) i spänningsserien kan reducera H⁺ till H₂-gas. Dessa kallas väteutdrivande metaller.
+                    <div class="formula-block mt-lg">
+                        Mg + 2H⁺ → Mg²⁺ + H₂↑
+                    </div>
+                    <p class="mt-lg">Exempel: Li, K, Ca, Na, Mg, Al, Zn, Fe kan alla reagera med syror och bilda vätgas!</p>
+                </div>
             </div>
         </section>
 
@@ -561,6 +570,189 @@
                             <li>Syra-bas-neutralisering</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galvanic Cells Section -->
+        <section id="galvaniskt">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Galvaniska Element</h2>
+                    <p>Kemisk energi omvandlas till elektrisk energi.</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card card-oxidation">
+                        <h3>Anod (−)</h3>
+                        <p>Oxidation sker här. Elektroner avges.</p>
+                        <div class="formula-block">Zn → Zn²⁺ + 2e⁻</div>
+                        <p>Metallen oxideras och löses upp.</p>
+                    </div>
+                    <div class="card card-reduction">
+                        <h3>Katod (+)</h3>
+                        <p>Reduktion sker här. Elektroner tas upp.</p>
+                        <div class="formula-block">Cu²⁺ + 2e⁻ → Cu</div>
+                        <p>Joner reduceras och metall fälls ut.</p>
+                    </div>
+                </div>
+
+                <div class="info-box mt-xl">
+                    <strong>Minnesregel:</strong> "Anoden Åker bort" (oxideras), "Krater tar emot" (Katod reducerar)
+                </div>
+
+                <h3 class="mt-2xl">Cellschema</h3>
+                <div class="card card-neutral">
+                    <p><strong>Format:</strong> − Anod(s) | Anodlösning(aq) || Katodlösning(aq) | Katod(s) +</p>
+                    <div class="formula-block large mt-lg">
+                        − Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s) +
+                    </div>
+                    <p class="mt-lg">Den vertikala linjen | = gräns mellan fas. Den dubbla linjen || = saltbrygga.</p>
+                </div>
+
+                <h3 class="mt-2xl">EMK (Elektromotorisk kraft)</h3>
+                <div class="formula-highlight">
+                    <div class="formula-block large">
+                        E°cell = E°katod − E°anod
+                    </div>
+                </div>
+
+                <table class="comparison-table mt-xl">
+                    <thead>
+                        <tr>
+                            <th>Halvreaktion</th>
+                            <th>E° (V)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Li⁺/Li</td>
+                            <td>−3,04</td>
+                        </tr>
+                        <tr>
+                            <td>K⁺/K</td>
+                            <td>−2,93</td>
+                        </tr>
+                        <tr>
+                            <td>Mg²⁺/Mg</td>
+                            <td>−2,37</td>
+                        </tr>
+                        <tr>
+                            <td>Al³⁺/Al</td>
+                            <td>−1,66</td>
+                        </tr>
+                        <tr>
+                            <td>Zn²⁺/Zn</td>
+                            <td>−0,76</td>
+                        </tr>
+                        <tr>
+                            <td>Fe²⁺/Fe</td>
+                            <td>−0,44</td>
+                        </tr>
+                        <tr>
+                            <td>H⁺/H₂ (ref)</td>
+                            <td>0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Cu²⁺/Cu</td>
+                            <td>+0,34</td>
+                        </tr>
+                        <tr>
+                            <td>Ag⁺/Ag</td>
+                            <td>+0,80</td>
+                        </tr>
+                        <tr>
+                            <td>Au³⁺/Au</td>
+                            <td>+1,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="grid-2 mt-xl">
+                    <div class="worked-example">
+                        <h4>Exempel: Zn|Cu cell</h4>
+                        <div class="example-steps">
+                            <div class="example-step">
+                                <span class="step-badge">1</span>
+                                <div class="step-content">
+                                    <strong>E°(Cu²⁺/Cu) = +0,34 V (katod)</strong>
+                                </div>
+                            </div>
+                            <div class="example-step">
+                                <span class="step-badge">2</span>
+                                <div class="step-content">
+                                    <strong>E°(Zn²⁺/Zn) = −0,76 V (anod)</strong>
+                                </div>
+                            </div>
+                            <div class="example-step answer">
+                                <span class="step-badge">✓</span>
+                                <div class="step-content">
+                                    <strong>E°cell = 0,34 − (−0,76) = +1,10 V</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="worked-example">
+                        <h4>Exempel: Al|Ag cell</h4>
+                        <div class="example-steps">
+                            <div class="example-step">
+                                <span class="step-badge">1</span>
+                                <div class="step-content">
+                                    <strong>E°(Ag⁺/Ag) = +0,80 V (katod)</strong>
+                                </div>
+                            </div>
+                            <div class="example-step">
+                                <span class="step-badge">2</span>
+                                <div class="step-content">
+                                    <strong>E°(Al³⁺/Al) = −1,66 V (anod)</strong>
+                                </div>
+                            </div>
+                            <div class="example-step answer">
+                                <span class="step-badge">✓</span>
+                                <div class="step-content">
+                                    <strong>E°cell = 0,80 − (−1,66) = +2,46 V</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="mt-2xl">Elektrolys</h3>
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Galvanisk cell</h4>
+                        <ul class="concept-list">
+                            <li>Spontan reaktion</li>
+                            <li>Producerar elektrisk ström</li>
+                            <li>Kemisk energi → Elektrisk energi</li>
+                            <li>Exempel: Batteri</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Elektrolys</h4>
+                        <ul class="concept-list">
+                            <li>Icke-spontan reaktion</li>
+                            <li>Kräver tillförd ström</li>
+                            <li>Elektrisk energi → Kemisk energi</li>
+                            <li>Exempel: Framställa Na från smält NaCl</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-xl">
+                    <h4>Elektrolys av smält NaCl</h4>
+                    <div class="grid-2">
+                        <div>
+                            <strong>Katod (−):</strong>
+                            <div class="formula-block">Na⁺ + e⁻ → Na</div>
+                        </div>
+                        <div>
+                            <strong>Anod (+):</strong>
+                            <div class="formula-block">2Cl⁻ → Cl₂ + 2e⁻</div>
+                        </div>
+                    </div>
+                    <p class="mt-lg"><strong>Totalreaktion:</strong> Endoterm (kräver energitillförsel)</p>
                 </div>
             </div>
         </section>

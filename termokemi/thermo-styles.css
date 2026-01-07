@@ -31,14 +31,15 @@
 
 .energy-list li {
     padding: var(--space-sm) 0;
-    padding-left: var(--space-lg);
-    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
 }
 
-.energy-list li::before {
-    content: '⚡';
-    position: absolute;
-    left: 0;
+.energy-list-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 /* Concept Grid */
@@ -743,6 +744,13 @@
 
 .catalyst-list .icon {
     font-size: 1.25rem;
+    display: none; /* Hide old icon span if any */
+}
+
+.catalyst-inline-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
 }
 
 .catalyst-card {
@@ -759,9 +767,11 @@
     border-color: rgba(255, 255, 255, 0.15);
 }
 
-.catalyst-icon {
-    font-size: 2.5rem;
+.catalyst-card-icon {
+    width: 48px;
+    height: 48px;
     margin-bottom: var(--space-md);
+    object-fit: contain;
 }
 
 .catalyst-card h4 {
@@ -783,16 +793,11 @@
    EVERYDAY EXAMPLES SECTION STYLES
    ============================================ */
 
-.everyday-examples {
-    margin-top: var(--space-lg);
-}
-
-.everyday-examples .example-item {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-md);
-    padding: var(--space-md) 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+.everyday-examples .example-icon-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .everyday-examples .example-item:last-child {
