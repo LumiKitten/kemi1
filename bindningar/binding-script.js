@@ -83,6 +83,53 @@ const allQuestions = [
         options: ["Jonbindning", "Metallbindning", "Kovalent bindning", "Vätebindning"],
         correct: 2,
         explanation: "Diamant består av kolatomer bundna med starka kovalenta bindningar."
+    },
+    // NEW QUESTIONS - Lewisstruktur och fasövergångar
+    {
+        question: "Hur många valenselektroner har syre (grupp 16)?",
+        options: ["2", "4", "6", "8"],
+        correct: 2,
+        explanation: "Grundämnen i grupp 16 har 6 valenselektroner."
+    },
+    {
+        question: "Hur många bindningar bildar kväve (N) normalt i en Lewisstruktur?",
+        options: ["1", "2", "3", "4"],
+        correct: 2,
+        explanation: "Kväve har 5 valenselektroner och behöver 3 till för oktett, alltså 3 bindningar."
+    },
+    {
+        question: "Vilka bindningar bryts när is smälter till vatten?",
+        options: ["Kovalenta bindningar", "Jonbindningar", "Vätebindningar", "Metallbindningar"],
+        correct: 2,
+        explanation: "Vid smältning bryts endast intermolekylära bindningar (vätebindningar), inte kovalenta."
+    },
+    {
+        question: "Vilka bindningar bryts när NaCl-kristaller smälter?",
+        options: ["Endast jonbindningar", "Endast kovalenta", "Endast vätebindningar", "Inga bindningar"],
+        correct: 0,
+        explanation: "I jonföreningar bryts de elektrostatiska jonbindningarna vid smältning."
+    },
+    {
+        question: "Varför har vatten hög specifik värmekapacitet?",
+        options: [
+            "Det har jonbindningar",
+            "Många vätebindningar måste brytas",
+            "Det är en metall",
+            "Det har opolära bindningar"
+        ],
+        correct: 1,
+        explanation: "Vätebindningar mellan vattenmolekyler kräver mycket energi att bryta."
+    },
+    {
+        question: "Hur ritar man en korrekt Lewisstruktur för H₂O?",
+        options: [
+            "H-O-H med fria elektronpar på O",
+            "H=O=H",
+            "H-H-O",
+            "O utan bindningar"
+        ],
+        correct: 0,
+        explanation: "Syre binds till två väten och har två fria elektronpar för att uppfylla oktettregeln."
     }
 ];
 

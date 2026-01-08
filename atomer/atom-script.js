@@ -93,6 +93,68 @@ const allQuestions = [
         ],
         correct: 1,
         explanation: "En positiv laddning innebär att atomen förlorat elektroner."
+    },
+    // NEW QUESTIONS - Excitation and average atomic mass
+    {
+        question: "Vad händer när en elektron exciteras?",
+        options: [
+            "Den lämnar atomen helt",
+            "Den hoppar till ett högre energiskal",
+            "Den bildar en jon",
+            "Den försvinner"
+        ],
+        correct: 1,
+        explanation: "Vid excitation absorberar elektronen energi och hoppar till ett högre energinivå."
+    },
+    {
+        question: "Vad händer när en exciterad elektron återgår till grundtillståndet?",
+        options: [
+            "Atomen exploderar",
+            "Ljus avges",
+            "Elektronen försvinner",
+            "Ingenting"
+        ],
+        correct: 1,
+        explanation: "När elektronen faller tillbaka avges energin som ljus (foton)."
+    },
+    {
+        question: "Klor har två stabila isotoper: 75% ³⁵Cl och 25% ³⁷Cl. Vad är ungefärlig genomsnittlig atommassa?",
+        options: ["35 u", "35,5 u", "36 u", "37 u"],
+        correct: 1,
+        explanation: "M = 0,75×35 + 0,25×37 = 26,25 + 9,25 = 35,5 u"
+    },
+    {
+        question: "Vad är skillnaden mellan excitation och jonisation?",
+        options: [
+            "Ingen skillnad",
+            "Vid excitation stannar elektronen i atomen, vid jonisation lämnar den",
+            "Vid jonisation stannar elektronen i atomen",
+            "Excitation sker bara i gaser"
+        ],
+        correct: 1,
+        explanation: "Vid excitation hoppar elektronen till högre skal men stannar kvar. Vid jonisation lämnar den atomen helt."
+    },
+    {
+        question: "Varför har neon en heltals atommassa (20) medan klor har 35,5?",
+        options: [
+            "Neon är tyngre",
+            "Klor har isotoper med olika abundans",
+            "Neon har inga neutroner",
+            "Klor har fler protoner"
+        ],
+        correct: 1,
+        explanation: "Klor har två isotoper (35 och 37) i ojämn fördelning, vilket ger medelvärdet 35,5."
+    },
+    {
+        question: "Vad är ett emissionsspektrum?",
+        options: [
+            "En lista på alla grundämnen",
+            "De specifika våglängder av ljus som ett ämne avger",
+            "Ett sätt att mäta massa",
+            "En typ av kemisk bindning"
+        ],
+        correct: 1,
+        explanation: "Varje grundämne har ett unikt emissionsspektrum som fungerar som ett fingeravtryck."
     }
 ];
 

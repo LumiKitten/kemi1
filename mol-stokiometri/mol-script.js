@@ -78,6 +78,58 @@ const allQuestions = [
         options: ["Ökar", "Minskar", "Förblir samma", "Beror på ämnet"],
         correct: 1,
         explanation: "Vid spädning minskar koncentrationen eftersom volymen ökar."
+    },
+    // NEW QUESTIONS - Gaslagen, kristallvatten, fällning
+    {
+        question: "I idealgaslagen pV=nRT, vad händer med volymen om trycket fördubblas (vid konstant T och n)?",
+        options: ["Fördubblas", "Halveras", "Oförändrad", "Fyrdubblas"],
+        correct: 1,
+        explanation: "Enligt Boyles lag: om p fördubblas halveras V (pV = konstant)."
+    },
+    {
+        question: "Hur många mol Cl⁻-joner bildas när 1 mol CaCl₂ dissocierar i vatten?",
+        options: ["1 mol", "2 mol", "3 mol", "0,5 mol"],
+        correct: 1,
+        explanation: "CaCl₂ → Ca²⁺ + 2Cl⁻, så 1 mol CaCl₂ ger 2 mol Cl⁻."
+    },
+    {
+        question: "Vilken volym upptar 1 mol gas vid NTP (0°C, 101,3 kPa)?",
+        options: ["11,2 dm³", "22,4 dm³", "44,8 dm³", "1 dm³"],
+        correct: 1,
+        explanation: "1 mol av vilken gas som helst upptar 22,4 dm³ vid NTP."
+    },
+    {
+        question: "Vad är en fällningsreaktion?",
+        options: [
+            "Gas bildas",
+            "Ett olösligt salt bildas och faller ut",
+            "Temperaturen sjunker",
+            "Färgen ändras"
+        ],
+        correct: 1,
+        explanation: "Fällning sker när två lösliga salter reagerar och bildar ett olösligt salt."
+    },
+    {
+        question: "Hur bestämmer man antalet kristallvatten (x) i ett hydrat?",
+        options: [
+            "Man mäter volymen",
+            "Man värmer och mäter massförlusten",
+            "Man löser i vatten",
+            "Man mäter pH"
+        ],
+        correct: 1,
+        explanation: "Genom att värma bort vattnet och mäta massförlusten kan man beräkna x."
+    },
+    {
+        question: "Vad är partialtryck enligt Daltons lag?",
+        options: [
+            "Det totala trycket",
+            "Varje gas bidrar med sitt eget tryck oberoende av andra",
+            "Trycket vid NTP",
+            "Trycket i en ideal gas"
+        ],
+        correct: 1,
+        explanation: "Varje gas i en blandning bidrar med sitt partialtryck, och totaltrycket är summan av alla."
     }
 ];
 

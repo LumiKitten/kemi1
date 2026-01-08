@@ -73,6 +73,63 @@ const allQuestions = [
         options: ["Fast → Flytande", "Flytande → Gas", "Fast → Gas", "Gas → Flytande"],
         correct: 2,
         explanation: "Sublimering är direkt övergång från fast till gas utan att passera vätskeform."
+    },
+    // NEW QUESTIONS - Lösningar och löslighet
+    {
+        question: "Vad betyder 'lika löser lika'?",
+        options: [
+            "Alla ämnen löser sig i vatten",
+            "Polära ämnen löser polära, opolära löser opolära",
+            "Atomer med samma storlek löser varandra",
+            "Endast salter kan lösas"
+        ],
+        correct: 1,
+        explanation: "Polära lösningsmedel (som vatten) löser polära ämnen, opolära löser opolära."
+    },
+    {
+        question: "Varför löser sig salt i vatten men inte i olja?",
+        options: [
+            "Olja är för trög",
+            "Vatten är polärt och kan bryta jonbindningar",
+            "Salt är för tungt",
+            "Olja är varmare"
+        ],
+        correct: 1,
+        explanation: "Vattnets polära molekyler kan omge och separera jonerna i saltet."
+    },
+    {
+        question: "Vad är en emulsion?",
+        options: [
+            "En ren lösning",
+            "Droppar av ett ämne fördelade i ett annat",
+            "Ett rent grundämne",
+            "En gas i vatten"
+        ],
+        correct: 1,
+        explanation: "Emulsion är en blandning där små droppar är utspridda i ett annat ämne, t.ex. mjölk."
+    },
+    {
+        question: "Vilken separationsmetod är bäst för att separera sand och järnspån?",
+        options: ["Filtrering", "Destillation", "Magnet", "Indunstning"],
+        correct: 2,
+        explanation: "En magnet drar till sig järnspånen men inte sanden."
+    },
+    {
+        question: "Varför flyter is på vatten?",
+        options: [
+            "Is har starkare bindningar",
+            "Is har lägre densitet p.g.a. vätebindningarnas struktur",
+            "Vatten trycker upp isen",
+            "Is har ingen massa"
+        ],
+        correct: 1,
+        explanation: "Vätebindningar i is skapar en öppen struktur som ger lägre densitet än flytande vatten."
+    },
+    {
+        question: "Vilket av dessa är ett opolärt lösningsmedel?",
+        options: ["Vatten", "Etanol", "Bensin", "Saltvatten"],
+        correct: 2,
+        explanation: "Bensin är ett opolärt lösningsmedel som löser fetter och oljor."
     }
 ];
 

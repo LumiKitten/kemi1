@@ -73,6 +73,58 @@ const allQuestions = [
         options: ["Grupp 1", "Grupp 2", "Grupp 17", "Grupp 18"],
         correct: 2,
         explanation: "Halogenerna (F, Cl, Br, I) finns i grupp 17."
+    },
+    // NEW QUESTIONS - Reaktivitetstrend och elektronkonfiguration
+    {
+        question: "Varför ökar reaktiviteten NEDÅT i grupp 1 (alkalimetaller)?",
+        options: [
+            "Färre elektroner",
+            "Valenselektronen är längre från kärnan",
+            "Fler protoner",
+            "Högre massa"
+        ],
+        correct: 1,
+        explanation: "Större avstånd till kärnan gör att valenselektronen lättare lämnar atomen."
+    },
+    {
+        question: "Varför minskar reaktiviteten NEDÅT i grupp 17 (halogener)?",
+        options: [
+            "Mindre atomer tar lättare upp elektroner",
+            "Större atomer är stabilare",
+            "Halogener bildar inga bindningar",
+            "Elektronegativiteten ökar"
+        ],
+        correct: 0,
+        explanation: "Fluor har starkare attraktion till nya elektroner pga. mindre atomradie."
+    },
+    {
+        question: "Vad är elektronkonfigurationen för Ar (atomnummer 18)?",
+        options: ["2, 8", "2, 8, 8", "2, 8, 7", "2, 8, 18"],
+        correct: 1,
+        explanation: "Argon har 18 elektroner: 2 + 8 + 8 = 18."
+    },
+    {
+        question: "Vilken jonladdning får grundämnen i grupp 2 typiskt?",
+        options: ["-2", "+1", "+2", "0"],
+        correct: 2,
+        explanation: "Grupp 2 har 2 valenselektroner och bildar +2-joner."
+    },
+    {
+        question: "Varför har övergångsmetaller ofta flera möjliga oxidationstal?",
+        options: [
+            "De är tyngre",
+            "De kan förlora olika antal d-elektroner",
+            "De är gaser",
+            "De har fullt yttersta skal"
+        ],
+        correct: 1,
+        explanation: "Övergångsmetaller har d-elektroner som kan delta i bindning på olika sätt."
+    },
+    {
+        question: "Vilken jon bildar aluminium (Al)?",
+        options: ["Al⁻", "Al²⁺", "Al³⁺", "Al bildar ej joner"],
+        correct: 2,
+        explanation: "Aluminium har 3 valenselektroner och bildar Al³⁺."
     }
 ];
 

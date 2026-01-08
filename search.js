@@ -41,7 +41,7 @@ const searchableTopics = [
     url: "mol-stokiometri/",
     icon: "⚖️",
     category: "Ämne",
-    keywords: ["mol", "stökiometri", "molmassa", "koncentration", "beräkning", "avogadro"]
+    keywords: ["mol", "stökiometri", "stoikiometri", "molmassa", "koncentration", "beräkning", "avogadro"]
   },
   {
     title: "Syror & Baser",
@@ -240,8 +240,251 @@ const searchableTopics = [
     icon: "❄️",
     category: "Begrepp",
     keywords: ["endoterm", "energi", "uppta", "kyla", "positiv"]
+  },
+  // NEW TOPICS ADDED
+  // Atomer - new sections
+  {
+    title: "Excitation och ljusemission",
+    desc: "Elektronhopp och atomspektrum",
+    url: "atomer/#excitation",
+    icon: "💡",
+    category: "Begrepp",
+    keywords: ["excitation", "emission", "spektrum", "ljus", "foton", "grundtillstånd", "exciterat"]
+  },
+  {
+    title: "Genomsnittlig atommassa",
+    desc: "Beräkna medelmassa från isotoper",
+    url: "atomer/#atommassa",
+    icon: "⚖️",
+    category: "Begrepp",
+    keywords: ["atommassa", "isotop", "genomsnitt", "medel", "abundans", "klor"]
+  },
+  // Bindningar - new sections
+  {
+    title: "Elektronformel (Lewisstruktur)",
+    desc: "Rita molekyler med elektronpar",
+    url: "bindningar/#elektronformel",
+    icon: "✏️",
+    category: "Begrepp",
+    keywords: ["lewis", "elektronformel", "struktur", "oktett", "valenselektron", "rita"]
+  },
+  {
+    title: "Fasövergångar och bindningar",
+    desc: "Vilka bindningar bryts vid smältning/kokning",
+    url: "bindningar/#fasovergangar",
+    icon: "🌡️",
+    category: "Begrepp",
+    keywords: ["fas", "fasövergång", "smältning", "kokning", "bindning", "intermolekylär"]
+  },
+  // Introduktion - new sections
+  {
+    title: "Lösningar och löslighet",
+    desc: "Lika löser lika - polära och opolära lösningsmedel",
+    url: "introduktion/#losningar",
+    icon: "💧",
+    category: "Begrepp",
+    keywords: ["lösning", "löslighet", "polär", "opolär", "lika löser lika", "salt", "vatten"]
+  },
+  // Mol-stökiometri - new sections
+  {
+    title: "Empirisk och molekylformel",
+    desc: "Bestäm formel från massprocent",
+    url: "mol-stokiometri/#empirisk",
+    icon: "🔬",
+    category: "Begrepp",
+    keywords: ["empirisk", "molekylformel", "massprocent", "formel", "förhållande"]
+  },
+  {
+    title: "Jonkoncentration",
+    desc: "Beräkna jonkoncentration vid dissociation",
+    url: "mol-stokiometri/#jonkoncentration",
+    icon: "⚡",
+    category: "Begrepp",
+    keywords: ["jonkoncentration", "dissociation", "jon", "salt", "CaCl2"]
+  },
+  {
+    title: "Massprocent",
+    desc: "Andel av ett ämne i en lösning",
+    url: "mol-stokiometri/#massprocent",
+    icon: "%",
+    category: "Begrepp",
+    keywords: ["massprocent", "procent", "andel", "massa", "lösning"]
+  },
+  {
+    title: "Kristallvatten",
+    desc: "Bestäm x i hydratiserade salter",
+    url: "mol-stokiometri/#kristallvatten",
+    icon: "💎",
+    category: "Begrepp",
+    keywords: ["kristallvatten", "hydrat", "CuSO4", "gips", "uppvärmning"]
+  },
+  {
+    title: "Utbyte (Yield)",
+    desc: "Teoretiskt vs verkligt utbyte",
+    url: "mol-stokiometri/#utbyte",
+    icon: "📊",
+    category: "Begrepp",
+    keywords: ["utbyte", "yield", "teoretiskt", "verkligt", "procent"]
+  },
+  {
+    title: "Gasberäkningar (pV=nRT)",
+    desc: "Idealgaslagen och Boyles lag",
+    url: "mol-stokiometri/#gaslagen",
+    icon: "💨",
+    category: "Begrepp",
+    keywords: ["gas", "ideal", "pV=nRT", "boyle", "tryck", "volym", "partialtryck", "dalton"]
+  },
+  {
+    title: "Fällningsreaktioner",
+    desc: "Olösliga salter och fällning",
+    url: "mol-stokiometri/#fallning",
+    icon: "🧪",
+    category: "Begrepp",
+    keywords: ["fällning", "precipitation", "olöslig", "AgCl", "BaSO4", "salt"]
+  },
+  // Syror-baser - new sections
+  {
+    title: "Korresponderande syra-bas-par",
+    desc: "Konjugerade par och amfolyter",
+    url: "syror-baser/#korresponderande",
+    icon: "🔄",
+    category: "Begrepp",
+    keywords: ["korresponderande", "konjugat", "par", "syra", "bas", "amfolyt", "vatten"]
+  },
+  {
+    title: "Titrering",
+    desc: "Bestäm koncentration med syra-bas titrering",
+    url: "syror-baser/#titrering",
+    icon: "🧪",
+    category: "Begrepp",
+    keywords: ["titrering", "ekvivalenspunkt", "indikator", "byrett", "c1V1=c2V2"]
+  },
+  {
+    title: "Buffertlösningar",
+    desc: "Lösningar som motstår pH-ändringar",
+    url: "syror-baser/#buffert",
+    icon: "🛡️",
+    category: "Begrepp",
+    keywords: ["buffert", "buffer", "pH", "blod", "kolsyra", "bikarbonat"]
+  },
+  // Termokemi - new sections
+  {
+    title: "Värmeberäkningar (Q=mcΔT)",
+    desc: "Beräkna värmeenergi",
+    url: "termokemi/#varmeberakningar",
+    icon: "🔥",
+    category: "Begrepp",
+    keywords: ["värme", "Q=mcΔT", "specifik", "värmekapacitet", "temperatur", "energi"]
+  },
+  // Redox - new sections
+  {
+    title: "Galvaniska celler",
+    desc: "Elektrokemiska celler och EMK",
+    url: "redox/#galvaniskt",
+    icon: "🔋",
+    category: "Begrepp",
+    keywords: ["galvanisk", "cell", "EMK", "batteri", "daniell", "anod", "katod"]
+  },
+  {
+    title: "Väteutdrivande metaller",
+    desc: "Metaller som kan reagera med syror",
+    url: "redox/#spanningsserien",
+    icon: "💨",
+    category: "Begrepp",
+    keywords: ["väteutdrivande", "väte", "metall", "syra", "spänningsserie", "H2"]
+  },
+  // Periodiska systemet - new sections
+  {
+    title: "Reaktivitetstrend",
+    desc: "Varför alkalimetaller och halogener har motsatta trender",
+    url: "periodiska-systemet/#trender",
+    icon: "📈",
+    category: "Begrepp",
+    keywords: ["reaktivitet", "trend", "alkalimetall", "halogen", "grupp", "period"]
   }
 ];
+
+// ============================================
+// FUZZY SEARCH HELPERS
+// ============================================
+
+// Normalize Swedish characters and common variations
+function normalizeText(text) {
+  return text.toLowerCase()
+    .replace(/ö/g, 'o').replace(/ä/g, 'a').replace(/å/g, 'a')
+    .replace(/é/g, 'e').replace(/ü/g, 'u')
+    .replace(/[^a-z0-9]/g, ''); // Remove non-alphanumeric
+}
+
+// Calculate Levenshtein distance (edit distance)
+function levenshteinDistance(a, b) {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  
+  const matrix = [];
+  
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+  
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // substitution
+          matrix[i][j - 1] + 1,     // insertion
+          matrix[i - 1][j] + 1      // deletion
+        );
+      }
+    }
+  }
+  
+  return matrix[b.length][a.length];
+}
+
+// Check if query fuzzy-matches target
+function fuzzyMatch(query, target) {
+  const normQuery = normalizeText(query);
+  const normTarget = normalizeText(target);
+  
+  // Exact substring match (after normalization)
+  if (normTarget.includes(normQuery)) return true;
+  
+  // For short queries, be stricter
+  if (normQuery.length < 4) {
+    return normTarget.includes(normQuery);
+  }
+  
+  // Allow 1 error for every 4 characters in query
+  const maxErrors = Math.floor(normQuery.length / 4) + 1;
+  
+  // Check each word in target
+  const targetWords = target.toLowerCase().split(/\s+/);
+  for (const word of targetWords) {
+    const normWord = normalizeText(word);
+    // If word is similar length to query, check distance
+    if (Math.abs(normWord.length - normQuery.length) <= maxErrors) {
+      if (levenshteinDistance(normQuery, normWord) <= maxErrors) {
+        return true;
+      }
+    }
+    // Also check if query starts with word or word starts with query
+    if (normWord.startsWith(normQuery) || normQuery.startsWith(normWord)) {
+      return true;
+    }
+  }
+  
+  return false;
+}
+
+// ============================================
+// SEARCH INITIALIZATION
+// ============================================
 
 function initSearch() {
   const searchInput = document.getElementById('globalSearch');
@@ -264,12 +507,39 @@ function initSearch() {
       return;
     }
     
-    const results = searchableTopics.filter(topic => {
-      const titleMatch = topic.title.toLowerCase().includes(query);
-      const descMatch = topic.desc.toLowerCase().includes(query);
-      const keywordMatch = topic.keywords.some(kw => kw.toLowerCase().includes(query));
-      return titleMatch || descMatch || keywordMatch;
-    });
+    const results = searchableTopics.map(topic => {
+      let score = 0;
+      const lowerQuery = query.toLowerCase();
+      const lowerTitle = topic.title.toLowerCase();
+      
+      // Exact title match = highest score
+      if (lowerTitle === lowerQuery) score += 100;
+      // Title starts with query
+      else if (lowerTitle.startsWith(lowerQuery)) score += 80;
+      // Title contains query
+      else if (lowerTitle.includes(lowerQuery)) score += 60;
+      
+      // Exact keyword match
+      if (topic.keywords.some(kw => kw.toLowerCase() === lowerQuery)) score += 50;
+      // Keyword starts with query
+      else if (topic.keywords.some(kw => kw.toLowerCase().startsWith(lowerQuery))) score += 40;
+      // Keyword contains query
+      else if (topic.keywords.some(kw => kw.toLowerCase().includes(lowerQuery))) score += 30;
+      
+      // Description contains query
+      if (topic.desc.toLowerCase().includes(lowerQuery)) score += 20;
+      
+      // Fuzzy matches (lower priority)
+      if (score === 0) {
+        if (fuzzyMatch(lowerQuery, topic.title)) score += 15;
+        else if (topic.keywords.some(kw => fuzzyMatch(lowerQuery, kw))) score += 10;
+        else if (fuzzyMatch(lowerQuery, topic.desc)) score += 5;
+      }
+      
+      return { ...topic, score };
+    })
+    .filter(topic => topic.score > 0)
+    .sort((a, b) => b.score - a.score);
     
     if (results.length === 0) {
       searchResults.innerHTML = '<div class="search-no-results">Inga resultat hittades</div>';

@@ -1,0 +1,238 @@
+/* ============================================
+   SYROR & BASER SPECIFIC STYLES
+   ============================================ */
+
+/* pH Scale */
+.ph-scale-container {
+  margin: var(--space-xl) 0;
+}
+
+.ph-scale {
+  height: 60px;
+  background: linear-gradient(
+    to right,
+    #ff0000 0%,
+    #ff4500 7%,
+    #ff8c00 14%,
+    #ffd700 21%,
+    #ffff00 28%,
+    #adff2f 35%,
+    #7fff00 42%,
+    #00ff00 50%,
+    #00fa9a 57%,
+    #00ced1 64%,
+    #1e90ff 71%,
+    #4169e1 78%,
+    #8a2be2 85%,
+    #9400d3 92%,
+    #4b0082 100%
+  );
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+
+.ph-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.ph-slider-container {
+  position: relative;
+  margin-top: var(--space-lg);
+}
+
+.ph-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ph-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: var(--text-primary);
+  border: 2px solid var(--bg-primary);
+  border-radius: var(--radius-sm);
+  cursor: grab;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.ph-slider::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.ph-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: var(--text-primary);
+  border: 2px solid var(--bg-primary);
+  border-radius: var(--radius-sm);
+  cursor: grab;
+}
+
+/* pH Display */
+.ph-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+.ph-value-box {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-lg);
+  text-align: center;
+  border-radius: var(--radius-md);
+}
+
+.ph-value-box .label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.ph-value-box .value {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.ph-value-box.acid .value {
+  color: var(--acid-primary);
+}
+
+.ph-value-box.base .value {
+  color: var(--base-primary);
+}
+
+.ph-value-box.neutral .value {
+  color: var(--neutral);
+}
+
+/* Molecule visualization */
+.molecule-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xl);
+  padding: var(--space-xl);
+  min-height: 200px;
+}
+
+.molecule {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.atom {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.atom-h {
+  width: 40px;
+  height: 40px;
+  background: var(--acid-primary);
+  box-shadow: 0 0 20px var(--acid-glow);
+}
+
+.atom-o {
+  background: var(--base-primary);
+  box-shadow: 0 0 20px var(--base-glow);
+}
+
+.atom-cl {
+  background: var(--neutral);
+  box-shadow: 0 0 20px var(--neutral-glow);
+}
+
+.ion {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.ion-h {
+  background: rgba(255, 71, 87, 0.15);
+  border: 2px solid var(--acid-primary);
+  color: var(--acid-primary);
+}
+
+.ion-oh {
+  background: rgba(52, 152, 219, 0.15);
+  border: 2px solid var(--base-primary);
+  color: var(--base-primary);
+}
+
+/* Ion animation container */
+.ion-animation {
+  position: relative;
+  height: 150px;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.floating-ion {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Examples list with pH badges */
+.examples-list {
+  list-style: none;
+  display: grid;
+  gap: var(--space-md);
+}
+
+.examples-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.examples-list .ph-badge {
+  min-width: 50px;
+  padding: var(--space-xs) var(--space-sm);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+}

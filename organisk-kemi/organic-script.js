@@ -88,6 +88,48 @@ const allQuestions = [
         ],
         correct: 1,
         explanation: "I aldehyder sitter karbonylgruppen i änden, i ketoner mitt i kedjan."
+    },
+    // NEW QUESTIONS - Namngivning och reaktioner
+    {
+        question: "Vad heter alkanen med 4 kolatomer?",
+        options: ["Propan", "Butan", "Pentan", "Metan"],
+        correct: 1,
+        explanation: "But- betyder 4 kolatomer, alltså C₄H₁₀."
+    },
+    {
+        question: "Vad är ändelsen för alkener?",
+        options: ["-an", "-en", "-yn", "-ol"],
+        correct: 1,
+        explanation: "Alkener slutar på -en (t.ex. eten, propen)."
+    },
+    {
+        question: "Vilken är formeln för alkyner?",
+        options: ["CnH2n+2", "CnH2n", "CnH2n-2", "CnHn"],
+        correct: 2,
+        explanation: "Alkyner har minst en trippelbindning och formeln CnH2n-2."
+    },
+    {
+        question: "Vad kallas reaktionen där små molekyler bildar en lång kedja?",
+        options: ["Neutralisation", "Polymerisation", "Oxidation", "Destillation"],
+        correct: 1,
+        explanation: "Polymerisation bildar polymerer (plaster) från monomerer."
+    },
+    {
+        question: "Vilken funktionell grupp finns i etrar?",
+        options: ["-OH", "-COOH", "-O-", "-CHO"],
+        correct: 2,
+        explanation: "Etrar har en syreatom mellan två kolkedjor (R-O-R)."
+    },
+    {
+        question: "Vad är strukturisomerer?",
+        options: [
+            "Molekyler med olika massa",
+            "Molekyler med samma molekylformel men atomerna sitter ihop olika",
+            "Molekyler med samma struktur",
+            "Molekyler med olika grundämnen"
+        ],
+        correct: 1,
+        explanation: "Strukturisomerer har samma molekylformel men olika strukturformel."
     }
 ];
 

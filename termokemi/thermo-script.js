@@ -98,6 +98,48 @@ const allQuestions = [
         options: ["Exoterm reaktion", "Endoterm reaktion", "Neutral process", "Katalytisk reaktion"],
         correct: 1,
         explanation: "Fotosyntes tar upp ljusenergi och är därför endoterm."
+    },
+    // NEW QUESTIONS - Värmeberäkningar och energidiagram
+    {
+        question: "Vilken formel används för att beräkna värmeenergi?",
+        options: ["E = mc²", "Q = mcΔT", "pV = nRT", "n = m/M"],
+        correct: 1,
+        explanation: "Q = mcΔT där m är massa, c är specifik värmekapacitet och ΔT är temperaturändring."
+    },
+    {
+        question: "Vattnets specifika värmekapacitet är 4,18 J/(g·K). Vad krävs för att värma 100 g vatten 10°C?",
+        options: ["418 J", "4180 J", "41800 J", "41,8 J"],
+        correct: 1,
+        explanation: "Q = 100 × 4,18 × 10 = 4180 J"
+    },
+    {
+        question: "I ett energidiagram, vad representerar höjden på 'kullen' mellan reaktanter och produkter?",
+        options: ["Entalpiändringen", "Aktiveringsenergin", "Reaktionshastigheten", "Temperaturen"],
+        correct: 1,
+        explanation: "Toppen visar aktiveringsenergin - energin som behövs för att starta reaktionen."
+    },
+    {
+        question: "Hur påverkas ΔH av en katalysator?",
+        options: ["ΔH ökar", "ΔH minskar", "ΔH är oförändrad", "ΔH byter tecken"],
+        correct: 2,
+        explanation: "En katalysator ändrar INTE ΔH - bara aktiveringsenergin sänks."
+    },
+    {
+        question: "Vad är förbränningsentalpi?",
+        options: [
+            "Energin för att bryta bindningar",
+            "ΔH när 1 mol ämne förbränns fullständigt",
+            "Temperaturen vid förbränning",
+            "Aktiveringsenergin för förbränning"
+        ],
+        correct: 1,
+        explanation: "Förbränningsentalpi är ΔH när 1 mol av ett ämne förbränns helt med O₂."
+    },
+    {
+        question: "Vad händer med temperaturen i omgivningen vid en exoterm reaktion?",
+        options: ["Temperaturen sjunker", "Temperaturen ökar", "Oförändrad", "Beror på reaktanten"],
+        correct: 1,
+        explanation: "Exoterma reaktioner avger värme till omgivningen, som blir varmare."
     }
 ];
 

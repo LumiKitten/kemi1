@@ -13,6 +13,7 @@
     rel="stylesheet" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="syror-styles.css" />
 </head>
 
 <body>
@@ -31,17 +32,27 @@
       </div>
       <button class="nav-toggle" aria-label="Meny">&#9776;</button>
       <ul class="nav-links">
-        <li><a href="#ph-skalan">pH-skalan</a></li>
-        <li><a href="#ph-poh">pH &amp; pOH</a></li>
-        <li><a href="#syror">Syror</a></li>
-        <li><a href="#baser">Baser</a></li>
-        <li><a href="#joner">Joner</a></li>
-        <li><a href="#neutralisation">Neutralisation</a></li>
-        <li><a href="#korresponderande">Korr. par</a></li>
-        <li><a href="#titrering">Titrering</a></li>
-        <li><a href="#buffert">Buffert</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Teori ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#ph-skalan">pH-skalan</a></li>
+            <li><a href="#ph-poh">pH &amp; pOH</a></li>
+            <li><a href="#syror">Syror</a></li>
+            <li><a href="#baser">Baser</a></li>
+            <li><a href="#joner">Joner</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Reaktioner ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#neutralisation">Neutralisation</a></li>
+            <li><a href="#korresponderande">Korr. par</a></li>
+            <li><a href="#titrering">Titrering</a></li>
+            <li><a href="#buffert">Buffert</a></li>
+          </ul>
+        </li>
         <li><a href="#quiz">Quiz</a></li>
-        <li class="nav-menu-back"><a href="../">← Tillbaka till meny</a></li>
+        <li class="nav-menu-back"><a href="../">← Tillbaka</a></li>
       </ul>
     </nav>
   </header>
@@ -815,7 +826,8 @@
     <p>Syror &amp; Baser | Kemi 1 Interaktiv Guide</p>
   </footer>
 
-  <script src="../script.js"></script>
+  <script src="../search.js"></script>
+  <script src="syror-script.js"></script>
 </body>
 
 </html>
