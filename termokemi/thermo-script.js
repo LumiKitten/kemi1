@@ -275,6 +275,7 @@ function updateDiagram(type) {
             arrow.style.top = "25%";
             arrow.style.height = "30%";
             arrow.style.background = "#3498db";
+            arrow.style.setProperty("--arrow-color", "#3498db");
         }
         if (label) {
             label.textContent = "ΔH > 0";
@@ -290,6 +291,7 @@ function updateDiagram(type) {
             arrow.style.top = "35%";
             arrow.style.height = "35%";
             arrow.style.background = "#e74c3c";
+            arrow.style.setProperty("--arrow-color", "#e74c3c");
         }
         if (label) {
             label.textContent = "ΔH < 0";

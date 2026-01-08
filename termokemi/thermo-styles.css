@@ -198,6 +198,7 @@
     background: var(--bg-secondary);
     border-radius: var(--radius-sm);
     font-size: 0.85rem;
+    transition: all 0.3s ease;
 }
 
 .energy-level.reactants {
@@ -244,7 +245,8 @@
     top: 35%;
     height: 35%;
     width: 2px;
-    background: #e74c3c;
+    background: var(--arrow-color, #e74c3c);
+    transition: all 0.3s ease;
 }
 
 .delta-h-arrow::before,
@@ -253,7 +255,8 @@
     position: absolute;
     width: 8px;
     height: 8px;
-    border: 2px solid #e74c3c;
+    border: 2px solid var(--arrow-color, #e74c3c);
+    transition: border-color 0.3s ease;
 }
 
 .delta-h-arrow::before {
