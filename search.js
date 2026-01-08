@@ -2,14 +2,14 @@
 // UNIVERSAL SEARCH - Kemi 1
 // ============================================
 const searchableTopics = [
-  // Main Topics
+  // Main Topics - only keep keywords that DON'T have specific entries
   {
     title: "Introduktion",
     desc: "Kemins grunder, säkerhet, materia och separationsmetoder",
     url: "introduktion/",
     icon: "🔬",
     category: "Ämne",
-    keywords: ["kemi", "grunder", "säkerhet", "materia", "separation", "laboratorium"]
+    keywords: ["kemi", "grunder", "laboratorium", "labbrock", "skyddsglasögon"]
   },
   {
     title: "Atomens Byggnad",
@@ -17,7 +17,7 @@ const searchableTopics = [
     url: "atomer/",
     icon: "⚛️",
     category: "Ämne",
-    keywords: ["atom", "proton", "neutron", "elektron", "isotop", "kärna", "skal"]
+    keywords: ["atom", "kärna", "skal"]
   },
   {
     title: "Periodiska Systemet",
@@ -25,7 +25,7 @@ const searchableTopics = [
     url: "periodiska-systemet/",
     icon: "📊",
     category: "Ämne",
-    keywords: ["periodiska", "systemet", "grupp", "period", "trend", "element", "metall"]
+    keywords: ["periodiska", "systemet"]
   },
   {
     title: "Kemisk Bindning",
@@ -33,7 +33,7 @@ const searchableTopics = [
     url: "bindningar/",
     icon: "🔗",
     category: "Ämne",
-    keywords: ["bindning", "jon", "kovalent", "metall", "intermolekylär", "kraft", "dipol"]
+    keywords: ["bindning", "kraft"]
   },
   {
     title: "Mol & Stökiometri",
@@ -41,7 +41,7 @@ const searchableTopics = [
     url: "mol-stokiometri/",
     icon: "⚖️",
     category: "Ämne",
-    keywords: ["mol", "stökiometri", "stoikiometri", "molmassa", "koncentration", "beräkning", "avogadro"]
+    keywords: ["stökiometri", "stoikiometri", "beräkning"]
   },
   {
     title: "Syror & Baser",
@@ -49,7 +49,7 @@ const searchableTopics = [
     url: "syror-baser/",
     icon: "⚗️",
     category: "Ämne",
-    keywords: ["syra", "bas", "pH", "pOH", "jon", "neutralisation", "saltsyra", "natriumhydroxid"]
+    keywords: ["syra", "bas"]
   },
   {
     title: "Termokemi",
@@ -57,7 +57,7 @@ const searchableTopics = [
     url: "termokemi/",
     icon: "🔥",
     category: "Ämne",
-    keywords: ["termokemi", "entalpi", "energi", "hess", "exoterm", "endoterm", "reaktion"]
+    keywords: ["termokemi", "hess", "reaktion"]
   },
   {
     title: "Redoxreaktioner",
@@ -65,7 +65,7 @@ const searchableTopics = [
     url: "redox/",
     icon: "⚡",
     category: "Ämne",
-    keywords: ["redox", "oxidation", "reduktion", "spänningsserie", "elektron", "elektrokemi"]
+    keywords: ["redox", "elektrokemi"]
   },
   {
     title: "Organisk Kemi",
@@ -73,7 +73,7 @@ const searchableTopics = [
     url: "organisk-kemi/",
     icon: "🧪",
     category: "Ämne",
-    keywords: ["organisk", "kol", "kolväte", "funktionell", "alkan", "alken", "alkyn", "alkohol"]
+    keywords: ["organisk", "kol", "kolväte", "funktionell", "alkan", "alken", "alkyn", "alkohol", "aldehyd", "keton", "karboxylsyra", "ester", "eter", "amin", "amid", "polymer", "mättat", "omättat", "namngivning", "isomer", "strukturformel"]
   },
   // Specific concepts within Syror & Baser
   {
@@ -124,6 +124,38 @@ const searchableTopics = [
     category: "Begrepp",
     keywords: ["neutralisation", "reaktion", "salt", "vatten", "syra", "bas"]
   },
+  {
+    title: "Titrering",
+    desc: "Bestäm koncentration med noggrann volymtillsats",
+    url: "syror-baser/#titrering",
+    icon: "🧪",
+    category: "Begrepp",
+    keywords: ["titrering", "ekvivalenspunkt", "indikator", "byrett", "koncentration"]
+  },
+  {
+    title: "Buffertlösningar",
+    desc: "Motverkar pH-förändringar vid syra/bas-tillsats",
+    url: "syror-baser/#buffert",
+    icon: "🛡️",
+    category: "Begrepp",
+    keywords: ["buffert", "buffertlösning", "konjugat", "svag syra", "pH-stabilitet"]
+  },
+  {
+    title: "Protolys",
+    desc: "Protonöverföring mellan syra och bas",
+    url: "syror-baser/#joner",
+    icon: "↔️",
+    category: "Begrepp",
+    keywords: ["protolys", "proton", "H+", "autoprotolys", "vatten", "överföring"]
+  },
+  {
+    title: "Korresponderande syra-baspar",
+    desc: "HCl/Cl⁻, NH₄⁺/NH₃ - skillnad på en proton",
+    url: "syror-baser/#korresponderande",
+    icon: "🔄",
+    category: "Begrepp",
+    keywords: ["korresponderande", "konjugat", "par", "syra", "bas", "proton"]
+  },
   // Specific concepts within Atomer
   {
     title: "Protoner",
@@ -165,6 +197,79 @@ const searchableTopics = [
     category: "Begrepp",
     keywords: ["nuklid", "nuklider", "atomkärna", "masstal", "atomnummer", "isotop"]
   },
+  // Specific concepts within Periodiska Systemet
+  {
+    title: "Grupper i periodiska systemet",
+    desc: "Vertikala kolumner med liknande egenskaper",
+    url: "periodiska-systemet/#grupper",
+    icon: "📊",
+    category: "Begrepp",
+    keywords: ["grupp", "kolumn", "vertikal", "valenselektron", "egenskaper"]
+  },
+  {
+    title: "Periodiska trender",
+    desc: "Atomradie, joniseringsenergi och elektronegativitet",
+    url: "periodiska-systemet/#trender",
+    icon: "📈",
+    category: "Begrepp",
+    keywords: ["trend", "period", "atomradie", "joniseringsenergi", "elektronegativitet", "mönster"]
+  },
+  {
+    title: "Alkalimetaller (grupp 1)",
+    desc: "Li, Na, K - reaktiva metaller med 1 valenselektron",
+    url: "periodiska-systemet/#grupper",
+    icon: "🔥",
+    category: "Begrepp",
+    keywords: ["alkalimetall", "alkali", "litium", "natrium", "kalium", "grupp 1", "reaktiv"]
+  },
+  {
+    title: "Halogener (grupp 17)",
+    desc: "F, Cl, Br, I - reaktiva icke-metaller med 7 valenselektroner",
+    url: "periodiska-systemet/#grupper",
+    icon: "☣️",
+    category: "Begrepp",
+    keywords: ["halogen", "fluor", "klor", "brom", "jod", "grupp 17", "reaktiv"]
+  },
+  {
+    title: "Ädelgaser (grupp 18)",
+    desc: "He, Ne, Ar - stabila gaser med fulla skal",
+    url: "periodiska-systemet/#grupper",
+    icon: "💫",
+    category: "Begrepp",
+    keywords: ["ädelgas", "helium", "neon", "argon", "oreaktiv", "stabilt", "grupp 18"]
+  },
+  {
+    title: "Metaller och icke-metaller",
+    desc: "Egenskaper och placering i periodiska systemet",
+    url: "periodiska-systemet/#metaller",
+    icon: "🔩",
+    category: "Begrepp",
+    keywords: ["metall", "icke-metall", "metalloid", "halvmetall", "ledningsförmåga"]
+  },
+  {
+    title: "Katjoner (positiva joner)",
+    desc: "Metaller avger elektroner och blir positivt laddade",
+    url: "periodiska-systemet/#vanliga-joner",
+    icon: "➕",
+    category: "Begrepp",
+    keywords: ["katjon", "positiv", "jon", "metall", "avger", "elektron", "Na+", "Mg2+", "Ca2+"]
+  },
+  {
+    title: "Anjoner (negativa joner)",
+    desc: "Icke-metaller tar upp elektroner och blir negativt laddade",
+    url: "periodiska-systemet/#vanliga-joner",
+    icon: "➖",
+    category: "Begrepp",
+    keywords: ["anjon", "negativ", "jon", "icke-metall", "tar upp", "elektron", "Cl-", "O2-", "S2-"]
+  },
+  {
+    title: "Vanliga joner",
+    desc: "Vilka joner grundämnen bildar baserat på grupp",
+    url: "periodiska-systemet/#vanliga-joner",
+    icon: "⚡",
+    category: "Begrepp",
+    keywords: ["jon", "joner", "laddning", "grupp", "valenselektron", "jonbildning"]
+  },
   // Specific concepts within Kemisk Bindning
   {
     title: "Jonbindning",
@@ -180,7 +285,55 @@ const searchableTopics = [
     url: "bindningar/#kovalent",
     icon: "🔗",
     category: "Begrepp",
-    keywords: ["kovalent", "bindning", "elektronpar", "molekyl", "H2O"]
+    keywords: ["kovalent", "bindning", "elektronpar", "molekyl", "H2O", "polär", "opolär"]
+  },
+  {
+    title: "Metallbindning",
+    desc: "Metallatomer delar på fria elektroner",
+    url: "bindningar/#metallbindning",
+    icon: "🔩",
+    category: "Begrepp",
+    keywords: ["metall", "metallbindning", "elektronmoln", "ledningsförmåga", "formbar"]
+  },
+  {
+    title: "Vätebindning",
+    desc: "Stark intermolekylär kraft mellan H och N/O/F",
+    url: "bindningar/#intermolekylara",
+    icon: "💧",
+    category: "Begrepp",
+    keywords: ["vätebindning", "väte", "hydrogen", "intermolekylär", "vatten", "kokpunkt", "H2O"]
+  },
+  {
+    title: "Van der Waals-krafter",
+    desc: "Svaga tillfälliga dipoler mellan alla molekyler",
+    url: "bindningar/#intermolekylara",
+    icon: "✨",
+    category: "Begrepp",
+    keywords: ["van der waals", "london", "dispersion", "tillfällig", "dipol", "opolär"]
+  },
+  {
+    title: "Dipol-dipol-bindning",
+    desc: "Attraktion mellan permanenta dipoler",
+    url: "bindningar/#intermolekylara",
+    icon: "🧲",
+    category: "Begrepp",
+    keywords: ["dipol", "dipol-dipol", "polär", "elektrostatisk", "permanent"]
+  },
+  {
+    title: "Elektronformel (Lewisstruktur)",
+    desc: "Rita molekyler med elektronpar",
+    url: "bindningar/#elektronformel",
+    icon: "✏️",
+    category: "Begrepp",
+    keywords: ["lewis", "elektronformel", "struktur", "oktett", "valenselektron", "rita", "prickar"]
+  },
+  {
+    title: "Fasövergångar",
+    desc: "Vilka bindningar bryts vid smältning/kokning",
+    url: "bindningar/#fasovergangar",
+    icon: "🌡️",
+    category: "Begrepp",
+    keywords: ["fas", "fasövergång", "smältning", "kokning", "sublimering", "kondensation", "stelning"]
   },
   // Specific concepts within Mol & Stökiometri
   {
@@ -199,6 +352,54 @@ const searchableTopics = [
     category: "Begrepp",
     keywords: ["avogadro", "tal", "mol", "partiklar", "konstant"]
   },
+  {
+    title: "Spädning",
+    desc: "c₁V₁ = c₂V₂ - beräkna volym och koncentration",
+    url: "mol-stokiometri/#spadning-calc",
+    icon: "💧",
+    category: "Begrepp",
+    keywords: ["spädning", "späda", "koncentration", "volym", "c1v1", "formel"]
+  },
+  {
+    title: "Begränsande reaktant",
+    desc: "Den reaktant som tar slut först",
+    url: "mol-stokiometri/#stokiometri",
+    icon: "🚫",
+    category: "Begrepp",
+    keywords: ["begränsande", "reaktant", "överskott", "stökiometri", "tar slut"]
+  },
+  {
+    title: "Kristallvatten",
+    desc: "Bestäm x i salter som CuSO₄·xH₂O",
+    url: "mol-stokiometri/#kristallvatten",
+    icon: "💎",
+    category: "Begrepp",
+    keywords: ["kristallvatten", "hydrat", "CuSO4", "uppvärmning", "vattenfritt"]
+  },
+  {
+    title: "Empirisk formel",
+    desc: "Enklaste heltalsförhållandet mellan atomer",
+    url: "mol-stokiometri/#empirisk",
+    icon: "📐",
+    category: "Begrepp",
+    keywords: ["empirisk", "formel", "molekylformel", "massprocent", "förhållande"]
+  },
+  {
+    title: "Gaslagen (pV=nRT)",
+    desc: "Idealgaslagen för beräkningar med gaser",
+    url: "mol-stokiometri/#gaslagen",
+    icon: "💨",
+    category: "Begrepp",
+    keywords: ["gas", "ideal", "pV=nRT", "tryck", "volym", "temperatur", "NTP", "22.4"]
+  },
+  {
+    title: "Fällningsreaktioner",
+    desc: "Olösliga salter som AgCl, BaSO₄",
+    url: "mol-stokiometri/#fallning",
+    icon: "🧪",
+    category: "Begrepp",
+    keywords: ["fällning", "precipitation", "olöslig", "AgCl", "BaSO4", "salt"]
+  },
   // Specific concepts within Redox
   {
     title: "Oxidation",
@@ -215,6 +416,30 @@ const searchableTopics = [
     icon: "📥",
     category: "Begrepp",
     keywords: ["reduktion", "elektron", "uppta", "oxidationstal"]
+  },
+  {
+    title: "Oxidationstal",
+    desc: "Beräkna oxidationstal för atomer i föreningar",
+    url: "redox/#oxidationstal",
+    icon: "🔢",
+    category: "Begrepp",
+    keywords: ["oxidationstal", "OT", "laddning", "beräkna", "regler"]
+  },
+  {
+    title: "Spänningsserien",
+    desc: "Metallernas ordning efter reduktionsförmåga",
+    url: "redox/#spanningsserien",
+    icon: "📊",
+    category: "Begrepp",
+    keywords: ["spänningsserie", "metall", "reduktion", "reaktivitet", "väteutdrivande"]
+  },
+  {
+    title: "Galvanisk cell",
+    desc: "Batteri - spontan redoxreaktion ger ström",
+    url: "redox/#galvaniskt",
+    icon: "🔋",
+    category: "Begrepp",
+    keywords: ["galvanisk", "cell", "batteri", "anod", "katod", "EMK", "spänning", "daniell"]
   },
   // Specific concepts within Termokemi
   {
@@ -240,6 +465,55 @@ const searchableTopics = [
     icon: "❄️",
     category: "Begrepp",
     keywords: ["endoterm", "energi", "uppta", "kyla", "positiv"]
+  },
+  {
+    title: "Aktiveringsenergi",
+    desc: "Minsta energi för att starta reaktionen",
+    url: "termokemi/#aktiveringsenergi",
+    icon: "⚡",
+    category: "Begrepp",
+    keywords: ["aktiveringsenergi", "Ea", "energibarriär", "aktiverad", "kollision"]
+  },
+  {
+    title: "Katalysator",
+    desc: "Sänker aktiveringsenergin utan att förbrukas",
+    url: "termokemi/#katalysatorer",
+    icon: "🚀",
+    category: "Begrepp",
+    keywords: ["katalysator", "enzym", "aktiveringsenergi", "hastighet", "reaktion"]
+  },
+  // Introduktion - specific sections
+  {
+    title: "Separationsmetoder",
+    desc: "Filtrering, destillation, kromatografi m.m.",
+    url: "introduktion/#separation",
+    icon: "🔬",
+    category: "Begrepp",
+    keywords: ["separation", "filtrering", "destillation", "kromatografi", "indunstning", "dekantering"]
+  },
+  {
+    title: "Faropiktogram",
+    desc: "Varningssymboler för kemikalier",
+    url: "introduktion/#sakerhet",
+    icon: "⚠️",
+    category: "Begrepp",
+    keywords: ["faropiktogram", "säkerhet", "varning", "brandfarligt", "giftigt", "frätande"]
+  },
+  {
+    title: "Homogena blandningar",
+    desc: "Lösningar - samma sammansättning överallt",
+    url: "introduktion/#materia",
+    icon: "💧",
+    category: "Begrepp",
+    keywords: ["homogen", "blandning", "lösning", "salt", "vatten", "luft", "legering"]
+  },
+  {
+    title: "Heterogena blandningar",
+    desc: "Olika faser syns - t.ex. sand och vatten",
+    url: "introduktion/#materia",
+    icon: "🏔️",
+    category: "Begrepp",
+    keywords: ["heterogen", "blandning", "faser", "suspension", "emulsion", "granit"]
   },
   // NEW TOPICS ADDED
   // Atomer - new sections
@@ -509,6 +783,7 @@ function initSearch() {
     
     const results = searchableTopics.map(topic => {
       let score = 0;
+      let matchedKeyword = null;
       const lowerQuery = query.toLowerCase();
       const lowerTitle = topic.title.toLowerCase();
       
@@ -519,24 +794,41 @@ function initSearch() {
       // Title contains query
       else if (lowerTitle.includes(lowerQuery)) score += 60;
       
-      // Exact keyword match
-      if (topic.keywords.some(kw => kw.toLowerCase() === lowerQuery)) score += 50;
-      // Keyword starts with query
-      else if (topic.keywords.some(kw => kw.toLowerCase().startsWith(lowerQuery))) score += 40;
-      // Keyword contains query
-      else if (topic.keywords.some(kw => kw.toLowerCase().includes(lowerQuery))) score += 30;
+      // Keyword matching - track which keyword matched
+      const exactKeyword = topic.keywords.find(kw => kw.toLowerCase() === lowerQuery);
+      const startsKeyword = topic.keywords.find(kw => kw.toLowerCase().startsWith(lowerQuery));
+      const containsKeyword = topic.keywords.find(kw => kw.toLowerCase().includes(lowerQuery));
+      
+      if (exactKeyword) {
+        score += 50;
+        matchedKeyword = exactKeyword;
+      } else if (startsKeyword) {
+        score += 40;
+        matchedKeyword = startsKeyword;
+      } else if (containsKeyword) {
+        score += 30;
+        matchedKeyword = containsKeyword;
+      }
       
       // Description contains query
       if (topic.desc.toLowerCase().includes(lowerQuery)) score += 20;
       
       // Fuzzy matches (lower priority)
       if (score === 0) {
-        if (fuzzyMatch(lowerQuery, topic.title)) score += 15;
-        else if (topic.keywords.some(kw => fuzzyMatch(lowerQuery, kw))) score += 10;
-        else if (fuzzyMatch(lowerQuery, topic.desc)) score += 5;
+        if (fuzzyMatch(lowerQuery, topic.title)) {
+          score += 15;
+        } else {
+          const fuzzyKeyword = topic.keywords.find(kw => fuzzyMatch(lowerQuery, kw));
+          if (fuzzyKeyword) {
+            score += 10;
+            matchedKeyword = fuzzyKeyword;
+          } else if (fuzzyMatch(lowerQuery, topic.desc)) {
+            score += 5;
+          }
+        }
       }
       
-      return { ...topic, score };
+      return { ...topic, score, matchedKeyword };
     })
     .filter(topic => topic.score > 0)
     .sort((a, b) => b.score - a.score);
@@ -544,16 +836,54 @@ function initSearch() {
     if (results.length === 0) {
       searchResults.innerHTML = '<div class="search-no-results">Inga resultat hittades</div>';
     } else {
-      searchResults.innerHTML = results.map(result => `
+      searchResults.innerHTML = results.map(result => {
+        // Show matched keyword if it's not visible in title/desc
+        const showKeyword = result.matchedKeyword && 
+          !result.title.toLowerCase().includes(query.toLowerCase()) &&
+          !result.desc.toLowerCase().includes(query.toLowerCase());
+        
+        return `
         <a href="${basePath}${result.url}" class="search-result-item">
           <span class="search-result-icon">${result.icon}</span>
           <div class="search-result-content">
             <div class="search-result-title">${highlightSearchMatch(result.title, query)}</div>
-            <div class="search-result-desc">${result.desc}</div>
+            <div class="search-result-desc">${result.desc}${showKeyword ? ` <span class="search-match-tag">→ ${result.matchedKeyword}</span>` : ''}</div>
           </div>
           <span class="search-result-category">${result.category}</span>
         </a>
-      `).join('');
+      `}).join('');
+      
+      // Add click handlers for smooth scrolling to sections
+      searchResults.querySelectorAll('.search-result-item').forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          // If it's a hash link on the current page, scroll smoothly
+          if (href.includes('#')) {
+            const hashIndex = href.indexOf('#');
+            const path = href.substring(0, hashIndex);
+            const hash = href.substring(hashIndex);
+            
+            // Check if we're on the same page (path is empty or matches current)
+            const currentPath = window.location.pathname;
+            const isCurrentPage = path === '' || 
+              currentPath.endsWith(path) || 
+              currentPath.includes(path.replace('../', ''));
+            
+            if (isCurrentPage && hash) {
+              e.preventDefault();
+              const target = document.querySelector(hash);
+              if (target) {
+                // Offset for fixed header
+                const headerOffset = 80;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                searchResults.classList.remove('active');
+                searchInput.value = '';
+              }
+            }
+          }
+        });
+      });
     }
     
     searchResults.classList.add('active');

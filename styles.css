@@ -309,6 +309,25 @@ nav {
   display: block;
 }
 
+/* Custom scrollbar for search results */
+.search-results::-webkit-scrollbar {
+  width: 8px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 .search-result-item {
   display: flex;
   align-items: center;
@@ -366,6 +385,12 @@ nav {
   text-align: center;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+
+.search-match-tag {
+  color: var(--base-primary);
+  font-weight: 500;
+  font-style: italic;
 }
 
 .nav-toggle {
